@@ -1,0 +1,5573 @@
+    repeat wait(0.5) until game:IsLoaded()
+
+
+game.Workspace.FallenPartsDestroyHeight = -50000
+
+--Hitlist
+Hitlisted = {
+	30967727, --PigDriver
+	2314954166, --MikeTheSpoogGobbler
+	2860001135, --Diagon442
+	2847668114, --Robo196547
+	2847670721, --Robo196587
+	2847672440, --Robo1965447
+	2847674609, --Clomendod44
+	2847676328, --Clomnendod44
+	2847678424, --Benos9117
+	2847680278, --Benos9ll7
+	2847682081, --Holo111l111111
+	2847683696, --Holo1111111l11
+	2847686360, --Holo11l1111l11
+	2860005706, --Roden8765
+	2860009469, --TinTen771
+	2860012066, --Deneo342
+	2860014189, --IppoUnion
+	2860016141, --Crowborne433
+	2860017656, --Portal8993
+	2860020954, --UUUU89834
+	2860022999, --JHF863464
+	2860024165, --FONO34325
+	2860025459, --Jobin4535
+	2860027153, --NENE84356
+	1719857761, --BeforeWonders
+	2892517576, --ZanonIsRetar
+	2892523508, --RotorCuff77
+	2847668114, --Robo196547
+	2847670721, --Robo196587
+	2847672440, --Robo1965447
+	2847674609, --Clomendod44
+	2847676328, --Clomnendod44
+	2847678424, --Benos9117
+	2847680278, --Benos9ll7
+	2847682081, --Holo111l111111
+	2847683696, --Holo1111111l11
+	2847686360, --Holo11l1111l11
+	2860001135, --Diagon442
+	2860005706, --Roden8765
+	2892523508, --RotorCuff77
+	2892550049, --ZanonLacksSkill
+	2892557175, --ZanonLacksSKill1
+	2892559986, --ZanonLacksSKill2
+	2892562336, --ZanonLacksSKill3
+	2892565530, --ZanonLacksSKill4
+	2892567939, --ZanonLacksSkill5
+	2892570070, --ZanonLacksSkill6
+	2892578129, --ZanonIsDesperate
+	2892580877, --ZanonIsDesperate1
+	2892590702, --Heton856
+	2892585440, --IcanDoThisAllDayLolz
+	2892586754, --ButYouCantLOL
+	2892589059, --BcuzUareApreschooler
+	2892597242, --WutACleverComeback
+	2892601167, --HaxCantCompensate
+	2892605128, --WithoutItUrNothing
+	2892608754, --YeahItReallyShows
+	132571927, --tkids1234
+	2892615871, --ZanonLacksSkill7
+	2892617672, --ZanonLacksSkill8
+	2892619989, --ZanonLacksSkill9
+	2892628573, --RotorCuff4344
+	2892633350, --Hehoon945
+	2894866510, --AntiAudioRemover
+	2894870477, --AudioPolice
+	1681802010, --AccountStoragerat
+	1366882092, --Hiroshi_Chan0603
+	2921548710, --3rdSacNeverComesOut
+	1692590541, --Rl8xh
+	3138149231 --FDFG65454
+}
+
+function ChatLogGui()
+	local ChatLogger = Instance.new("ScreenGui")
+	local DragFrame = Instance.new("Frame")
+	local BaseFrame = Instance.new("Frame")
+	local XButton = Instance.new("TextButton")
+	local UICorner = Instance.new("UICorner")
+	local UICorner_2 = Instance.new("UICorner")
+	local ScrollFrame = Instance.new("ScrollingFrame")
+	local UICorner_3 = Instance.new("UICorner")
+	local Frame = Instance.new("Frame")
+	local UICorner_4 = Instance.new("UICorner")
+	local Minimize = Instance.new("TextButton")
+	local UICorner_5 = Instance.new("UICorner")
+	local Title = Instance.new("TextLabel")
+
+	ChatLogger.Name = "ChatLogger"
+	ChatLogger.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+	DragFrame.Name = "DragFrame"
+	DragFrame.Parent = ChatLogger
+	DragFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	DragFrame.BackgroundTransparency = 1.000
+	DragFrame.Position = UDim2.new(0.298833817, 0, 0.22807017, 0)
+	DragFrame.Size = UDim2.new(0, 339, 0, 317)
+
+	BaseFrame.Name = "BaseFrame"
+	BaseFrame.Parent = DragFrame
+	BaseFrame.BackgroundColor3 = Color3.fromRGB(42, 2, 74)
+	BaseFrame.Position = UDim2.new(0.0589970499, 0, 0.0630914792, 0)
+	BaseFrame.Size = UDim2.new(0, 299, 0, 277)
+
+	XButton.Name = "XButton"
+	XButton.Parent = BaseFrame
+	XButton.BackgroundColor3 = Color3.fromRGB(42, 2, 74)
+	XButton.Position = UDim2.new(0.916387975, 0, 0, 0)
+	XButton.Size = UDim2.new(0, 25, 0, 25)
+	XButton.ZIndex = 3
+	XButton.Font = Enum.Font.SourceSans
+	XButton.Text = "X"
+	XButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+	XButton.TextSize = 14.000
+
+	UICorner.CornerRadius = UDim.new(0, 10)
+	UICorner.Parent = XButton
+
+	UICorner_2.CornerRadius = UDim.new(0, 10)
+	UICorner_2.Parent = BaseFrame
+
+	ScrollFrame.Name = 'ScrollFrame'
+	ScrollFrame.Parent = BaseFrame
+	ScrollFrame.Active = true
+	ScrollFrame.BackgroundColor3 = Color3.fromRGB(0, 8, 21)
+	ScrollFrame.Position = UDim2.new(0.0334448144, 0, 0.111913361, 0)
+	ScrollFrame.Size = UDim2.new(0, 279, 0, 240)
+	ScrollFrame.ZIndex = 2
+	ScrollFrame.CanvasSize = UDim2.new(2, 0, 100, 0)
+	ScrollFrame.HorizontalScrollBarInset = Enum.ScrollBarInset.Always
+	ScrollFrame.ScrollBarThickness = 5
+	ScrollFrame.BorderColor3 = Color3.fromRGB(0, 8, 21)
+
+	UICorner_3.CornerRadius = UDim.new(0, 10)
+	UICorner_3.Parent = ScrollFrame
+
+	Frame.Parent = BaseFrame
+	Frame.BackgroundColor3 = Color3.fromRGB(0, 8, 21)
+	Frame.Position = UDim2.new(0.020066889, 0, 0.0902527049, 0)
+	Frame.Size = UDim2.new(0, 287, 0, 249)
+
+	UICorner_4.CornerRadius = UDim.new(0, 10)
+	UICorner_4.Parent = Frame
+
+	Minimize.Name = "Minimize"
+	Minimize.Parent = BaseFrame
+	Minimize.BackgroundColor3 = Color3.fromRGB(42, 2, 74)
+	Minimize.Position = UDim2.new(0.862876236, 0, 0, 0)
+	Minimize.Size = UDim2.new(0, 25, 0, 25)
+	Minimize.ZIndex = 3
+	Minimize.Font = Enum.Font.SourceSans
+	Minimize.Text = "-"
+	Minimize.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Minimize.TextSize = 14.000
+
+	UICorner_5.CornerRadius = UDim.new(0, 10)
+	UICorner_5.Parent = Minimize
+
+	Title.Name = "Title"
+	Title.Parent = BaseFrame
+	Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Title.BackgroundTransparency = 1.000
+	Title.Position = UDim2.new(0.163879603, 0, 0, 0)
+	Title.Size = UDim2.new(0, 200, 0, 25)
+	Title.Font = Enum.Font.SourceSans
+	Title.Text = "Chatlogger By: Anon"
+	Title.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Title.TextSize = 14.000
+	Title.TextStrokeColor3 = Color3.fromRGB(118, 118, 118)
+
+	-- Scripts:
+	local script = Instance.new('Script', ChatLogger)
+
+	--frame
+	frame = script.Parent.DragFrame
+	frame.Draggable = true
+	frame.Active = true
+	frame.Selectable = true
+
+	Minimized = false
+	PrevPos = 0
+
+	--XButton
+	XButton.MouseButton1Down:connect(function()
+		ChatLogger:Remove()
+	end)
+
+	--Minimize
+	Minimize.MouseButton1Down:connect(function()
+		if Minimized then
+			spawn(function()
+				Frame:TweenSize(UDim2.new(0, 287, 0, 249), 2, "Linear", 0.25, true, nil) --Out
+				BaseFrame:TweenSize(UDim2.new(0, 299, 0, 277), 2, "Linear", 0.25, true, nil) --Out
+			end)
+			wait(0.5)
+			ScrollFrame.Visible = true
+		else
+			spawn(function()
+				Frame:TweenSize(UDim2.new(0, 287, 0, 0), 2, "Linear", 0.25, true, nil) --In
+				BaseFrame:TweenSize(UDim2.new(0, 299, 0, 25), 2, "Linear", 0.25, true, nil) --In
+			end)
+			ScrollFrame.Visible = false
+		end
+		Minimized = not Minimized
+	end)
+
+	--UpdateFunction
+	function UpdateChat(plr, Msg)
+		ChatColor = Color3.fromRGB(118, 118, 118)
+
+		if string.sub(Msg, 1,1) == ":" or string.sub(Msg,1,1) == ";" then 
+			ChatColor = Color3.fromRGB(177,121,153) 
+		elseif string.sub(Msg,1,2) == "/w" or string.sub(Msg,1,7) == "/whisper" then 
+			ChatColor = Color3.fromRGB(110,126,179) 
+		else 
+			ChatColor = Color3.fromRGB(118, 118, 118) 
+		end
+
+		Message = Instance.new("TextLabel",ScrollFrame)
+		Message.ZIndex = 4
+		Message.Text = plr.Name .. ": " .. Msg
+		Message.Size = UDim2.new(0.5,0,.00035,0)
+		Message.Position = UDim2.new(0,0,0 + PrevPos ,0)
+		Message.Font = Enum.Font.SourceSansSemibold
+		Message.TextColor3 = ChatColor
+		Message.TextStrokeTransparency = 1
+		Message.BackgroundTransparency = 1
+		Message.BackgroundColor3 = Color3.new(0,0,0)
+		Message.BorderSizePixel = 0
+		Message.BorderColor3 = Color3.new(0,0,0)
+		Message.FontSize = "Size14"
+		Message.TextXAlignment = Enum.TextXAlignment.Left
+		Message.ClipsDescendants = true
+		PrevPos = PrevPos + 0.0004
+	end
+
+	for i,v in pairs(game.Players:GetPlayers()) do
+		v.Chatted:Connect(function(msg)
+			UpdateChat(v, msg)
+		end)
+	end
+	game.Players.PlayerAdded:Connect(function(plr)
+		plr.Chatted:Connect(function(msg)
+			UpdateChat(plr, msg)
+		end)
+	end)
+end
+
+--GuiReset
+local function GuiReset()
+	pcall(function()
+		_G.ID = false
+		_G.Name = true
+		_G.AntiMap = false
+		_G.GrimSpam = false
+		_G.AirWalk = false
+		_G.AntiJoin = false
+		_G.TorsoCbring = false
+		_G.KillHits = false
+		_G.BaseProtect = false
+		_G.TargetOthers = false
+		_G.KillTarget = false
+		_G.Diamond = false
+		_G.RemoveMe = false
+		_G.RocketRainOn = false
+		_G.GetId = false
+		_G.Heal = false
+		_G.AntiFF = false
+		_G.Martyrdom = false
+		_G.RocketTarget = false
+		_G.Grimgold = false
+		_G.Epsilon = false
+		_G.Chart = false
+		_G.Woods = false
+		_G.Tela = false
+		_G.Wind = false
+		_G.Spam = false
+		_G.KillAura = false
+		_G.Spectate = false
+		_G.Speed = false
+		_G.Jump = false
+		_G.Flying = false
+		_G.Fly = false
+		_G.RocketDraw = false
+		_G.HatGlitch = false
+		for i=0,10 do
+			fireclickdetector(game.Workspace[game.Players.LocalPlayer.Name .. "'s Cloud"].OutfitGiver.Previous.ClickDetector)
+		end
+		for i,v in pairs(game.Workspace:GetChildren()) do
+			if v.Name == 'SongPlaying' then
+				v:Remove()
+			end
+		end
+		if game.Workspace:FindFirstChild('Airwalk') then
+			game.Workspace.Airwalk:Destroy()
+		end
+		if game.Workspace:FindFirstChild('PlatformBlock') then
+			game.Workspace.PlatformBlock:Destroy()
+		end
+		game.Lighting.ClockTime = "12"
+		game:GetService("ReplicatedStorage").Remotes.SetRigType:FireServer(Enum.HumanoidRigType.R6)
+		game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
+		wait(0.5)
+		if game.Players.LocalPlayer.Character:FindFirstChild('Eggsteroid') then
+			game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(1556297743)
+		end
+	end)
+end
+
+GuiReset()
+local function SearchGui()
+	local SearchUI = Instance.new("ScreenGui")
+	local SearchDragFrame = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local SearchOutlineFrame = Instance.new("Frame")
+	local UICorner_2 = Instance.new("UICorner")
+	local SearchX = Instance.new("TextButton")
+	local UICorner_3 = Instance.new("UICorner")
+	local ScrollFrame = Instance.new("ScrollingFrame")
+	local UICorner_4 = Instance.new("UICorner")
+	local DeathPoint = Instance.new("TextButton")
+	local UICorner_5 = Instance.new("UICorner")
+	local CBring = Instance.new("TextButton")
+	local UICorner_6 = Instance.new("UICorner")
+	local FTI = Instance.new("TextButton")
+	local UICorner_7 = Instance.new("UICorner")
+	local Diamond = Instance.new("TextButton")
+	local UICorner_8 = Instance.new("UICorner")
+	local TargetOthers = Instance.new("TextButton")
+	local UICorner_9 = Instance.new("UICorner")
+	local InsertTarget = Instance.new("TextButton")
+	local UICorner_10 = Instance.new("UICorner")
+	local RemoveTarget = Instance.new("TextButton")
+	local UICorner_11 = Instance.new("UICorner")
+	local Speed = Instance.new("TextButton")
+	local UICorner_12 = Instance.new("UICorner")
+	local Jump = Instance.new("TextButton")
+	local UICorner_13 = Instance.new("UICorner")
+	local ToPlayer = Instance.new("TextButton")
+	local UICorner_14 = Instance.new("UICorner")
+	local TimeChange = Instance.new("TextButton")
+	local UICorner_15 = Instance.new("UICorner")
+	local UIListLayout = Instance.new("UIListLayout")
+	local Whitelist = Instance.new("TextButton")
+	local UICorner_16 = Instance.new("UICorner")
+	local InsertUser = Instance.new("TextButton")
+	local UICorner_17 = Instance.new("UICorner")
+	local RemoveUser = Instance.new("TextButton")
+	local UICorner_18 = Instance.new("UICorner")
+	local Hitlist = Instance.new("TextButton")
+	local UICorner_19 = Instance.new("UICorner")
+	local BaseProtect = Instance.new("TextButton")
+	local UICorner_20 = Instance.new("UICorner")
+	local DeleteMe = Instance.new("TextButton")
+	local UICorner_21 = Instance.new("UICorner")
+	local GodMode = Instance.new("TextButton")
+	local UICorner_22 = Instance.new("UICorner")
+	local AntiVoid = Instance.new("TextButton")
+	local UICorner_23 = Instance.new("UICorner")
+	local Anchor = Instance.new("TextButton")
+	local UICorner_24 = Instance.new("UICorner")
+	local AntiMap = Instance.new("TextButton")
+	local UICorner_25 = Instance.new("UICorner")
+	local RemoveWalls = Instance.new("TextButton")
+	local UICorner_26 = Instance.new("UICorner")
+	local AirWalk = Instance.new("TextButton")
+	local UICorner_27 = Instance.new("UICorner")
+	local ClickTp = Instance.new("TextButton")
+	local UICorner_28 = Instance.new("UICorner")
+	local Spam = Instance.new("TextButton")
+	local UICorner_29 = Instance.new("UICorner")
+	local RocketRain = Instance.new("TextButton")
+	local UICorner_30 = Instance.new("UICorner")
+	local Crash = Instance.new("TextButton")
+	local UICorner_31 = Instance.new("UICorner")
+	local Load = Instance.new("TextButton")
+	local UICorner_32 = Instance.new("UICorner")
+	local Save = Instance.new("TextButton")
+	local UICorner_33 = Instance.new("UICorner")
+	local Heal = Instance.new("TextButton")
+	local UICorner_34 = Instance.new("UICorner")
+	local Martyrdom = Instance.new("TextButton")
+	local UICorner_35 = Instance.new("UICorner")
+	local Safespot = Instance.new("TextButton")
+	local UICorner_36 = Instance.new("UICorner")
+	local AntiFF = Instance.new("TextButton")
+	local UICorner_37 = Instance.new("UICorner")
+	local SpamChangers = Instance.new("TextButton")
+	local UICorner_38 = Instance.new("UICorner")
+	local RocketTarget = Instance.new("TextButton")
+	local UICorner_39 = Instance.new("UICorner")
+	local KillAura = Instance.new("TextButton")
+	local UICorner_40 = Instance.new("UICorner")
+	local OverFrame = Instance.new("Frame")
+	local UICorner_41 = Instance.new("UICorner")
+	local SearchBar = Instance.new("TextBox")
+	local UICorner_42 = Instance.new("UICorner")
+
+	--Properties:
+
+	SearchUI.Name = "SearchUI"
+	SearchUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	SearchUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	SearchDragFrame.Name = "SearchDragFrame"
+	SearchDragFrame.Parent = SearchUI
+	SearchDragFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	SearchDragFrame.BackgroundTransparency = 1.000
+	SearchDragFrame.Position = UDim2.new(0.415682912, 0, 0.399721473, 0)
+	SearchDragFrame.Size = UDim2.new(0, 225, 0, 143)
+
+	UICorner.Parent = SearchDragFrame
+	SearchOutlineFrame.Name = "SearchOutlineFrame"
+	SearchOutlineFrame.Parent = SearchDragFrame
+	SearchOutlineFrame.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	SearchOutlineFrame.Position = UDim2.new(0.0722291023, 0, 0.0778764263, 0)
+	SearchOutlineFrame.Size = UDim2.new(0, 191, 0, 120)
+
+	UICorner_2.Parent = SearchOutlineFrame
+
+	SearchX.Name = "SearchX"
+	SearchX.Parent = SearchOutlineFrame
+	SearchX.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	SearchX.LayoutOrder = 10000
+	SearchX.Position = UDim2.new(0.8974123, 0, 0, 0)
+	SearchX.Size = UDim2.new(0, 19, 0, 19)
+	SearchX.ZIndex = 1000
+	SearchX.Font = Enum.Font.SourceSans
+	SearchX.Text = "X"
+	SearchX.TextColor3 = Color3.fromRGB(0, 0, 0)
+	SearchX.TextSize = 14.000
+
+	UICorner_3.CornerRadius = UDim.new(0, 100)
+	UICorner_3.Parent = SearchX
+
+	ScrollFrame.Name = "ScrollFrame"
+	ScrollFrame.Parent = SearchOutlineFrame
+	ScrollFrame.Active = true
+	ScrollFrame.BackgroundColor3 = Color3.fromRGB(0, 8, 21)
+	ScrollFrame.BorderColor3 = Color3.fromRGB(0, 8, 21)
+	ScrollFrame.Position = UDim2.new(0.0680626705, 0, 0.25, 0)
+	ScrollFrame.Size = UDim2.new(0, 170, 0, 83)
+	ScrollFrame.ZIndex = 2
+	ScrollFrame.CanvasSize = UDim2.new(0, 0, 2.5, 310)
+	ScrollFrame.ScrollBarThickness = 7
+
+	UICorner_4.Parent = ScrollFrame
+
+	DeathPoint.Name = "DeathPoint"
+	DeathPoint.Parent = ScrollFrame
+	DeathPoint.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	DeathPoint.Position = UDim2.new(0.0909090936, 0, 0.273751348, 0)
+	DeathPoint.Size = UDim2.new(0, 160, 0, 13)
+	DeathPoint.ZIndex = 3
+	DeathPoint.Font = Enum.Font.SourceSans
+	DeathPoint.Text = "DeathPoint"
+	DeathPoint.TextColor3 = Color3.fromRGB(118, 118, 118)
+	DeathPoint.TextSize = 14.000
+
+	UICorner_5.Parent = DeathPoint
+
+	CBring.Name = "CBring"
+	CBring.Parent = ScrollFrame
+	CBring.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	CBring.Position = UDim2.new(0.0909090936, 0, 0.0901764557, 0)
+	CBring.Size = UDim2.new(0, 160, 0, 13)
+	CBring.ZIndex = 3
+	CBring.Font = Enum.Font.SourceSans
+	CBring.Text = "CBring"
+	CBring.TextColor3 = Color3.fromRGB(118, 118, 118)
+	CBring.TextSize = 14.000
+
+	UICorner_6.Parent = CBring
+
+	FTI.Name = "FTI"
+	FTI.Parent = ScrollFrame
+	FTI.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	FTI.Position = UDim2.new(0.505681813, 0, 0.0901764557, 0)
+	FTI.Size = UDim2.new(0, 160, 0, 13)
+	FTI.ZIndex = 3
+	FTI.Font = Enum.Font.SourceSans
+	FTI.Text = "FTI"
+	FTI.TextColor3 = Color3.fromRGB(118, 118, 118)
+	FTI.TextSize = 14.000
+
+	UICorner_7.Parent = FTI
+
+	Diamond.Name = "Diamond"
+	Diamond.Parent = ScrollFrame
+	Diamond.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Diamond.Position = UDim2.new(0.505681813, 0, 0.15297839, 0)
+	Diamond.Size = UDim2.new(0, 160, 0, 13)
+	Diamond.ZIndex = 3
+	Diamond.Font = Enum.Font.SourceSans
+	Diamond.Text = "Diamond"
+	Diamond.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Diamond.TextSize = 14.000
+	Diamond.TextWrapped = true
+
+	UICorner_8.Parent = Diamond
+
+	TargetOthers.Name = "TargetOthers"
+	TargetOthers.Parent = ScrollFrame
+	TargetOthers.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	TargetOthers.Position = UDim2.new(0.0909090936, 0, 0.15297839, 0)
+	TargetOthers.Size = UDim2.new(0, 160, 0, 13)
+	TargetOthers.ZIndex = 3
+	TargetOthers.Font = Enum.Font.SourceSans
+	TargetOthers.Text = "TargetOthers"
+	TargetOthers.TextColor3 = Color3.fromRGB(118, 118, 118)
+	TargetOthers.TextSize = 14.000
+
+	UICorner_9.Parent = TargetOthers
+
+	InsertTarget.Name = "InsertTarget"
+	InsertTarget.Parent = ScrollFrame
+	InsertTarget.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	InsertTarget.Position = UDim2.new(0.505681813, 0, 0.215780318, 0)
+	InsertTarget.Size = UDim2.new(0, 160, 0, 13)
+	InsertTarget.ZIndex = 3
+	InsertTarget.Font = Enum.Font.SourceSans
+	InsertTarget.Text = "InsertTarget"
+	InsertTarget.TextColor3 = Color3.fromRGB(118, 118, 118)
+	InsertTarget.TextSize = 14.000
+
+	UICorner_10.Parent = InsertTarget
+
+	RemoveTarget.Name = "RemoveTarget"
+	RemoveTarget.Parent = ScrollFrame
+	RemoveTarget.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	RemoveTarget.Position = UDim2.new(0.0909090936, 0, 0.215780318, 0)
+	RemoveTarget.Size = UDim2.new(0, 160, 0, 13)
+	RemoveTarget.ZIndex = 3
+	RemoveTarget.Font = Enum.Font.SourceSans
+	RemoveTarget.Text = "RemoveTarget"
+	RemoveTarget.TextColor3 = Color3.fromRGB(118, 118, 118)
+	RemoveTarget.TextSize = 14.000
+
+	UICorner_11.Parent = RemoveTarget
+
+	Speed.Name = "Speed"
+	Speed.Parent = ScrollFrame
+	Speed.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Speed.Position = UDim2.new(0.505681813, 0, 0.273751348, 0)
+	Speed.Size = UDim2.new(0, 160, 0, 13)
+	Speed.ZIndex = 3
+	Speed.Font = Enum.Font.SourceSans
+	Speed.Text = "Speed"
+	Speed.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Speed.TextSize = 14.000
+
+	UICorner_12.Parent = Speed
+
+	Jump.Name = "Jump"
+	Jump.Parent = ScrollFrame
+	Jump.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Jump.Position = UDim2.new(0.0909090936, 0, 0.273751348, 0)
+	Jump.Size = UDim2.new(0, 160, 0, 13)
+	Jump.ZIndex = 3
+	Jump.Font = Enum.Font.SourceSans
+	Jump.Text = "Jump"
+	Jump.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Jump.TextSize = 14.000
+
+	UICorner_13.Parent = Jump
+
+	ToPlayer.Name = "ToPlayer"
+	ToPlayer.Parent = ScrollFrame
+	ToPlayer.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	ToPlayer.Position = UDim2.new(0.505681813, 0, 0.331722349, 0)
+	ToPlayer.Size = UDim2.new(0, 160, 0, 13)
+	ToPlayer.ZIndex = 3
+	ToPlayer.Font = Enum.Font.SourceSans
+	ToPlayer.Text = "ToPlayer"
+	ToPlayer.TextColor3 = Color3.fromRGB(118, 118, 118)
+	ToPlayer.TextSize = 14.000
+
+	UICorner_14.Parent = ToPlayer
+
+	TimeChange.Name = "TimeChange"
+	TimeChange.Parent = ScrollFrame
+	TimeChange.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	TimeChange.Position = UDim2.new(0.0909090936, 0, 0.331722349, 0)
+	TimeChange.Size = UDim2.new(0, 160, 0, 13)
+	TimeChange.ZIndex = 3
+	TimeChange.Font = Enum.Font.SourceSans
+	TimeChange.Text = "TimeChange"
+	TimeChange.TextColor3 = Color3.fromRGB(118, 118, 118)
+	TimeChange.TextSize = 14.000
+
+	UICorner_15.Parent = TimeChange
+
+	UIListLayout.Parent = ScrollFrame
+	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	UIListLayout.Padding = UDim.new(0, 4)
+
+	Whitelist.Name = "Whitelist"
+	Whitelist.Parent = ScrollFrame
+	Whitelist.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Whitelist.Position = UDim2.new(0.505681813, 0, 0.0901764557, 0)
+	Whitelist.Size = UDim2.new(0, 160, 0, 13)
+	Whitelist.ZIndex = 3
+	Whitelist.Font = Enum.Font.SourceSans
+	Whitelist.Text = "Whitelist"
+	Whitelist.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Whitelist.TextSize = 14.000
+	Whitelist.TextWrapped = true
+
+	UICorner_16.Parent = Whitelist
+
+	InsertUser.Name = "InsertUser"
+	InsertUser.Parent = ScrollFrame
+	InsertUser.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	InsertUser.Position = UDim2.new(0.0909090936, 0, 0.0901764557, 0)
+	InsertUser.Size = UDim2.new(0, 160, 0, 13)
+	InsertUser.ZIndex = 3
+	InsertUser.Font = Enum.Font.SourceSans
+	InsertUser.Text = "InsertUser"
+	InsertUser.TextColor3 = Color3.fromRGB(118, 118, 118)
+	InsertUser.TextSize = 14.000
+
+	UICorner_17.Parent = InsertUser
+
+	RemoveUser.Name = "RemoveUser"
+	RemoveUser.Parent = ScrollFrame
+	RemoveUser.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	RemoveUser.Position = UDim2.new(0.505681813, 0, 0.15297839, 0)
+	RemoveUser.Size = UDim2.new(0, 160, 0, 13)
+	RemoveUser.ZIndex = 3
+	RemoveUser.Font = Enum.Font.SourceSans
+	RemoveUser.Text = "RemoveUser"
+	RemoveUser.TextColor3 = Color3.fromRGB(118, 118, 118)
+	RemoveUser.TextSize = 14.000
+
+	UICorner_18.Parent = RemoveUser
+
+	Hitlist.Name = "Hitlist"
+	Hitlist.Parent = ScrollFrame
+	Hitlist.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Hitlist.Position = UDim2.new(0.0909090936, 0, 0.15297839, 0)
+	Hitlist.Size = UDim2.new(0, 160, 0, 13)
+	Hitlist.ZIndex = 3
+	Hitlist.Font = Enum.Font.SourceSans
+	Hitlist.Text = "Hitlist"
+	Hitlist.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Hitlist.TextSize = 14.000
+
+	UICorner_19.Parent = Hitlist
+
+	BaseProtect.Name = "BaseProtect"
+	BaseProtect.Parent = ScrollFrame
+	BaseProtect.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	BaseProtect.Position = UDim2.new(0.505681813, 0, 0.215780318, 0)
+	BaseProtect.Size = UDim2.new(0, 160, 0, 13)
+	BaseProtect.ZIndex = 3
+	BaseProtect.Font = Enum.Font.SourceSans
+	BaseProtect.Text = "BaseProtect"
+	BaseProtect.TextColor3 = Color3.fromRGB(118, 118, 118)
+	BaseProtect.TextSize = 14.000
+	UICorner_20.Parent = BaseProtect
+
+	DeleteMe.Name = "DeleteMe"
+	DeleteMe.Parent = ScrollFrame
+	DeleteMe.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	DeleteMe.Position = UDim2.new(0.0909090936, 0, 0.215780318, 0)
+	DeleteMe.Size = UDim2.new(0, 160, 0, 13)
+	DeleteMe.ZIndex = 3
+	DeleteMe.Font = Enum.Font.SourceSans
+	DeleteMe.Text = "DeleteMe"
+	DeleteMe.TextColor3 = Color3.fromRGB(118, 118, 118)
+	DeleteMe.TextSize = 14.000
+
+	UICorner_21.Parent = DeleteMe
+
+	GodMode.Name = "GodMode"
+	GodMode.Parent = ScrollFrame
+	GodMode.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	GodMode.Position = UDim2.new(0.505681813, 0, 0.273751348, 0)
+	GodMode.Size = UDim2.new(0, 160, 0, 13)
+	GodMode.ZIndex = 3
+	GodMode.Font = Enum.Font.SourceSans
+	GodMode.Text = "GodMode"
+	GodMode.TextColor3 = Color3.fromRGB(118, 118, 118)
+	GodMode.TextSize = 14.000
+
+	UICorner_22.Parent = GodMode
+
+	AntiVoid.Name = "AntiVoid"
+	AntiVoid.Parent = ScrollFrame
+	AntiVoid.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	AntiVoid.Position = UDim2.new(0.0909090936, 0, 0.273751348, 0)
+	AntiVoid.Size = UDim2.new(0, 160, 0, 13)
+	AntiVoid.ZIndex = 3
+	AntiVoid.Font = Enum.Font.SourceSans
+	AntiVoid.Text = "AntiVoid"
+	AntiVoid.TextColor3 = Color3.fromRGB(118, 118, 118)
+	AntiVoid.TextSize = 14.000
+
+	UICorner_23.Parent = AntiVoid
+
+	Anchor.Name = "Anchor"
+	Anchor.Parent = ScrollFrame
+	Anchor.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Anchor.Position = UDim2.new(0.0909090936, 0, 0.0901764557, 0)
+	Anchor.Size = UDim2.new(0, 160, 0, 13)
+	Anchor.ZIndex = 3
+	Anchor.Font = Enum.Font.SourceSans
+	Anchor.Text = "Anchor"
+	Anchor.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Anchor.TextSize = 14.000
+
+	UICorner_24.Parent = Anchor
+
+	AntiMap.Name = "AntiMap"
+	AntiMap.Parent = ScrollFrame
+	AntiMap.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	AntiMap.Position = UDim2.new(0.0909090936, 0, 0.215780318, 0)
+	AntiMap.Size = UDim2.new(0, 160, 0, 13)
+	AntiMap.ZIndex = 3
+	AntiMap.Font = Enum.Font.SourceSans
+	AntiMap.Text = "AntiMap"
+	AntiMap.TextColor3 = Color3.fromRGB(118, 118, 118)
+	AntiMap.TextSize = 14.000
+	UICorner_25.Parent = AntiMap
+
+	RemoveWalls.Name = "RemoveWalls"
+	RemoveWalls.Parent = ScrollFrame
+	RemoveWalls.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	RemoveWalls.Position = UDim2.new(0.0909090936, 0, 0.273751348, 0)
+	RemoveWalls.Size = UDim2.new(0, 160, 0, 13)
+	RemoveWalls.ZIndex = 3
+	RemoveWalls.Font = Enum.Font.SourceSans
+	RemoveWalls.Text = "RemoveWalls"
+	RemoveWalls.TextColor3 = Color3.fromRGB(118, 118, 118)
+	RemoveWalls.TextSize = 14.000
+
+	UICorner_26.Parent = RemoveWalls
+
+	AirWalk.Name = "AirWalk"
+	AirWalk.Parent = ScrollFrame
+	AirWalk.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	AirWalk.Position = UDim2.new(0.505681813, 0, 0.15297839, 0)
+	AirWalk.Size = UDim2.new(0, 160, 0, 13)
+	AirWalk.ZIndex = 3
+	AirWalk.Font = Enum.Font.SourceSans
+	AirWalk.Text = "AirWalk"
+	AirWalk.TextColor3 = Color3.fromRGB(118, 118, 118)
+	AirWalk.TextSize = 14.000
+
+	UICorner_27.Parent = AirWalk
+
+	ClickTp.Name = "ClickTp"
+	ClickTp.Parent = ScrollFrame
+	ClickTp.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	ClickTp.Position = UDim2.new(0.505681813, 0, 0.273751348, 0)
+	ClickTp.Size = UDim2.new(0, 160, 0, 13)
+	ClickTp.ZIndex = 3
+	ClickTp.Font = Enum.Font.SourceSans
+	ClickTp.Text = "ClickTp"
+	ClickTp.TextColor3 = Color3.fromRGB(118, 118, 118)
+	ClickTp.TextSize = 14.000
+
+	UICorner_28.Parent = ClickTp
+
+	Spam.Name = "Spam"
+	Spam.Parent = ScrollFrame
+	Spam.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Spam.Position = UDim2.new(0.0909090936, 0, 0.15297839, 0)
+	Spam.Size = UDim2.new(0, 160, 0, 13)
+	Spam.ZIndex = 3
+	Spam.Font = Enum.Font.SourceSans
+	Spam.Text = "Spam"
+	Spam.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Spam.TextSize = 14.000
+
+	UICorner_29.Parent = Spam
+
+	RocketRain.Name = "RocketRain"
+	RocketRain.Parent = ScrollFrame
+	RocketRain.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	RocketRain.Position = UDim2.new(0.505681813, 0, 0.215780318, 0)
+	RocketRain.Size = UDim2.new(0, 160, 0, 13)
+	RocketRain.ZIndex = 3
+	RocketRain.Font = Enum.Font.SourceSans
+	RocketRain.Text = "RocketRain"
+	RocketRain.TextColor3 = Color3.fromRGB(118, 118, 118)
+	RocketRain.TextSize = 14.000
+
+	UICorner_30.Parent = RocketRain
+	Crash.Name = "Crash"
+	Crash.Parent = ScrollFrame
+	Crash.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Crash.Position = UDim2.new(0.0909090936, 0, 0.0901764557, 0)
+	Crash.Size = UDim2.new(0, 160, 0, 13)
+	Crash.ZIndex = 3
+	Crash.Font = Enum.Font.SourceSans
+	Crash.Text = "Crash"
+	Crash.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Crash.TextSize = 14.000
+
+	UICorner_31.Parent = Crash
+
+	Load.Name = "Load"
+	Load.Parent = ScrollFrame
+	Load.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Load.Position = UDim2.new(0.505681813, 0, 0.0901764557, 0)
+	Load.Size = UDim2.new(0, 160, 0, 13)
+	Load.ZIndex = 3
+	Load.Font = Enum.Font.SourceSans
+	Load.Text = "Load"
+	Load.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Load.TextSize = 14.000
+
+	UICorner_32.Parent = Load
+
+	Save.Name = "Save"
+	Save.Parent = ScrollFrame
+	Save.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Save.Position = UDim2.new(0.505681813, 0, 0.331722349, 0)
+	Save.Size = UDim2.new(0, 160, 0, 13)
+	Save.ZIndex = 3
+	Save.Font = Enum.Font.SourceSans
+	Save.Text = "Save"
+	Save.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Save.TextSize = 14.000
+
+	UICorner_33.Parent = Save
+
+	Heal.Name = "Heal"
+	Heal.Parent = ScrollFrame
+	Heal.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Heal.Position = UDim2.new(0.0909090936, 0, 0.331722349, 0)
+	Heal.Size = UDim2.new(0, 160, 0, 13)
+	Heal.ZIndex = 3
+	Heal.Font = Enum.Font.SourceSans
+	Heal.Text = "Heal"
+	Heal.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Heal.TextSize = 14.000
+
+	UICorner_34.Parent = Heal
+
+	Martyrdom.Name = "Martyrdom"
+	Martyrdom.Parent = ScrollFrame
+	Martyrdom.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Martyrdom.Position = UDim2.new(0.505681813, 0, 0.0901764557, 0)
+	Martyrdom.Size = UDim2.new(0, 160, 0, 13)
+	Martyrdom.ZIndex = 3
+	Martyrdom.Font = Enum.Font.SourceSans
+	Martyrdom.Text = "Martyrdom"
+	Martyrdom.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Martyrdom.TextSize = 14.000
+
+	UICorner_35.Parent = Martyrdom
+
+	Safespot.Name = "Safespot"
+	Safespot.Parent = ScrollFrame
+	Safespot.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Safespot.Position = UDim2.new(0.505681813, 0, 0.15297839, 0)
+	Safespot.Size = UDim2.new(0, 160, 0, 13)
+	Safespot.ZIndex = 3
+	Safespot.Font = Enum.Font.SourceSans
+	Safespot.Text = "Safespot"
+	Safespot.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Safespot.TextSize = 14.000
+
+	UICorner_36.Parent = Safespot
+
+	AntiFF.Name = "AntiFF"
+	AntiFF.Parent = ScrollFrame
+	AntiFF.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	AntiFF.Position = UDim2.new(0.0909090936, 0, 0.15297839, 0)
+	AntiFF.Size = UDim2.new(0, 160, 0, 13)
+	AntiFF.ZIndex = 3
+	AntiFF.Font = Enum.Font.SourceSans
+	AntiFF.Text = "AntiFF"
+	AntiFF.TextColor3 = Color3.fromRGB(118, 118, 118)
+	AntiFF.TextSize = 14.000
+
+	UICorner_37.Parent = AntiFF
+
+	SpamChangers.Name = "SpamChangers"
+	SpamChangers.Parent = ScrollFrame
+	SpamChangers.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	SpamChangers.Position = UDim2.new(0.505681813, 0, 0.215780318, 0)
+	SpamChangers.Size = UDim2.new(0, 160, 0, 13)
+	SpamChangers.ZIndex = 3
+	SpamChangers.Font = Enum.Font.SourceSans
+	SpamChangers.Text = "SpamChangers"
+	SpamChangers.TextColor3 = Color3.fromRGB(118, 118, 118)
+	SpamChangers.TextSize = 14.000
+
+	UICorner_38.Parent = SpamChangers
+
+	RocketTarget.Name = "RocketTarget"
+	RocketTarget.Parent = ScrollFrame
+	RocketTarget.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	RocketTarget.Position = UDim2.new(0.0909090936, 0, 0.215780318, 0)
+	RocketTarget.Size = UDim2.new(0, 160, 0, 13)
+	RocketTarget.ZIndex = 3
+	RocketTarget.Font = Enum.Font.SourceSans
+	RocketTarget.Text = "RocketTarget"
+	RocketTarget.TextColor3 = Color3.fromRGB(118, 118, 118)
+	RocketTarget.TextSize = 14.000
+
+	UICorner_39.Parent = RocketTarget
+
+	KillAura.Name = "KillAura"
+	KillAura.Parent = ScrollFrame
+	KillAura.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	KillAura.Position = UDim2.new(0.505681813, 0, 0.273751348, 0)
+	KillAura.Size = UDim2.new(0, 160, 0, 13)
+	KillAura.ZIndex = 3
+	KillAura.Font = Enum.Font.SourceSans
+	KillAura.Text = "KillAura"
+	KillAura.TextColor3 = Color3.fromRGB(118, 118, 118)
+	KillAura.TextSize = 14.000
+
+	UICorner_40.Parent = KillAura
+
+	OverFrame.Name = "OverFrame"
+	OverFrame.Parent = SearchOutlineFrame
+	OverFrame.BackgroundColor3 = Color3.fromRGB(0, 8, 21)
+	OverFrame.Position = UDim2.new(0.031413611, 0, 0.0338163674, 0)
+	OverFrame.Size = UDim2.new(0, 179, 0, 110)
+
+	UICorner_41.Parent = OverFrame
+
+	SearchBar.Name = "SearchBar"
+	SearchBar.Parent = SearchOutlineFrame
+	SearchBar.BackgroundColor3 = Color3.fromRGB(52, 61, 88)
+	SearchBar.Position = UDim2.new(0.0989999995, 0, 0.0500000007, 0)
+	SearchBar.Size = UDim2.new(0, 147, 0, 18)
+	SearchBar.Font = Enum.Font.SourceSans
+	SearchBar.PlaceholderColor3 = Color3.fromRGB(118, 118, 118)
+	SearchBar.PlaceholderText = "Search"
+	SearchBar.Text = ""
+	SearchBar.TextColor3 = Color3.fromRGB(118, 118, 118)
+	SearchBar.TextSize = 14.000
+
+	UICorner_42.Parent = SearchBar
+
+	-- Scripts:
+
+	local script = Instance.new('LocalScript', SearchOutlineFrame)
+
+	--SearchBox
+	local searchBar = script.Parent.SearchBar 
+	local Items = script.Parent.ScrollFrame
+
+	function UpdateResults()
+		local Search = string.lower(searchBar.Text)
+		for i,v in pairs(Items:GetChildren()) do
+			if v:IsA("TextButton") then
+				if Search ~= "" then
+					local Item = string.lower(v.Text)
+					if string.find(Item, Search) then
+						v.Visible = true
+					else
+						v.Visible = false
+					end
+				else
+					v.Visible = false
+				end
+			end
+		end
+	end
+
+	searchBar.Changed:Connect(UpdateResults)
+
+	local script = Instance.new('Script', SearchUI)
+	--frame
+	frame = script.Parent.SearchDragFrame
+	frame.Draggable = true
+	frame.Active = true
+	frame.Selectable = true
+	--SearchX
+	SearchX.MouseButton1Down:connect(function()
+		SearchUI:Remove()
+	end)
+	--Cbring
+	CBring.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "CBring" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--FTI
+	FTI.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "FTI" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--Diamond
+	Diamond.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "Diamond" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+	--TargetOthers
+	TargetOthers.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "Others" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--InsertTarget
+	InsertTarget.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "InsertTarget" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--RemoveTarget
+	RemoveTarget.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "RemoveTarget" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+	--Speed
+	Speed.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "Speed" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--Jump
+	Jump.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "Jump" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--ToPlayer
+	ToPlayer.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "ToPlayer" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--TimeChange
+	TimeChange.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "TimeSet" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--Whitelist
+	Whitelist.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "Whitelist" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--InsertUser
+	InsertUser.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "InsertWhitelist" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--RemoveUser
+	RemoveUser.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "RemoveWhitelist" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--Hitlist
+	Hitlist.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "Hitlist" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+	--BaseProtect
+	BaseProtect.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "BaseProtect" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--DeleteMe
+	DeleteMe.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "DeleteMe" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--Godmode
+	GodMode.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "GodMode" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--AntiVoid
+	AntiVoid.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "AntiVoid" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--Anchor
+	Anchor.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "Anchor" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--AntiMap
+	AntiMap.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "AntiMap" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--RemoveWalls
+	RemoveWalls.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "RemoveWalls" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--AirWalk
+	AirWalk.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "AirWalk" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--ClickTP
+	ClickTp.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "ClickTP" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--Spam
+	Spam.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "Spam" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--RocketRain
+	RocketRain.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "RocketRain" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--Crash
+	Crash.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "Crash" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--Load
+	Load.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "Load" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--Save
+	Save.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "Save" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--Heal
+	Heal.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "Heal" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--Martyrdom
+	Martyrdom.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "Martyrdom" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--Safespot
+	Safespot.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "SafeSpot" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--AntiFF
+	AntiFF.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "AntiFF" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--SpamChangers
+	SpamChangers.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "SpamChangers" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--RocketTarget
+	RocketTarget.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "RocketTarget" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--KillAura
+	KillAura.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "KillAura" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+
+	--RenameSharks
+	spawn(function()
+		while true do
+			game.RunService.RenderStepped:wait()
+			if game.Workspace:FindFirstChild('Land Shark')then
+				game.Workspace['Land Shark'].Name = "Shark1"
+			end
+		end
+	end)
+
+	--Counter
+	_G.Counter = 1
+
+
+	--DeathPoint
+	DeathPoint.MouseButton1Down:connect(function()
+		for i, v in pairs(game.Players.LocalPlayer.PlayerGui.CHGui:GetDescendants()) do
+			if v.Name == "DeathPoint" then
+				for i,c in pairs(v.Parent.Parent:GetChildren()) do
+					if string.find(string.lower(c.Name), string.lower("Page")) then
+						if c.Visible == true then
+							c.Visible = false
+						end
+					end
+					v.Parent.Visible = true
+				end
+			end
+		end
+	end)
+end
+local function Sure()
+	local SureGui = Instance.new("ScreenGui")
+	local AreYouSure = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local YouSure = Instance.new("TextLabel")
+	local Yes = Instance.new("TextButton")
+	local UICorner_2 = Instance.new("UICorner")
+	local No = Instance.new("TextButton")
+	local UICorner_3 = Instance.new("UICorner")
+
+	--Properties:
+
+	SureGui.Name = "SureGui"
+	SureGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	SureGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	AreYouSure.Name = "AreYouSure"
+	AreYouSure.Parent = SureGui
+	AreYouSure.BackgroundColor3 = Color3.fromRGB(0, 8, 21)
+	AreYouSure.Position = UDim2.new(0.431754261, 0, 0.437230706, 0)
+	AreYouSure.Size = UDim2.new(0, 222, 0, 110)
+
+	UICorner.Parent = AreYouSure
+
+	YouSure.Name = "YouSure"
+	YouSure.Parent = AreYouSure
+	YouSure.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	YouSure.BackgroundTransparency = 1.000
+	YouSure.Position = UDim2.new(0.0495495796, 0, -0.0090909088, 0)
+	YouSure.Size = UDim2.new(0, 200, 0, 50)
+	YouSure.Font = Enum.Font.SourceSans
+	YouSure.Text = "Are You Sure?"
+	YouSure.TextColor3 = Color3.fromRGB(56, 2, 100)
+	YouSure.TextSize = 14.000
+
+	Yes.Name = "Yes"
+	Yes.Parent = AreYouSure
+	Yes.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Yes.Position = UDim2.new(0.0990990996, 0, 0.454545379, 0)
+	Yes.Size = UDim2.new(0, 71, 0, 40)
+	Yes.Font = Enum.Font.SourceSans
+	Yes.Text = "Yes"
+	Yes.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Yes.TextSize = 14.000
+
+	UICorner_2.Parent = Yes
+
+	No.Name = "No"
+	No.Parent = AreYouSure
+	No.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	No.Position = UDim2.new(0.581081092, 0, 0.454545379, 0)
+	No.Size = UDim2.new(0, 71, 0, 40)
+	No.Font = Enum.Font.SourceSans
+	No.Text = "No"
+	No.TextColor3 = Color3.fromRGB(0, 0, 0)
+	No.TextSize = 14.000
+
+	UICorner_3.Parent = No
+
+	-- Scripts:
+
+	local function YARUX_fake_script() -- SureGui.Script 
+		local script = Instance.new('Script', SureGui)
+
+		--No
+		No.MouseButton1Down:connect(function()
+			AreYouSure.Visible = false
+		end)
+
+		--Yes
+		Yes.MouseButton1Down:connect(function()
+		  game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+          game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(170903610)
+		  wait()
+	      game.Players.LocalPlayer.Backpack:WaitForChild("SpaceSword").Parent = game.Players.LocalPlayer.Character
+		  game.Players.LocalPlayer.Character:WaitForChild("SpaceSword").Handle:BreakJoints()
+          game.Players.LocalPlayer.Character.SpaceSword.Handle.CFrame = CFrame.new(Vector3.new(-9e9, 9e9, 9e9))
+		  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9e9,9e6,-9e9)
+		  game.Players.LocalPlayer.Character.SpaceSword.ControlFunction:InvokeServer("KeyDown","q")
+        end)	
+	end
+	coroutine.wrap(YARUX_fake_script)()
+end
+function ChGui()
+	CHGui = Instance.new("ScreenGui")
+	DragFrame = Instance.new("Frame")
+	OutlineFrame = Instance.new("Frame")
+	UICorner = Instance.new("UICorner")
+	Page1Frame = Instance.new("Frame")
+	UICorner_2 = Instance.new("UICorner")
+	_1 = Instance.new("TextLabel")
+	MadeByAnon = Instance.new("TextLabel")
+	Next1 = Instance.new("TextButton")
+	UICorner_3 = Instance.new("UICorner")
+	CBring = Instance.new("TextButton")
+	UICorner_4 = Instance.new("UICorner")
+	FTI = Instance.new("TextButton")
+	UICorner_5 = Instance.new("UICorner")
+	Others = Instance.new("TextButton")
+	UICorner_6 = Instance.new("UICorner")
+	Diamond = Instance.new("TextButton")
+	UICorner_7 = Instance.new("UICorner")
+	InsertTarget = Instance.new("TextButton")
+	UICorner_8 = Instance.new("UICorner")
+	RemoveTarget = Instance.new("TextButton")
+	UICorner_9 = Instance.new("UICorner")
+	TargetName = Instance.new("TextBox")
+	UICorner_10 = Instance.new("UICorner")
+	X = Instance.new("TextButton")
+	UICorner_11 = Instance.new("UICorner")
+	Page4Frame = Instance.new("Frame")
+	UICorner_12 = Instance.new("UICorner")
+	_4 = Instance.new("TextLabel")
+	Prev3 = Instance.new("TextButton")
+	UICorner_13 = Instance.new("UICorner")
+	AirWalk = Instance.new("TextButton")
+	UICorner_14 = Instance.new("UICorner")
+	ClickTP = Instance.new("TextButton")
+	UICorner_15 = Instance.new("UICorner")
+	Spam = Instance.new("TextButton")
+	UICorner_16 = Instance.new("UICorner")
+	Crash = Instance.new("TextButton")
+	UICorner_17 = Instance.new("UICorner")
+	RocketRain = Instance.new("TextButton")
+	UICorner_18 = Instance.new("UICorner")
+	Next4 = Instance.new("TextButton")
+	UICorner_19 = Instance.new("UICorner")
+	See6 = Instance.new("TextLabel")
+	Page2Frame = Instance.new("Frame")
+	UICorner_20 = Instance.new("UICorner")
+	_2 = Instance.new("TextLabel")
+	Next2 = Instance.new("TextButton")
+	UICorner_21 = Instance.new("UICorner")
+	Prev1 = Instance.new("TextButton")
+	UICorner_22 = Instance.new("UICorner")
+	Speed = Instance.new("TextButton")
+	UICorner_23 = Instance.new("UICorner")
+	WalkSpeed = Instance.new("TextBox")
+	UICorner_24 = Instance.new("UICorner")
+	Jump = Instance.new("TextButton")
+	UICorner_25 = Instance.new("UICorner")
+	JumpHeight = Instance.new("TextBox")
+	UICorner_26 = Instance.new("UICorner")
+	TimeChange = Instance.new("TextButton")
+	UICorner_27 = Instance.new("UICorner")
+	PlayerName = Instance.new("TextBox")
+	UICorner_28 = Instance.new("UICorner")
+	ToPlayer = Instance.new("TextButton")
+	UICorner_29 = Instance.new("UICorner")
+	TimeSet = Instance.new("TextBox")
+	UICorner_30 = Instance.new("UICorner")
+	Page3Frame = Instance.new("Frame")
+	UICorner_31 = Instance.new("UICorner")
+	_3 = Instance.new("TextLabel")
+	Next3 = Instance.new("TextButton")
+	UICorner_32 = Instance.new("UICorner")
+	Prev2 = Instance.new("TextButton")
+	UICorner_33 = Instance.new("UICorner")
+	Whitelist = Instance.new("TextButton")
+	UICorner_34 = Instance.new("UICorner")
+	WhitelistUser = Instance.new("TextBox")
+	UICorner_35 = Instance.new("UICorner")
+	InsertWhitelist = Instance.new("TextButton")
+	UICorner_36 = Instance.new("UICorner")
+	RemoveWhitelist = Instance.new("TextButton")
+	UICorner_37 = Instance.new("UICorner")
+	BaseProtect = Instance.new("TextButton")
+	UICorner_38 = Instance.new("UICorner")
+	GodMode = Instance.new("TextButton")
+	UICorner_39 = Instance.new("UICorner")
+	DeleteMe = Instance.new("TextButton")
+	UICorner_40 = Instance.new("UICorner")
+	Anchor = Instance.new("TextButton")
+	UICorner_41 = Instance.new("UICorner")
+	AntiMap = Instance.new("TextButton")
+	UICorner_42 = Instance.new("UICorner")
+	RemoveWalls = Instance.new("TextButton")
+	UICorner_43 = Instance.new("UICorner")
+	AntiVoid = Instance.new("TextButton")
+	UICorner_44 = Instance.new("UICorner")
+	Hitlist = Instance.new("TextButton")
+	UICorner_45 = Instance.new("UICorner")
+	Page5Frame = Instance.new("Frame")
+	UICorner_46 = Instance.new("UICorner")
+	_5 = Instance.new("TextLabel")
+	Prev4 = Instance.new("TextButton")
+	UICorner_47 = Instance.new("UICorner")
+	PrevLoad = Instance.new("TextButton")
+	UICorner_48 = Instance.new("UICorner")
+	Loadout = Instance.new("TextLabel")
+	UICorner_49 = Instance.new("UICorner")
+	NextLoad = Instance.new("TextButton")
+	UICorner_50 = Instance.new("UICorner")
+	Load = Instance.new("TextButton")
+	UICorner_51 = Instance.new("UICorner")
+	Save = Instance.new("TextButton")
+	UICorner_52 = Instance.new("UICorner")
+	Heal = Instance.new("TextButton")
+	UICorner_53 = Instance.new("UICorner")
+	Martyrdom = Instance.new("TextButton")
+	UICorner_54 = Instance.new("UICorner")
+	SafeSpot = Instance.new("TextButton")
+	UICorner_55 = Instance.new("UICorner")
+	AntiFF = Instance.new("TextButton")
+	UICorner_56 = Instance.new("UICorner")
+	Next5 = Instance.new("TextButton")
+	UICorner_57 = Instance.new("UICorner")
+	Page6Frame = Instance.new("Frame")
+	UICorner_58 = Instance.new("UICorner")
+	_6 = Instance.new("TextLabel")
+	Prev5 = Instance.new("TextButton")
+	UICorner_59 = Instance.new("UICorner")
+	SpamChangers = Instance.new("TextLabel")
+	Grimgold = Instance.new("TextButton")
+	Epsilon = Instance.new("TextButton")
+	Chart = Instance.new("TextButton")
+	Woods = Instance.new("TextButton")
+	SelectMessage = Instance.new("TextLabel")
+	KillAura = Instance.new("TextButton")
+	UICorner_60 = Instance.new("UICorner")
+	LandShark = Instance.new("TextButton")
+	Tela = Instance.new("TextButton")
+	DeathPoint = Instance.new("TextButton")
+	UICorner_61 = Instance.new("UICorner")
+	Wind = Instance.new("TextButton")
+	RocketTarget = Instance.new("TextButton")
+	UICorner_62 = Instance.new("UICorner")
+	Next6 = Instance.new("TextButton")
+	UICorner_63 = Instance.new("UICorner")
+	Search = Instance.new("TextButton")
+	UICorner_64 = Instance.new("UICorner")
+	OwnerPanel = Instance.new("TextButton")
+	UICorner_65 = Instance.new("UICorner")
+	Page7Frame = Instance.new("Frame")
+	UICorner_66 = Instance.new("UICorner")
+	_7 = Instance.new("TextLabel")
+	Prev6 = Instance.new("TextButton")
+	UICorner_67 = Instance.new("UICorner")
+	SpectateName = Instance.new("TextBox")
+	UICorner_68 = Instance.new("UICorner")
+	Bring = Instance.new("TextButton")
+	UICorner_69 = Instance.new("UICorner")
+	Spectate = Instance.new("TextButton")
+	UICorner_70 = Instance.new("UICorner")
+	Blind = Instance.new("TextButton")
+	UICorner_71 = Instance.new("UICorner")
+	IDToggle = Instance.new("TextButton")
+	UICorner_72 = Instance.new("UICorner")
+	NameToggle = Instance.new("TextButton")
+	UICorner_73 = Instance.new("UICorner")
+	RemoveHit = Instance.new("TextButton")
+	UICorner_74 = Instance.new("UICorner")
+	InsertHit = Instance.new("TextButton")
+	UICorner_75 = Instance.new("UICorner")
+	HitName = Instance.new("TextBox")
+	UICorner_76 = Instance.new("UICorner")
+	Next7 = Instance.new("TextButton")
+	UICorner_77 = Instance.new("UICorner")
+	Page8Frame = Instance.new("Frame")
+	UICorner_78 = Instance.new("UICorner")
+	_8 = Instance.new("TextLabel")
+	Prev7 = Instance.new("TextButton")
+	UICorner_79 = Instance.new("UICorner")
+	Next8 = Instance.new("TextButton")
+	UICorner_80 = Instance.new("UICorner")
+	SongID = Instance.new("TextBox")
+	UICorner_81 = Instance.new("UICorner")
+	Play = Instance.new("TextButton")
+	UICorner_82 = Instance.new("UICorner")
+	Pause = Instance.new("TextButton")
+	UICorner_83 = Instance.new("UICorner")
+	ChatLogger = Instance.new("TextButton")
+	UICorner_84 = Instance.new("UICorner")
+	RocketDraw = Instance.new("TextButton")
+	UICorner_85 = Instance.new("UICorner")
+	Fly = Instance.new("TextButton")
+	UICorner_86 = Instance.new("UICorner")
+	GearBreak = Instance.new("TextButton")
+	UICorner_87 = Instance.new("UICorner")
+	HatGlitch = Instance.new("TextButton")
+	UICorner_88 = Instance.new("UICorner")
+	Page10Frame = Instance.new("Frame")
+	UICorner_89 = Instance.new("UICorner")
+	_10 = Instance.new("TextLabel")
+	Prev9 = Instance.new("TextButton")
+	UICorner_90 = Instance.new("UICorner")
+	CreditsTitle = Instance.new("TextLabel")
+	CreditsFrame = Instance.new("Frame")
+	Scripting = Instance.new("TextLabel")
+	GuiDesign = Instance.new("TextLabel")
+	Inspiration = Instance.new("TextLabel")
+	UIListLayout = Instance.new("UIListLayout")
+	Thanks = Instance.new("TextLabel")
+	Page9Frame = Instance.new("Frame")
+	UICorner_91 = Instance.new("UICorner")
+	_9 = Instance.new("TextLabel")
+	Prev8 = Instance.new("TextButton")
+	UICorner_92 = Instance.new("UICorner")
+	Next9 = Instance.new("TextButton")
+	UICorner_93 = Instance.new("UICorner")
+	InsertScroll = Instance.new("TextButton")
+	UICorner_94 = Instance.new("UICorner")
+	InsertAzure = Instance.new("TextButton")
+	UICorner_95 = Instance.new("UICorner")
+	InsertHorn = Instance.new("TextButton")
+	UICorner_96 = Instance.new("UICorner")
+	Banned = Instance.new("TextLabel")
+	InsertFrost = Instance.new("TextButton")
+	UICorner_97 = Instance.new("UICorner")
+	InsertTela = Instance.new("TextButton")
+	UICorner_98 = Instance.new("UICorner")
+	InsertWings = Instance.new("TextButton")
+	UICorner_99 = Instance.new("UICorner")
+	InsertSOD = Instance.new("TextButton")
+	UICorner_100 = Instance.new("UICorner")
+	InsertChart = Instance.new("TextButton")
+	UICorner_101 = Instance.new("UICorner")
+	InsertPol = Instance.new("TextButton")
+	UICorner_102 = Instance.new("UICorner")
+	InsertFurno = Instance.new("TextButton")
+	UICorner_103 = Instance.new("UICorner")
+	InsertSorcus = Instance.new("TextButton")
+	UICorner_104 = Instance.new("UICorner")
+	InsertSOL = Instance.new("TextButton")
+	UICorner_105 = Instance.new("UICorner")
+	GearInserters = Instance.new("TextLabel")
+
+	--Properties:
+
+	CHGui.Name = "CHGui"
+	CHGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+	DragFrame.Name = "DragFrame"
+	DragFrame.Parent = CHGui
+	DragFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	DragFrame.BackgroundTransparency = 1.000
+	DragFrame.LayoutOrder = 1000000
+	DragFrame.Position = UDim2.new(0.427172571, 0, 0.146757677, 0)
+	DragFrame.Size = UDim2.new(0, 348, 0, 221)
+
+	OutlineFrame.Name = "OutlineFrame"
+	OutlineFrame.Parent = DragFrame
+	OutlineFrame.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	OutlineFrame.LayoutOrder = 2
+	OutlineFrame.Position = UDim2.new(0.0502301827, 0, 0.0676018223, 0)
+	OutlineFrame.Size = UDim2.new(0, 313, 0, 190)
+
+	UICorner.CornerRadius = UDim.new(0, 10)
+	UICorner.Parent = OutlineFrame
+
+	Page1Frame.Name = "Page1Frame"
+	Page1Frame.Parent = OutlineFrame
+	Page1Frame.BackgroundColor3 = Color3.fromRGB(0, 8, 21)
+	Page1Frame.LayoutOrder = 100
+	Page1Frame.Position = UDim2.new(0.0223642178, 0, 0.042105265, 0)
+	Page1Frame.Size = UDim2.new(0, 298, 0, 174)
+
+	UICorner_2.CornerRadius = UDim.new(0, 10)
+	UICorner_2.Parent = Page1Frame
+
+	_1.Name = "1"
+	_1.Parent = Page1Frame
+	_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	_1.BackgroundTransparency = 1.000
+	_1.Position = UDim2.new(0.832214773, 0, 0.890804589, 0)
+	_1.Size = UDim2.new(0, 67, 0, 13)
+	_1.Font = Enum.Font.SourceSans
+	_1.Text = "1"
+	_1.TextColor3 = Color3.fromRGB(42, 2, 74)
+	_1.TextScaled = true
+	_1.TextSize = 14.000
+	_1.TextWrapped = true
+
+	MadeByAnon.Name = "MadeByAnon"
+	MadeByAnon.Parent = Page1Frame
+	MadeByAnon.BackgroundColor3 = Color3.fromRGB(57, 57, 55)
+	MadeByAnon.BackgroundTransparency = 1.000
+	MadeByAnon.Position = UDim2.new(0.171140939, 0, 0.890804589, 0)
+	MadeByAnon.Size = UDim2.new(0, 197, 0, 13)
+	MadeByAnon.Font = Enum.Font.SourceSans
+	MadeByAnon.Text = "Made By:Anon"
+	MadeByAnon.TextColor3 = Color3.fromRGB(42, 2, 74)
+	MadeByAnon.TextScaled = true
+	MadeByAnon.TextSize = 14.000
+	MadeByAnon.TextStrokeColor3 = Color3.fromRGB(240, 240, 240)
+	MadeByAnon.TextWrapped = true
+
+	Next1.Name = "Next1"
+	Next1.Parent = Page1Frame
+	Next1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Next1.BackgroundTransparency = 1.000
+	Next1.Position = UDim2.new(0.900958478, 0, 0.415789634, 0)
+	Next1.Size = UDim2.new(0, 23, 0, 30)
+	Next1.Font = Enum.Font.RobotoCondensed
+	Next1.Text = ">"
+	Next1.TextColor3 = Color3.fromRGB(56, 2, 100)
+	Next1.TextScaled = true
+	Next1.TextSize = 14.000
+	Next1.TextWrapped = true
+
+	UICorner_3.Parent = Next1
+
+	CBring.Name = "CBring"
+	CBring.Parent = Page1Frame
+	CBring.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	CBring.Position = UDim2.new(0.0973154381, 0, 0.0632181242, 0)
+	CBring.Size = UDim2.new(0, 54, 0, 36)
+	CBring.Font = Enum.Font.SourceSans
+	CBring.Text = "CBring"
+	CBring.TextColor3 = Color3.fromRGB(118, 118, 118)
+	CBring.TextSize = 14.000
+
+	UICorner_4.Parent = CBring
+
+	FTI.Name = "FTI"
+	FTI.Parent = Page1Frame
+	FTI.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	FTI.Position = UDim2.new(0.409395963, 0, 0.0632181242, 0)
+	FTI.Size = UDim2.new(0, 54, 0, 36)
+	FTI.Font = Enum.Font.SourceSans
+	FTI.Text = "FTI"
+	FTI.TextColor3 = Color3.fromRGB(118, 118, 118)
+	FTI.TextSize = 14.000
+
+	UICorner_5.Parent = FTI
+
+	Others.Name = "Others"
+	Others.Parent = Page1Frame
+	Others.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Others.Position = UDim2.new(0.127516776, 0, 0.58820343, 0)
+	Others.Size = UDim2.new(0, 45, 0, 38)
+	Others.Font = Enum.Font.SourceSans
+	Others.Text = "Target Others"
+	Others.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Others.TextSize = 14.000
+	Others.TextWrapped = true
+
+	UICorner_6.Parent = Others
+
+	Diamond.Name = "Diamond"
+	Diamond.Parent = Page1Frame
+	Diamond.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Diamond.Position = UDim2.new(0.718120813, 0, 0.0632181242, 0)
+	Diamond.Size = UDim2.new(0, 54, 0, 36)
+	Diamond.Font = Enum.Font.SourceSans
+	Diamond.Text = "Diamond"
+	Diamond.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Diamond.TextSize = 14.000
+
+	UICorner_7.Parent = Diamond
+
+	InsertTarget.Name = "InsertTarget"
+	InsertTarget.Parent = Page1Frame
+	InsertTarget.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	InsertTarget.Position = UDim2.new(0.308724821, 0, 0.586206913, 0)
+	InsertTarget.Size = UDim2.new(0, 176, 0, 17)
+	InsertTarget.Font = Enum.Font.SourceSans
+	InsertTarget.Text = "Insert Target"
+	InsertTarget.TextColor3 = Color3.fromRGB(118, 118, 118)
+	InsertTarget.TextSize = 14.000
+
+	UICorner_8.Parent = InsertTarget
+
+	RemoveTarget.Name = "RemoveTarget"
+	RemoveTarget.Parent = Page1Frame
+	RemoveTarget.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	RemoveTarget.Position = UDim2.new(0.308724821, 0, 0.706896603, 0)
+	RemoveTarget.Size = UDim2.new(0, 176, 0, 17)
+	RemoveTarget.Font = Enum.Font.SourceSans
+	RemoveTarget.Text = "Remove Target"
+	RemoveTarget.TextColor3 = Color3.fromRGB(118, 118, 118)
+	RemoveTarget.TextSize = 14.000
+
+	UICorner_9.Parent = RemoveTarget
+
+	TargetName.Name = "TargetName"
+	TargetName.Parent = Page1Frame
+	TargetName.BackgroundColor3 = Color3.fromRGB(52, 61, 88)
+	TargetName.Position = UDim2.new(0.0995454714, 0, 0.33532986, 0)
+	TargetName.Size = UDim2.new(0, 238, 0, 29)
+	TargetName.Font = Enum.Font.SourceSans
+	TargetName.PlaceholderColor3 = Color3.fromRGB(118, 118, 118)
+	TargetName.PlaceholderText = "Target Username"
+	TargetName.Text = ""
+	TargetName.TextColor3 = Color3.fromRGB(118, 118, 118)
+	TargetName.TextSize = 14.000
+
+	UICorner_10.Parent = TargetName
+
+	X.Name = "X"
+	X.Parent = OutlineFrame
+	X.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	X.LayoutOrder = 10000
+	X.Position = UDim2.new(0.93929714, 0, 0, 0)
+	X.Size = UDim2.new(0, 19, 0, 19)
+	X.ZIndex = 1000
+	X.Font = Enum.Font.SourceSans
+	X.Text = "X"
+	X.TextColor3 = Color3.fromRGB(0, 0, 0)
+	X.TextSize = 14.000
+
+	UICorner_11.CornerRadius = UDim.new(0, 100)
+	UICorner_11.Parent = X
+
+	Page4Frame.Name = "Page4Frame"
+	Page4Frame.Parent = OutlineFrame
+	Page4Frame.BackgroundColor3 = Color3.fromRGB(0, 8, 21)
+	Page4Frame.LayoutOrder = 400
+	Page4Frame.Position = UDim2.new(0.0223642178, 0, 0.042105265, 0)
+	Page4Frame.Size = UDim2.new(0, 298, 0, 174)
+	Page4Frame.Visible = false
+
+	UICorner_12.CornerRadius = UDim.new(0, 10)
+	UICorner_12.Parent = Page4Frame
+
+	_4.Name = "4"
+	_4.Parent = Page4Frame
+	_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	_4.BackgroundTransparency = 1.000
+	_4.Position = UDim2.new(0.832214773, 0, 0.890804589, 0)
+	_4.Size = UDim2.new(0, 67, 0, 13)
+	_4.Font = Enum.Font.SourceSans
+	_4.Text = "4"
+	_4.TextColor3 = Color3.fromRGB(42, 2, 74)
+	_4.TextScaled = true
+	_4.TextSize = 14.000
+	_4.TextWrapped = true
+
+	Prev3.Name = "Prev3"
+	Prev3.Parent = Page4Frame
+	Prev3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Prev3.BackgroundTransparency = 1.000
+	Prev3.Position = UDim2.new(0.022364201, 0, 0.415789634, 0)
+	Prev3.Size = UDim2.new(0, 23, 0, 30)
+	Prev3.Font = Enum.Font.RobotoCondensed
+	Prev3.Text = "<"
+	Prev3.TextColor3 = Color3.fromRGB(56, 2, 100)
+	Prev3.TextScaled = true
+	Prev3.TextSize = 14.000
+	Prev3.TextWrapped = true
+
+	UICorner_13.Parent = Prev3
+
+	AirWalk.Name = "AirWalk"
+	AirWalk.Parent = Page4Frame
+	AirWalk.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	AirWalk.Position = UDim2.new(0.0973154306, 0, 0.0689655542, 0)
+	AirWalk.Size = UDim2.new(0, 60, 0, 60)
+	AirWalk.Font = Enum.Font.SourceSans
+	AirWalk.Text = "AirWalk"
+	AirWalk.TextColor3 = Color3.fromRGB(118, 118, 118)
+	AirWalk.TextSize = 14.000
+
+	UICorner_14.CornerRadius = UDim.new(0, 100)
+	UICorner_14.Parent = AirWalk
+
+	ClickTP.Name = "ClickTP"
+	ClickTP.Parent = Page4Frame
+	ClickTP.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	ClickTP.Position = UDim2.new(0.399328858, 0, 0.0689655542, 0)
+	ClickTP.Size = UDim2.new(0, 60, 0, 60)
+	ClickTP.Font = Enum.Font.SourceSans
+	ClickTP.Text = "ClickTP"
+	ClickTP.TextColor3 = Color3.fromRGB(118, 118, 118)
+	ClickTP.TextSize = 14.000
+
+	UICorner_15.CornerRadius = UDim.new(0, 100)
+	UICorner_15.Parent = ClickTP
+
+	Spam.Name = "Spam"
+	Spam.Parent = Page4Frame
+	Spam.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Spam.Position = UDim2.new(0.697986543, 0, 0.0689655542, 0)
+	Spam.Size = UDim2.new(0, 60, 0, 60)
+	Spam.Font = Enum.Font.SourceSans
+	Spam.Text = "Spam"
+	Spam.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Spam.TextSize = 14.000
+
+	UICorner_16.CornerRadius = UDim.new(0, 100)
+	UICorner_16.Parent = Spam
+
+	Crash.Name = "Crash"
+	Crash.Parent = Page4Frame
+	Crash.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Crash.Position = UDim2.new(0.546979845, 0, 0.545976996, 0)
+	Crash.Size = UDim2.new(0, 60, 0, 60)
+	Crash.Font = Enum.Font.SourceSans
+	Crash.Text = "Crash"
+	Crash.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Crash.TextSize = 14.000
+
+	UICorner_17.CornerRadius = UDim.new(0, 100)
+	UICorner_17.Parent = Crash
+
+	RocketRain.Name = "RocketRain"
+	RocketRain.Parent = Page4Frame
+	RocketRain.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	RocketRain.Position = UDim2.new(0.251677841, 0, 0.545976996, 0)
+	RocketRain.Size = UDim2.new(0, 60, 0, 60)
+	RocketRain.Font = Enum.Font.SourceSans
+	RocketRain.Text = "Rocket Rain"
+	RocketRain.TextColor3 = Color3.fromRGB(118, 118, 118)
+	RocketRain.TextSize = 14.000
+
+	UICorner_18.CornerRadius = UDim.new(0, 100)
+	UICorner_18.Parent = RocketRain
+
+	Next4.Name = "Next4"
+	Next4.Parent = Page4Frame
+	Next4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Next4.BackgroundTransparency = 1.000
+	Next4.Position = UDim2.new(0.900958478, 0, 0.415789634, 0)
+	Next4.Size = UDim2.new(0, 23, 0, 30)
+	Next4.Font = Enum.Font.RobotoCondensed
+	Next4.Text = ">"
+	Next4.TextColor3 = Color3.fromRGB(56, 2, 100)
+	Next4.TextScaled = true
+	Next4.TextSize = 14.000
+	Next4.TextWrapped = true
+
+	UICorner_19.Parent = Next4
+
+	See6.Name = "See6"
+	See6.Parent = Page4Frame
+	See6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	See6.BackgroundTransparency = 1.000
+	See6.Position = UDim2.new(0.463087261, 0, 0.298850536, 0)
+	See6.Size = UDim2.new(0, 200, 0, 50)
+	See6.Font = Enum.Font.SourceSansItalic
+	See6.Text = "See Page6"
+	See6.TextColor3 = Color3.fromRGB(118, 118, 118)
+	See6.TextSize = 14.000
+
+	Page2Frame.Name = "Page2Frame"
+	Page2Frame.Parent = OutlineFrame
+	Page2Frame.BackgroundColor3 = Color3.fromRGB(0, 8, 21)
+	Page2Frame.LayoutOrder = 200
+	Page2Frame.Position = UDim2.new(0.0223642178, 0, 0.042105265, 0)
+	Page2Frame.Size = UDim2.new(0, 298, 0, 174)
+	Page2Frame.Visible = false
+
+	UICorner_20.CornerRadius = UDim.new(0, 10)
+	UICorner_20.Parent = Page2Frame
+
+	_2.Name = "2"
+	_2.Parent = Page2Frame
+	_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	_2.BackgroundTransparency = 1.000
+	_2.Position = UDim2.new(0.832214773, 0, 0.890804589, 0)
+	_2.Size = UDim2.new(0, 67, 0, 13)
+	_2.Font = Enum.Font.SourceSans
+	_2.Text = "2"
+	_2.TextColor3 = Color3.fromRGB(42, 2, 74)
+	_2.TextScaled = true
+	_2.TextSize = 14.000
+	_2.TextWrapped = true
+
+	Next2.Name = "Next2"
+	Next2.Parent = Page2Frame
+	Next2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Next2.BackgroundTransparency = 1.000
+	Next2.Position = UDim2.new(0.900958478, 0, 0.415789634, 0)
+	Next2.Size = UDim2.new(0, 23, 0, 30)
+	Next2.Font = Enum.Font.RobotoCondensed
+	Next2.Text = ">"
+	Next2.TextColor3 = Color3.fromRGB(56, 2, 100)
+	Next2.TextScaled = true
+	Next2.TextSize = 14.000
+	Next2.TextWrapped = true
+
+	UICorner_21.Parent = Next2
+
+	Prev1.Name = "Prev1"
+	Prev1.Parent = Page2Frame
+	Prev1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Prev1.BackgroundTransparency = 1.000
+	Prev1.Position = UDim2.new(0.022364201, 0, 0.415789634, 0)
+	Prev1.Size = UDim2.new(0, 23, 0, 30)
+	Prev1.Font = Enum.Font.RobotoCondensed
+	Prev1.Text = "<"
+	Prev1.TextColor3 = Color3.fromRGB(56, 2, 100)
+	Prev1.TextScaled = true
+	Prev1.TextSize = 14.000
+	Prev1.TextWrapped = true
+
+	UICorner_22.Parent = Prev1
+
+	Speed.Name = "Speed"
+	Speed.Parent = Page2Frame
+	Speed.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Speed.Position = UDim2.new(0.0973154381, 0, 0.0632183924, 0)
+	Speed.Size = UDim2.new(0, 239, 0, 15)
+	Speed.Font = Enum.Font.SourceSans
+	Speed.Text = "Speed"
+	Speed.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Speed.TextSize = 14.000
+
+	UICorner_23.Parent = Speed
+
+	WalkSpeed.Name = "WalkSpeed"
+	WalkSpeed.Parent = Page2Frame
+	WalkSpeed.BackgroundColor3 = Color3.fromRGB(52, 61, 88)
+	WalkSpeed.Position = UDim2.new(0.0973154381, 0, 0.183908045, 0)
+	WalkSpeed.Size = UDim2.new(0, 239, 0, 14)
+	WalkSpeed.Font = Enum.Font.SourceSans
+	WalkSpeed.PlaceholderColor3 = Color3.fromRGB(118, 118, 118)
+	WalkSpeed.PlaceholderText = "Speed Value"
+	WalkSpeed.Text = ""
+	WalkSpeed.TextColor3 = Color3.fromRGB(118, 118, 118)
+	WalkSpeed.TextSize = 14.000
+
+	UICorner_24.Parent = WalkSpeed
+
+	Jump.Name = "Jump"
+	Jump.Parent = Page2Frame
+	Jump.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Jump.Position = UDim2.new(0.100671142, 0, 0.298850596, 0)
+	Jump.Size = UDim2.new(0, 239, 0, 15)
+	Jump.Font = Enum.Font.SourceSans
+	Jump.Text = "Jump"
+	Jump.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Jump.TextSize = 14.000
+
+	UICorner_25.Parent = Jump
+
+	JumpHeight.Name = "JumpHeight"
+	JumpHeight.Parent = Page2Frame
+	JumpHeight.BackgroundColor3 = Color3.fromRGB(52, 61, 88)
+	JumpHeight.Position = UDim2.new(0.100671142, 0, 0.419540226, 0)
+	JumpHeight.Size = UDim2.new(0, 239, 0, 14)
+	JumpHeight.Font = Enum.Font.SourceSans
+	JumpHeight.PlaceholderColor3 = Color3.fromRGB(118, 118, 118)
+	JumpHeight.PlaceholderText = "Jump Value"
+	JumpHeight.Text = ""
+	JumpHeight.TextColor3 = Color3.fromRGB(118, 118, 118)
+	JumpHeight.TextSize = 14.000
+
+	UICorner_26.Parent = JumpHeight
+
+	TimeChange.Name = "TimeChange"
+	TimeChange.Parent = Page2Frame
+	TimeChange.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	TimeChange.Position = UDim2.new(0.104026847, 0, 0.764367819, 0)
+	TimeChange.Size = UDim2.new(0, 239, 0, 15)
+	TimeChange.Font = Enum.Font.SourceSans
+	TimeChange.Text = "TimeChange"
+	TimeChange.TextColor3 = Color3.fromRGB(118, 118, 118)
+	TimeChange.TextSize = 14.000
+
+	UICorner_27.Parent = TimeChange
+
+	PlayerName.Name = "PlayerName"
+	PlayerName.Parent = Page2Frame
+	PlayerName.BackgroundColor3 = Color3.fromRGB(52, 61, 88)
+	PlayerName.Position = UDim2.new(0.100671142, 0, 0.649425268, 0)
+	PlayerName.Size = UDim2.new(0, 239, 0, 14)
+	PlayerName.Font = Enum.Font.SourceSans
+	PlayerName.PlaceholderColor3 = Color3.fromRGB(118, 118, 118)
+	PlayerName.PlaceholderText = "Player Name"
+	PlayerName.Text = ""
+	PlayerName.TextColor3 = Color3.fromRGB(118, 118, 118)
+	PlayerName.TextSize = 14.000
+
+	UICorner_28.Parent = PlayerName
+
+	ToPlayer.Name = "ToPlayer"
+	ToPlayer.Parent = Page2Frame
+	ToPlayer.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	ToPlayer.Position = UDim2.new(0.100671142, 0, 0.528735638, 0)
+	ToPlayer.Size = UDim2.new(0, 239, 0, 15)
+	ToPlayer.Font = Enum.Font.SourceSans
+	ToPlayer.Text = "ToPlayer"
+	ToPlayer.TextColor3 = Color3.fromRGB(118, 118, 118)
+	ToPlayer.TextSize = 14.000
+
+	UICorner_29.Parent = ToPlayer
+
+	TimeSet.Name = "TimeSet"
+	TimeSet.Parent = Page2Frame
+	TimeSet.BackgroundColor3 = Color3.fromRGB(52, 61, 88)
+	TimeSet.Position = UDim2.new(0.104026847, 0, 0.885057449, 0)
+	TimeSet.Size = UDim2.new(0, 239, 0, 14)
+	TimeSet.Font = Enum.Font.SourceSans
+	TimeSet.PlaceholderColor3 = Color3.fromRGB(118, 118, 118)
+	TimeSet.PlaceholderText = "00:00 - 24:00"
+	TimeSet.Text = ""
+	TimeSet.TextColor3 = Color3.fromRGB(118, 118, 118)
+	TimeSet.TextSize = 14.000
+
+	UICorner_30.Parent = TimeSet
+
+	Page3Frame.Name = "Page3Frame"
+	Page3Frame.Parent = OutlineFrame
+	Page3Frame.BackgroundColor3 = Color3.fromRGB(0, 8, 21)
+	Page3Frame.LayoutOrder = 300
+	Page3Frame.Position = UDim2.new(0.0223642178, 0, 0.042105265, 0)
+	Page3Frame.Size = UDim2.new(0, 298, 0, 174)
+	Page3Frame.Visible = false
+
+	UICorner_31.CornerRadius = UDim.new(0, 10)
+	UICorner_31.Parent = Page3Frame
+
+	_3.Name = "3"
+	_3.Parent = Page3Frame
+	_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	_3.BackgroundTransparency = 1.000
+	_3.Position = UDim2.new(0.832214773, 0, 0.890804589, 0)
+	_3.Size = UDim2.new(0, 67, 0, 13)
+	_3.Font = Enum.Font.SourceSans
+	_3.Text = "3"
+	_3.TextColor3 = Color3.fromRGB(42, 2, 74)
+	_3.TextScaled = true
+	_3.TextSize = 14.000
+	_3.TextWrapped = true
+
+	Next3.Name = "Next3"
+	Next3.Parent = Page3Frame
+	Next3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Next3.BackgroundTransparency = 1.000
+	Next3.Position = UDim2.new(0.900958478, 0, 0.415789634, 0)
+	Next3.Size = UDim2.new(0, 23, 0, 30)
+	Next3.Font = Enum.Font.RobotoCondensed
+	Next3.Text = ">"
+	Next3.TextColor3 = Color3.fromRGB(56, 2, 100)
+	Next3.TextScaled = true
+	Next3.TextSize = 14.000
+	Next3.TextWrapped = true
+
+	UICorner_32.Parent = Next3
+
+	Prev2.Name = "Prev2"
+	Prev2.Parent = Page3Frame
+	Prev2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Prev2.BackgroundTransparency = 1.000
+	Prev2.Position = UDim2.new(0.022364201, 0, 0.415789634, 0)
+	Prev2.Size = UDim2.new(0, 23, 0, 30)
+	Prev2.Font = Enum.Font.RobotoCondensed
+	Prev2.Text = "<"
+	Prev2.TextColor3 = Color3.fromRGB(56, 2, 100)
+	Prev2.TextScaled = true
+	Prev2.TextSize = 14.000
+	Prev2.TextWrapped = true
+
+	UICorner_33.Parent = Prev2
+
+	Whitelist.Name = "Whitelist"
+	Whitelist.Parent = Page3Frame
+	Whitelist.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Whitelist.Position = UDim2.new(0.0973154381, 0, 0.0574714392, 0)
+	Whitelist.Size = UDim2.new(0, 53, 0, 43)
+	Whitelist.Font = Enum.Font.SourceSans
+	Whitelist.Text = "Whitelist"
+	Whitelist.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Whitelist.TextSize = 14.000
+
+	UICorner_34.Parent = Whitelist
+
+	WhitelistUser.Name = "WhitelistUser"
+	WhitelistUser.Parent = Page3Frame
+	WhitelistUser.BackgroundColor3 = Color3.fromRGB(52, 61, 88)
+	WhitelistUser.Position = UDim2.new(0.295302004, 0, 0.0632183924, 0)
+	WhitelistUser.Size = UDim2.new(0, 180, 0, 15)
+	WhitelistUser.Font = Enum.Font.SourceSans
+	WhitelistUser.PlaceholderColor3 = Color3.fromRGB(118, 118, 118)
+	WhitelistUser.PlaceholderText = "Whitelist User"
+	WhitelistUser.Text = ""
+	WhitelistUser.TextColor3 = Color3.fromRGB(118, 118, 118)
+	WhitelistUser.TextSize = 14.000
+
+	UICorner_35.Parent = WhitelistUser
+
+	InsertWhitelist.Name = "InsertWhitelist"
+	InsertWhitelist.Parent = Page3Frame
+	InsertWhitelist.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	InsertWhitelist.Position = UDim2.new(0.295302004, 0, 0.183908135, 0)
+	InsertWhitelist.Size = UDim2.new(0, 88, 0, 21)
+	InsertWhitelist.Font = Enum.Font.SourceSans
+	InsertWhitelist.Text = "InsertUser"
+	InsertWhitelist.TextColor3 = Color3.fromRGB(118, 118, 118)
+	InsertWhitelist.TextSize = 14.000
+
+	UICorner_36.Parent = InsertWhitelist
+
+	RemoveWhitelist.Name = "RemoveWhitelist"
+	RemoveWhitelist.Parent = Page3Frame
+	RemoveWhitelist.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	RemoveWhitelist.Position = UDim2.new(0.604026794, 0, 0.183908135, 0)
+	RemoveWhitelist.Size = UDim2.new(0, 88, 0, 21)
+	RemoveWhitelist.Font = Enum.Font.SourceSans
+	RemoveWhitelist.Text = "RemoveUser"
+	RemoveWhitelist.TextColor3 = Color3.fromRGB(118, 118, 118)
+	RemoveWhitelist.TextSize = 14.000
+
+	UICorner_37.Parent = RemoveWhitelist
+
+	BaseProtect.Name = "BaseProtect"
+	BaseProtect.Parent = Page3Frame
+	BaseProtect.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	BaseProtect.Position = UDim2.new(0.312080532, 0, 0.356321841, 0)
+	BaseProtect.Size = UDim2.new(0, 50, 0, 50)
+	BaseProtect.Font = Enum.Font.SourceSans
+	BaseProtect.Text = "Base Protect"
+	BaseProtect.TextColor3 = Color3.fromRGB(118, 118, 118)
+	BaseProtect.TextSize = 14.000
+	BaseProtect.TextWrapped = true
+
+	UICorner_38.Parent = BaseProtect
+
+	GodMode.Name = "GodMode"
+	GodMode.Parent = Page3Frame
+	GodMode.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	GodMode.Position = UDim2.new(0.731543601, 0, 0.356321812, 0)
+	GodMode.Size = UDim2.new(0, 50, 0, 50)
+	GodMode.Font = Enum.Font.SourceSans
+	GodMode.Text = "GodMode"
+	GodMode.TextColor3 = Color3.fromRGB(118, 118, 118)
+	GodMode.TextSize = 14.000
+
+	UICorner_39.Parent = GodMode
+
+	DeleteMe.Name = "DeleteMe"
+	DeleteMe.Parent = Page3Frame
+	DeleteMe.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	DeleteMe.Position = UDim2.new(0.523355782, 0, 0.356000006, 0)
+	DeleteMe.Size = UDim2.new(0, 50, 0, 50)
+	DeleteMe.Font = Enum.Font.SourceSans
+	DeleteMe.Text = "DeleteMe"
+	DeleteMe.TextColor3 = Color3.fromRGB(118, 118, 118)
+	DeleteMe.TextSize = 14.000
+
+	UICorner_40.Parent = DeleteMe
+
+	Anchor.Name = "Anchor"
+	Anchor.Parent = Page3Frame
+	Anchor.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Anchor.Position = UDim2.new(0.312080532, 0, 0.678160906, 0)
+	Anchor.Size = UDim2.new(0, 50, 0, 50)
+	Anchor.Font = Enum.Font.SourceSans
+	Anchor.Text = "Anchor"
+	Anchor.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Anchor.TextSize = 14.000
+	Anchor.TextWrapped = true
+
+	UICorner_41.Parent = Anchor
+
+	AntiMap.Name = "AntiMap"
+	AntiMap.Parent = Page3Frame
+	AntiMap.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	AntiMap.Position = UDim2.new(0.523355782, 0, 0.6778391, 0)
+	AntiMap.Size = UDim2.new(0, 50, 0, 50)
+	AntiMap.Font = Enum.Font.SourceSans
+	AntiMap.Text = "Anti Map"
+	AntiMap.TextColor3 = Color3.fromRGB(118, 118, 118)
+	AntiMap.TextSize = 14.000
+	AntiMap.TextWrapped = true
+
+	UICorner_42.Parent = AntiMap
+
+	RemoveWalls.Name = "RemoveWalls"
+	RemoveWalls.Parent = Page3Frame
+	RemoveWalls.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	RemoveWalls.Position = UDim2.new(0.731543601, 0, 0.678160906, 0)
+	RemoveWalls.Size = UDim2.new(0, 50, 0, 50)
+	RemoveWalls.Font = Enum.Font.SourceSans
+	RemoveWalls.Text = "Remove Walls"
+	RemoveWalls.TextColor3 = Color3.fromRGB(118, 118, 118)
+	RemoveWalls.TextSize = 14.000
+	RemoveWalls.TextWrapped = true
+
+	UICorner_43.Parent = RemoveWalls
+
+	AntiVoid.Name = "AntiVoid"
+	AntiVoid.Parent = Page3Frame
+	AntiVoid.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	AntiVoid.Position = UDim2.new(0.0973154306, 0, 0.678160906, 0)
+	AntiVoid.Size = UDim2.new(0, 50, 0, 50)
+	AntiVoid.Font = Enum.Font.SourceSans
+	AntiVoid.Text = "Anti Void"
+	AntiVoid.TextColor3 = Color3.fromRGB(118, 118, 118)
+	AntiVoid.TextSize = 14.000
+	AntiVoid.TextWrapped = true
+
+	UICorner_44.Parent = AntiVoid
+
+	Hitlist.Name = "Hitlist"
+	Hitlist.Parent = Page3Frame
+	Hitlist.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Hitlist.Position = UDim2.new(0.0973154306, 0, 0.356321812, 0)
+	Hitlist.Size = UDim2.new(0, 50, 0, 50)
+	Hitlist.Font = Enum.Font.SourceSans
+	Hitlist.Text = "Hitlist"
+	Hitlist.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Hitlist.TextSize = 14.000
+
+	UICorner_45.Parent = Hitlist
+
+	Page5Frame.Name = "Page5Frame"
+	Page5Frame.Parent = OutlineFrame
+	Page5Frame.BackgroundColor3 = Color3.fromRGB(0, 8, 21)
+	Page5Frame.LayoutOrder = 400
+	Page5Frame.Position = UDim2.new(0.0223642178, 0, 0.042105265, 0)
+	Page5Frame.Size = UDim2.new(0, 298, 0, 174)
+	Page5Frame.Visible = false
+
+	UICorner_46.CornerRadius = UDim.new(0, 10)
+	UICorner_46.Parent = Page5Frame
+
+	_5.Name = "5"
+	_5.Parent = Page5Frame
+	_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	_5.BackgroundTransparency = 1.000
+	_5.Position = UDim2.new(0.832214773, 0, 0.890804589, 0)
+	_5.Size = UDim2.new(0, 67, 0, 13)
+	_5.Font = Enum.Font.SourceSans
+	_5.Text = "5"
+	_5.TextColor3 = Color3.fromRGB(42, 2, 74)
+	_5.TextScaled = true
+	_5.TextSize = 14.000
+	_5.TextWrapped = true
+
+	Prev4.Name = "Prev4"
+	Prev4.Parent = Page5Frame
+	Prev4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Prev4.BackgroundTransparency = 1.000
+	Prev4.Position = UDim2.new(0.022364201, 0, 0.415789634, 0)
+	Prev4.Size = UDim2.new(0, 23, 0, 30)
+	Prev4.Font = Enum.Font.RobotoCondensed
+	Prev4.Text = "<"
+	Prev4.TextColor3 = Color3.fromRGB(56, 2, 100)
+	Prev4.TextScaled = true
+	Prev4.TextSize = 14.000
+	Prev4.TextWrapped = true
+
+	UICorner_47.Parent = Prev4
+
+	PrevLoad.Name = "PrevLoad"
+	PrevLoad.Parent = Page5Frame
+	PrevLoad.BackgroundColor3 = Color3.fromRGB(52, 61, 88)
+	PrevLoad.Position = UDim2.new(0.0973154455, 0, 0.0632181317, 0)
+	PrevLoad.Size = UDim2.new(0, 59, 0, 23)
+	PrevLoad.ZIndex = 2
+	PrevLoad.Font = Enum.Font.SourceSans
+	PrevLoad.Text = "Prev"
+	PrevLoad.TextColor3 = Color3.fromRGB(118, 118, 118)
+	PrevLoad.TextSize = 14.000
+
+	UICorner_48.Parent = PrevLoad
+
+	Loadout.Name = "Loadout"
+	Loadout.Parent = Page5Frame
+	Loadout.BackgroundColor3 = Color3.fromRGB(52, 61, 88)
+	Loadout.Position = UDim2.new(0.164429531, 0, 0.0632183552, 0)
+	Loadout.Size = UDim2.new(0, 200, 0, 23)
+	Loadout.Font = Enum.Font.SourceSans
+	Loadout.Text = "No Load Detected"
+	Loadout.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Loadout.TextSize = 14.000
+
+	UICorner_49.CornerRadius = UDim.new(0, 10)
+	UICorner_49.Parent = Loadout
+
+	NextLoad.Name = "NextLoad"
+	NextLoad.Parent = Page5Frame
+	NextLoad.BackgroundColor3 = Color3.fromRGB(52, 61, 88)
+	NextLoad.Position = UDim2.new(0.704697967, 0, 0.0632181317, 0)
+	NextLoad.Size = UDim2.new(0, 59, 0, 23)
+	NextLoad.ZIndex = 2
+	NextLoad.Font = Enum.Font.SourceSans
+	NextLoad.Text = "Next"
+	NextLoad.TextColor3 = Color3.fromRGB(118, 118, 118)
+	NextLoad.TextSize = 14.000
+
+	UICorner_50.Parent = NextLoad
+
+	Load.Name = "Load"
+	Load.Parent = Page5Frame
+	Load.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Load.Position = UDim2.new(0.0973154381, 0, 0.218390718, 0)
+	Load.Size = UDim2.new(0, 115, 0, 23)
+	Load.Font = Enum.Font.SourceSans
+	Load.Text = "Load"
+	Load.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Load.TextSize = 14.000
+
+	UICorner_51.Parent = Load
+
+	Save.Name = "Save"
+	Save.Parent = Page5Frame
+	Save.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Save.Position = UDim2.new(0.516778529, 0, 0.218390718, 0)
+	Save.Size = UDim2.new(0, 115, 0, 23)
+	Save.Font = Enum.Font.SourceSans
+	Save.Text = "Save"
+	Save.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Save.TextSize = 14.000
+
+	UICorner_52.Parent = Save
+
+	Heal.Name = "Heal"
+	Heal.Parent = Page5Frame
+	Heal.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Heal.Position = UDim2.new(0.0973154381, 0, 0.392801136, 0)
+	Heal.Size = UDim2.new(0, 115, 0, 36)
+	Heal.Font = Enum.Font.SourceSans
+	Heal.Text = "Heal"
+	Heal.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Heal.TextSize = 14.000
+
+	UICorner_53.Parent = Heal
+
+	Martyrdom.Name = "Martyrdom"
+	Martyrdom.Parent = Page5Frame
+	Martyrdom.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Martyrdom.Position = UDim2.new(0.516778529, 0, 0.392801136, 0)
+	Martyrdom.Size = UDim2.new(0, 115, 0, 36)
+	Martyrdom.Font = Enum.Font.SourceSans
+	Martyrdom.Text = "Martyrdom"
+	Martyrdom.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Martyrdom.TextSize = 14.000
+
+	UICorner_54.Parent = Martyrdom
+
+	SafeSpot.Name = "SafeSpot"
+	SafeSpot.Parent = Page5Frame
+	SafeSpot.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	SafeSpot.Position = UDim2.new(0.0973154381, 0, 0.643678188, 0)
+	SafeSpot.Size = UDim2.new(0, 240, 0, 26)
+	SafeSpot.Font = Enum.Font.SourceSans
+	SafeSpot.Text = "SafeSpot"
+	SafeSpot.TextColor3 = Color3.fromRGB(118, 118, 118)
+	SafeSpot.TextSize = 14.000
+
+	UICorner_55.Parent = SafeSpot
+
+	AntiFF.Name = "AntiFF"
+	AntiFF.Parent = Page5Frame
+	AntiFF.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	AntiFF.Position = UDim2.new(0.0973154381, 0, 0.816092014, 0)
+	AntiFF.Size = UDim2.new(0, 240, 0, 26)
+	AntiFF.Font = Enum.Font.SourceSans
+	AntiFF.Text = "Anti-FF"
+	AntiFF.TextColor3 = Color3.fromRGB(118, 118, 118)
+	AntiFF.TextSize = 14.000
+
+	UICorner_56.Parent = AntiFF
+
+	Next5.Name = "Next5"
+	Next5.Parent = Page5Frame
+	Next5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Next5.BackgroundTransparency = 1.000
+	Next5.Position = UDim2.new(0.900958478, 0, 0.415789634, 0)
+	Next5.Size = UDim2.new(0, 23, 0, 30)
+	Next5.Font = Enum.Font.RobotoCondensed
+	Next5.Text = ">"
+	Next5.TextColor3 = Color3.fromRGB(56, 2, 100)
+	Next5.TextScaled = true
+	Next5.TextSize = 14.000
+	Next5.TextWrapped = true
+
+	UICorner_57.Parent = Next5
+
+	Page6Frame.Name = "Page6Frame"
+	Page6Frame.Parent = OutlineFrame
+	Page6Frame.BackgroundColor3 = Color3.fromRGB(0, 8, 21)
+	Page6Frame.LayoutOrder = 400
+	Page6Frame.Position = UDim2.new(0.0223642178, 0, 0.042105265, 0)
+	Page6Frame.Size = UDim2.new(0, 298, 0, 174)
+	Page6Frame.Visible = false
+
+	UICorner_58.CornerRadius = UDim.new(0, 10)
+	UICorner_58.Parent = Page6Frame
+
+	_6.Name = "6"
+	_6.Parent = Page6Frame
+	_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	_6.BackgroundTransparency = 1.000
+	_6.Position = UDim2.new(0.832214773, 0, 0.890804589, 0)
+	_6.Size = UDim2.new(0, 67, 0, 13)
+	_6.Font = Enum.Font.SourceSans
+	_6.Text = "6"
+	_6.TextColor3 = Color3.fromRGB(42, 2, 74)
+	_6.TextScaled = true
+	_6.TextSize = 14.000
+	_6.TextWrapped = true
+
+	Prev5.Name = "Prev5"
+	Prev5.Parent = Page6Frame
+	Prev5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Prev5.BackgroundTransparency = 1.000
+	Prev5.Position = UDim2.new(0.022364201, 0, 0.415789634, 0)
+	Prev5.Size = UDim2.new(0, 23, 0, 30)
+	Prev5.Font = Enum.Font.RobotoCondensed
+	Prev5.Text = "<"
+	Prev5.TextColor3 = Color3.fromRGB(56, 2, 100)
+	Prev5.TextScaled = true
+	Prev5.TextSize = 14.000
+	Prev5.TextWrapped = true
+
+	UICorner_59.Parent = Prev5
+
+	SpamChangers.Name = "SpamChangers"
+	SpamChangers.Parent = Page6Frame
+	SpamChangers.BackgroundColor3 = Color3.fromRGB(29, 1, 52)
+	SpamChangers.BorderColor3 = Color3.fromRGB(118, 118, 118)
+	SpamChangers.BorderSizePixel = 0
+	SpamChangers.Position = UDim2.new(0.0973154381, 0, 0.0632183924, 0)
+	SpamChangers.Size = UDim2.new(0, 113, 0, 15)
+	SpamChangers.Font = Enum.Font.SourceSans
+	SpamChangers.Text = "Spam Changers"
+	SpamChangers.TextColor3 = Color3.fromRGB(118, 118, 118)
+	SpamChangers.TextSize = 14.000
+
+	Grimgold.Name = "Grimgold"
+	Grimgold.Parent = Page6Frame
+	Grimgold.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Grimgold.BorderSizePixel = 0
+	Grimgold.Position = UDim2.new(0.0973154306, 0, 0.149425268, 0)
+	Grimgold.Size = UDim2.new(0, 113, 0, 15)
+	Grimgold.Font = Enum.Font.SourceSans
+	Grimgold.Text = "Grimgold"
+	Grimgold.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Grimgold.TextSize = 14.000
+
+	Epsilon.Name = "Epsilon"
+	Epsilon.Parent = Page6Frame
+	Epsilon.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Epsilon.BorderSizePixel = 0
+	Epsilon.Position = UDim2.new(0.0973154306, 0, 0.235632166, 0)
+	Epsilon.Size = UDim2.new(0, 113, 0, 15)
+	Epsilon.Font = Enum.Font.SourceSans
+	Epsilon.Text = "Epsilon"
+	Epsilon.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Epsilon.TextSize = 14.000
+
+	Chart.Name = "Chart"
+	Chart.Parent = Page6Frame
+	Chart.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Chart.BorderSizePixel = 0
+	Chart.Position = UDim2.new(0.0973154306, 0, 0.321839035, 0)
+	Chart.Size = UDim2.new(0, 113, 0, 15)
+	Chart.Font = Enum.Font.SourceSans
+	Chart.Text = "Chart"
+	Chart.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Chart.TextSize = 14.000
+
+	Woods.Name = "Woods"
+	Woods.Parent = Page6Frame
+	Woods.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Woods.BorderSizePixel = 0
+	Woods.Position = UDim2.new(0.0973154306, 0, 0.408045948, 0)
+	Woods.Size = UDim2.new(0, 113, 0, 15)
+	Woods.Font = Enum.Font.SourceSans
+	Woods.Text = "Woods"
+	Woods.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Woods.TextSize = 14.000
+
+	SelectMessage.Name = "SelectMessage"
+	SelectMessage.Parent = Page6Frame
+	SelectMessage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	SelectMessage.BackgroundTransparency = 1.000
+	SelectMessage.Position = UDim2.new(0.137583897, 0, 0.833333313, 0)
+	SelectMessage.Size = UDim2.new(0, 88, 0, 29)
+	SelectMessage.Font = Enum.Font.SourceSansItalic
+	SelectMessage.Text = "Select Gear to Spam(Page4) *One at a Time*"
+	SelectMessage.TextColor3 = Color3.fromRGB(118, 118, 118)
+	SelectMessage.TextSize = 14.000
+	SelectMessage.TextWrapped = true
+
+	KillAura.Name = "KillAura"
+	KillAura.Parent = Page6Frame
+	KillAura.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	KillAura.Position = UDim2.new(0.540268302, 0, 0.379310369, 0)
+	KillAura.Size = UDim2.new(0, 108, 0, 41)
+	KillAura.Font = Enum.Font.SourceSans
+	KillAura.Text = "KillAura"
+	KillAura.TextColor3 = Color3.fromRGB(118, 118, 118)
+	KillAura.TextSize = 14.000
+
+	UICorner_60.Parent = KillAura
+
+	LandShark.Name = "LandShark"
+	LandShark.Parent = Page6Frame
+	LandShark.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	LandShark.BorderSizePixel = 0
+	LandShark.Position = UDim2.new(0.0973154306, 0, 0.666666687, 0)
+	LandShark.Size = UDim2.new(0, 113, 0, 15)
+	LandShark.Font = Enum.Font.SourceSans
+	LandShark.Text = "LandShark"
+	LandShark.TextColor3 = Color3.fromRGB(118, 118, 118)
+	LandShark.TextSize = 14.000
+
+	Tela.Name = "Tela"
+	Tela.Parent = Page6Frame
+	Tela.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Tela.BorderSizePixel = 0
+	Tela.Position = UDim2.new(0.0973154306, 0, 0.494252861, 0)
+	Tela.Size = UDim2.new(0, 113, 0, 15)
+	Tela.Font = Enum.Font.SourceSans
+	Tela.Text = "Tela"
+	Tela.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Tela.TextSize = 14.000
+
+	DeathPoint.Name = "DeathPoint"
+	DeathPoint.Parent = Page6Frame
+	DeathPoint.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	DeathPoint.Position = UDim2.new(0.540000021, 0, 0.700999975, 0)
+	DeathPoint.Size = UDim2.new(0, 108, 0, 41)
+	DeathPoint.Font = Enum.Font.SourceSans
+	DeathPoint.Text = "DeathPoint"
+	DeathPoint.TextColor3 = Color3.fromRGB(118, 118, 118)
+	DeathPoint.TextSize = 14.000
+
+	UICorner_61.Parent = DeathPoint
+
+	Wind.Name = "Wind"
+	Wind.Parent = Page6Frame
+	Wind.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Wind.BorderSizePixel = 0
+	Wind.Position = UDim2.new(0.0973154306, 0, 0.580459774, 0)
+	Wind.Size = UDim2.new(0, 113, 0, 15)
+	Wind.Font = Enum.Font.SourceSans
+	Wind.Text = "Windhorn"
+	Wind.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Wind.TextSize = 14.000
+
+	RocketTarget.Name = "RocketTarget"
+	RocketTarget.Parent = Page6Frame
+	RocketTarget.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	RocketTarget.Position = UDim2.new(0.540268302, 0, 0.0632184148, 0)
+	RocketTarget.Size = UDim2.new(0, 108, 0, 41)
+	RocketTarget.Font = Enum.Font.SourceSans
+	RocketTarget.Text = "RocketTarget"
+	RocketTarget.TextColor3 = Color3.fromRGB(118, 118, 118)
+	RocketTarget.TextSize = 14.000
+
+	UICorner_62.Parent = RocketTarget
+
+	Next6.Name = "Next6"
+	Next6.Parent = Page6Frame
+	Next6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Next6.BackgroundTransparency = 1.000
+	Next6.Position = UDim2.new(0.900958478, 0, 0.415789634, 0)
+	Next6.Size = UDim2.new(0, 23, 0, 30)
+	Next6.Font = Enum.Font.RobotoCondensed
+	Next6.Text = ">"
+	Next6.TextColor3 = Color3.fromRGB(56, 2, 100)
+	Next6.TextScaled = true
+	Next6.TextSize = 14.000
+	Next6.TextWrapped = true
+
+	UICorner_63.Parent = Next6
+
+	Search.Name = "Search"
+	Search.Parent = OutlineFrame
+	Search.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Search.LayoutOrder = 10000
+	Search.Size = UDim2.new(0, 19, 0, 19)
+	Search.ZIndex = 1000
+	Search.Font = Enum.Font.SourceSans
+	Search.Text = "?"
+	Search.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Search.TextSize = 14.000
+
+	UICorner_64.CornerRadius = UDim.new(0, 100)
+	UICorner_64.Parent = Search
+
+	OwnerPanel.Name = "OwnerPanel"
+	OwnerPanel.Parent = OutlineFrame
+	OwnerPanel.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	OwnerPanel.Position = UDim2.new(0, 0, 0.900000036, 0)
+	OwnerPanel.Size = UDim2.new(0, 19, 0, 19)
+	OwnerPanel.ZIndex = 1000
+	OwnerPanel.Font = Enum.Font.SourceSans
+	OwnerPanel.LineHeight = 0.800
+	OwnerPanel.Text = "*"
+	OwnerPanel.TextColor3 = Color3.fromRGB(0, 0, 0)
+	OwnerPanel.TextScaled = true
+	OwnerPanel.TextSize = 14.000
+	OwnerPanel.TextWrapped = true
+
+	UICorner_65.Parent = OwnerPanel
+
+	Page7Frame.Name = "Page7Frame"
+	Page7Frame.Parent = OutlineFrame
+	Page7Frame.BackgroundColor3 = Color3.fromRGB(0, 8, 21)
+	Page7Frame.LayoutOrder = 400
+	Page7Frame.Position = UDim2.new(0.0223642178, 0, 0.042105265, 0)
+	Page7Frame.Size = UDim2.new(0, 298, 0, 174)
+	Page7Frame.Visible = false
+
+	UICorner_66.CornerRadius = UDim.new(0, 10)
+	UICorner_66.Parent = Page7Frame
+
+	_7.Name = "7"
+	_7.Parent = Page7Frame
+	_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	_7.BackgroundTransparency = 1.000
+	_7.Position = UDim2.new(0.832214773, 0, 0.890804589, 0)
+	_7.Size = UDim2.new(0, 67, 0, 13)
+	_7.Font = Enum.Font.SourceSans
+	_7.Text = "7"
+	_7.TextColor3 = Color3.fromRGB(42, 2, 74)
+	_7.TextScaled = true
+	_7.TextSize = 14.000
+	_7.TextWrapped = true
+
+	Prev6.Name = "Prev6"
+	Prev6.Parent = Page7Frame
+	Prev6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Prev6.BackgroundTransparency = 1.000
+	Prev6.Position = UDim2.new(0.022364201, 0, 0.415789634, 0)
+	Prev6.Size = UDim2.new(0, 23, 0, 30)
+	Prev6.Font = Enum.Font.RobotoCondensed
+	Prev6.Text = "<"
+	Prev6.TextColor3 = Color3.fromRGB(56, 2, 100)
+	Prev6.TextScaled = true
+	Prev6.TextSize = 14.000
+	Prev6.TextWrapped = true
+
+	UICorner_67.Parent = Prev6
+
+	SpectateName.Name = "SpectateName"
+	SpectateName.Parent = Page7Frame
+	SpectateName.BackgroundColor3 = Color3.fromRGB(52, 61, 88)
+	SpectateName.Position = UDim2.new(0.0995454714, 0, 0.0632183924, 0)
+	SpectateName.Size = UDim2.new(0, 239, 0, 20)
+	SpectateName.Font = Enum.Font.SourceSans
+	SpectateName.PlaceholderColor3 = Color3.fromRGB(118, 118, 118)
+	SpectateName.PlaceholderText = "Enter Name Here"
+	SpectateName.Text = ""
+	SpectateName.TextColor3 = Color3.fromRGB(118, 118, 118)
+	SpectateName.TextSize = 14.000
+
+	UICorner_68.Parent = SpectateName
+
+	Bring.Name = "Bring"
+	Bring.Parent = Page7Frame
+	Bring.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Bring.Position = UDim2.new(0.0973154306, 0, 0.212643668, 0)
+	Bring.Size = UDim2.new(0, 113, 0, 29)
+	Bring.Font = Enum.Font.SourceSans
+	Bring.Text = "Bring"
+	Bring.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Bring.TextSize = 14.000
+
+	UICorner_69.Parent = Bring
+
+	Spectate.Name = "Spectate"
+	Spectate.Parent = Page7Frame
+	Spectate.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Spectate.Position = UDim2.new(0.520134211, 0, 0.212643668, 0)
+	Spectate.Size = UDim2.new(0, 113, 0, 29)
+	Spectate.Font = Enum.Font.SourceSans
+	Spectate.Text = "Spectate"
+	Spectate.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Spectate.TextSize = 14.000
+
+	UICorner_70.Parent = Spectate
+
+	Blind.Name = "Blind"
+	Blind.Parent = Page7Frame
+	Blind.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Blind.Position = UDim2.new(0.0973154381, 0, 0.415789634, 0)
+	Blind.Size = UDim2.new(0, 239, 0, 30)
+	Blind.Font = Enum.Font.SourceSans
+	Blind.Text = "BlindTarget"
+	Blind.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Blind.TextSize = 14.000
+
+	UICorner_71.Parent = Blind
+
+	IDToggle.Name = "IDToggle"
+	IDToggle.Parent = Page7Frame
+	IDToggle.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	IDToggle.Position = UDim2.new(0.0973154306, 0, 0.643678129, 0)
+	IDToggle.Size = UDim2.new(0, 52, 0, 24)
+	IDToggle.Font = Enum.Font.SourceSans
+	IDToggle.Text = "UserId"
+	IDToggle.TextColor3 = Color3.fromRGB(118, 118, 118)
+	IDToggle.TextSize = 14.000
+
+	UICorner_72.Parent = IDToggle
+
+	NameToggle.Name = "NameToggle"
+	NameToggle.Parent = Page7Frame
+	NameToggle.BackgroundColor3 = Color3.fromRGB(31, 0, 56)
+	NameToggle.Position = UDim2.new(0.0973154381, 0, 0.827586174, 0)
+	NameToggle.Size = UDim2.new(0, 52, 0, 24)
+	NameToggle.Font = Enum.Font.SourceSans
+	NameToggle.Text = "Username"
+	NameToggle.TextColor3 = Color3.fromRGB(118, 118, 118)
+	NameToggle.TextSize = 14.000
+
+	UICorner_73.Parent = NameToggle
+
+	RemoveHit.Name = "RemoveHit"
+	RemoveHit.Parent = Page7Frame
+	RemoveHit.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	RemoveHit.Position = UDim2.new(0.614093959, 0, 0.821839094, 0)
+	RemoveHit.Size = UDim2.new(0, 85, 0, 25)
+	RemoveHit.Font = Enum.Font.SourceSans
+	RemoveHit.Text = "RemoveHit"
+	RemoveHit.TextColor3 = Color3.fromRGB(118, 118, 118)
+	RemoveHit.TextSize = 14.000
+
+	UICorner_74.Parent = RemoveHit
+
+	InsertHit.Name = "InsertHit"
+	InsertHit.Parent = Page7Frame
+	InsertHit.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	InsertHit.Position = UDim2.new(0.305369139, 0, 0.821839094, 0)
+	InsertHit.Size = UDim2.new(0, 85, 0, 25)
+	InsertHit.Font = Enum.Font.SourceSans
+	InsertHit.Text = "InsertHit"
+	InsertHit.TextColor3 = Color3.fromRGB(118, 118, 118)
+	InsertHit.TextSize = 14.000
+
+	UICorner_75.Parent = InsertHit
+
+	HitName.Name = "HitName"
+	HitName.Parent = Page7Frame
+	HitName.BackgroundColor3 = Color3.fromRGB(52, 61, 88)
+	HitName.Position = UDim2.new(0.305369139, 0, 0.643678188, 0)
+	HitName.Size = UDim2.new(0, 177, 0, 24)
+	HitName.Font = Enum.Font.SourceSans
+	HitName.PlaceholderColor3 = Color3.fromRGB(118, 118, 118)
+	HitName.PlaceholderText = "Hitlist Name Here"
+	HitName.Text = ""
+	HitName.TextColor3 = Color3.fromRGB(118, 118, 118)
+	HitName.TextSize = 14.000
+
+	UICorner_76.Parent = HitName
+
+	Next7.Name = "Next7"
+	Next7.Parent = Page7Frame
+	Next7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Next7.BackgroundTransparency = 1.000
+	Next7.Position = UDim2.new(0.900958478, 0, 0.415789634, 0)
+	Next7.Size = UDim2.new(0, 23, 0, 30)
+	Next7.Font = Enum.Font.RobotoCondensed
+	Next7.Text = ">"
+	Next7.TextColor3 = Color3.fromRGB(56, 2, 100)
+	Next7.TextScaled = true
+	Next7.TextSize = 14.000
+	Next7.TextWrapped = true
+
+	UICorner_77.Parent = Next7
+
+	Page8Frame.Name = "Page8Frame"
+	Page8Frame.Parent = OutlineFrame
+	Page8Frame.BackgroundColor3 = Color3.fromRGB(0, 8, 21)
+	Page8Frame.LayoutOrder = 400
+	Page8Frame.Position = UDim2.new(0.0223642178, 0, 0.042105265, 0)
+	Page8Frame.Size = UDim2.new(0, 298, 0, 174)
+	Page8Frame.Visible = false
+
+	UICorner_78.CornerRadius = UDim.new(0, 10)
+	UICorner_78.Parent = Page8Frame
+
+	_8.Name = "8"
+	_8.Parent = Page8Frame
+	_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	_8.BackgroundTransparency = 1.000
+	_8.Position = UDim2.new(0.832214773, 0, 0.890804589, 0)
+	_8.Size = UDim2.new(0, 67, 0, 13)
+	_8.Font = Enum.Font.SourceSans
+	_8.Text = "8"
+	_8.TextColor3 = Color3.fromRGB(42, 2, 74)
+	_8.TextScaled = true
+	_8.TextSize = 14.000
+	_8.TextWrapped = true
+
+	Prev7.Name = "Prev7"
+	Prev7.Parent = Page8Frame
+	Prev7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Prev7.BackgroundTransparency = 1.000
+	Prev7.Position = UDim2.new(0.022364201, 0, 0.415789634, 0)
+	Prev7.Size = UDim2.new(0, 23, 0, 30)
+	Prev7.Font = Enum.Font.RobotoCondensed
+	Prev7.Text = "<"
+	Prev7.TextColor3 = Color3.fromRGB(56, 2, 100)
+	Prev7.TextScaled = true
+	Prev7.TextSize = 14.000
+	Prev7.TextWrapped = true
+
+	UICorner_79.Parent = Prev7
+
+	Next8.Name = "Next8"
+	Next8.Parent = Page8Frame
+	Next8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Next8.BackgroundTransparency = 1.000
+	Next8.Position = UDim2.new(0.900958478, 0, 0.415789634, 0)
+	Next8.Size = UDim2.new(0, 23, 0, 30)
+	Next8.Font = Enum.Font.RobotoCondensed
+	Next8.Text = ">"
+	Next8.TextColor3 = Color3.fromRGB(56, 2, 100)
+	Next8.TextScaled = true
+	Next8.TextSize = 14.000
+	Next8.TextWrapped = true
+
+	UICorner_80.Parent = Next8
+
+	SongID.Name = "SongID"
+	SongID.Parent = Page8Frame
+	SongID.BackgroundColor3 = Color3.fromRGB(52, 61, 88)
+	SongID.Position = UDim2.new(0.15436241, 0, 0.0632183924, 0)
+	SongID.Size = UDim2.new(0, 211, 0, 29)
+	SongID.Font = Enum.Font.SourceSans
+	SongID.PlaceholderColor3 = Color3.fromRGB(118, 118, 118)
+	SongID.PlaceholderText = "Insert Song ID Here"
+	SongID.Text = ""
+	SongID.TextColor3 = Color3.fromRGB(118, 118, 118)
+	SongID.TextSize = 14.000
+
+	UICorner_81.Parent = SongID
+
+	Play.Name = "Play"
+	Play.Parent = Page8Frame
+	Play.BackgroundColor3 = Color3.fromRGB(52, 61, 88)
+	Play.Position = UDim2.new(0.0995454714, 0, 0.0632183924, 0)
+	Play.Size = UDim2.new(0, 32, 0, 29)
+	Play.Font = Enum.Font.SourceSans
+	Play.Text = "Play"
+	Play.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Play.TextSize = 14.000
+
+	UICorner_82.Parent = Play
+
+	Pause.Name = "Pause"
+	Pause.Parent = Page8Frame
+	Pause.BackgroundColor3 = Color3.fromRGB(52, 61, 88)
+	Pause.Position = UDim2.new(0.790820658, 0, 0.0632183924, 0)
+	Pause.Size = UDim2.new(0, 32, 0, 29)
+	Pause.Font = Enum.Font.SourceSans
+	Pause.Text = "Stop"
+	Pause.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Pause.TextSize = 14.000
+
+	UICorner_83.Parent = Pause
+
+	ChatLogger.Name = "ChatLogger"
+	ChatLogger.Parent = Page8Frame
+	ChatLogger.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	ChatLogger.Position = UDim2.new(0.0995454714, 0, 0.298850566, 0)
+	ChatLogger.Size = UDim2.new(0, 115, 0, 44)
+	ChatLogger.Font = Enum.Font.SourceSans
+	ChatLogger.Text = "ChatLogger"
+	ChatLogger.TextColor3 = Color3.fromRGB(118, 118, 118)
+	ChatLogger.TextSize = 14.000
+
+	UICorner_84.Parent = ChatLogger
+
+	RocketDraw.Name = "RocketDraw"
+	RocketDraw.Parent = Page8Frame
+	RocketDraw.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	RocketDraw.Position = UDim2.new(0.512297153, 0, 0.298850566, 0)
+	RocketDraw.Size = UDim2.new(0, 115, 0, 44)
+	RocketDraw.Font = Enum.Font.SourceSans
+	RocketDraw.Text = "RocketDraw"
+	RocketDraw.TextColor3 = Color3.fromRGB(118, 118, 118)
+	RocketDraw.TextSize = 14.000
+
+	UICorner_85.Parent = RocketDraw
+
+	Fly.Name = "Fly"
+	Fly.Parent = Page8Frame
+	Fly.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	Fly.Position = UDim2.new(0.0973154381, 0, 0.614942551, 0)
+	Fly.Size = UDim2.new(0, 75, 0, 56)
+	Fly.Font = Enum.Font.SourceSans
+	Fly.Text = "Fly"
+	Fly.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Fly.TextSize = 14.000
+
+	UICorner_86.Parent = Fly
+
+	GearBreak.Name = "GearBreak"
+	GearBreak.Parent = Page8Frame
+	GearBreak.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	GearBreak.Position = UDim2.new(0.372483194, 0, 0.614942551, 0)
+	GearBreak.Size = UDim2.new(0, 75, 0, 56)
+	GearBreak.Font = Enum.Font.SourceSans
+	GearBreak.Text = "GearBreak"
+	GearBreak.TextColor3 = Color3.fromRGB(118, 118, 118)
+	GearBreak.TextSize = 14.000
+	GearBreak.TextWrapped = true
+
+	UICorner_87.Parent = GearBreak
+
+	HatGlitch.Name = "HatGlitch"
+	HatGlitch.Parent = Page8Frame
+	HatGlitch.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	HatGlitch.Position = UDim2.new(0.644295335, 0, 0.614942551, 0)
+	HatGlitch.Size = UDim2.new(0, 75, 0, 56)
+	HatGlitch.Font = Enum.Font.SourceSans
+	HatGlitch.Text = "HatGlitch"
+	HatGlitch.TextColor3 = Color3.fromRGB(118, 118, 118)
+	HatGlitch.TextSize = 14.000
+
+	UICorner_88.Parent = HatGlitch
+
+	Page10Frame.Name = "Page10Frame"
+	Page10Frame.Parent = OutlineFrame
+	Page10Frame.BackgroundColor3 = Color3.fromRGB(0, 8, 21)
+	Page10Frame.LayoutOrder = 400
+	Page10Frame.Position = UDim2.new(0.0223642178, 0, 0.042105265, 0)
+	Page10Frame.Size = UDim2.new(0, 298, 0, 174)
+	Page10Frame.Visible = false
+
+	UICorner_89.CornerRadius = UDim.new(0, 10)
+	UICorner_89.Parent = Page10Frame
+
+	_10.Name = "10"
+	_10.Parent = Page10Frame
+	_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	_10.BackgroundTransparency = 1.000
+	_10.Position = UDim2.new(0.832214773, 0, 0.890804589, 0)
+	_10.Size = UDim2.new(0, 67, 0, 13)
+	_10.Font = Enum.Font.SourceSans
+	_10.Text = "10"
+	_10.TextColor3 = Color3.fromRGB(42, 2, 74)
+	_10.TextScaled = true
+	_10.TextSize = 14.000
+	_10.TextWrapped = true
+
+	Prev9.Name = "Prev9"
+	Prev9.Parent = Page10Frame
+	Prev9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Prev9.BackgroundTransparency = 1.000
+	Prev9.Position = UDim2.new(0.022364201, 0, 0.415789634, 0)
+	Prev9.Size = UDim2.new(0, 23, 0, 30)
+	Prev9.Font = Enum.Font.RobotoCondensed
+	Prev9.Text = "<"
+	Prev9.TextColor3 = Color3.fromRGB(56, 2, 100)
+	Prev9.TextScaled = true
+	Prev9.TextSize = 14.000
+	Prev9.TextWrapped = true
+
+	UICorner_90.Parent = Prev9
+
+	CreditsTitle.Name = "CreditsTitle"
+	CreditsTitle.Parent = Page10Frame
+	CreditsTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	CreditsTitle.BackgroundTransparency = 1.000
+	CreditsTitle.Position = UDim2.new(0.241610736, 0, 0.0574715286, 0)
+	CreditsTitle.Size = UDim2.new(0, 154, 0, 20)
+	CreditsTitle.Font = Enum.Font.SourceSansBold
+	CreditsTitle.Text = "Credits"
+	CreditsTitle.TextColor3 = Color3.fromRGB(118, 118, 118)
+	CreditsTitle.TextScaled = true
+	CreditsTitle.TextSize = 14.000
+	CreditsTitle.TextWrapped = true
+
+	CreditsFrame.Name = "CreditsFrame"
+	CreditsFrame.Parent = Page10Frame
+	CreditsFrame.BackgroundColor3 = Color3.fromRGB(0, 8, 21)
+	CreditsFrame.BorderSizePixel = 0
+	CreditsFrame.Position = UDim2.new(0.0995454714, 0, 0.172413796, 0)
+	CreditsFrame.Size = UDim2.new(0, 239, 0, 138)
+
+	Scripting.Name = "Scripting"
+	Scripting.Parent = CreditsFrame
+	Scripting.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Scripting.BackgroundTransparency = 1.000
+	Scripting.BorderSizePixel = 0
+	Scripting.Position = UDim2.new(0, 0, 0.623188376, 0)
+	Scripting.Size = UDim2.new(0, 239, 0, 32)
+	Scripting.Font = Enum.Font.SourceSansItalic
+	Scripting.Text = "Scripting: Anon, Cielle"
+	Scripting.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Scripting.TextSize = 20.000
+	Scripting.TextWrapped = true
+
+	GuiDesign.Name = "GuiDesign"
+	GuiDesign.Parent = CreditsFrame
+	GuiDesign.BackgroundColor3 = Color3.fromRGB(118, 118, 118)
+	GuiDesign.BackgroundTransparency = 1.000
+	GuiDesign.BorderSizePixel = 0
+	GuiDesign.Size = UDim2.new(0, 239, 0, 34)
+	GuiDesign.Font = Enum.Font.SourceSansItalic
+	GuiDesign.Text = "GuiDesign: Anon, Xerantheneum"
+	GuiDesign.TextColor3 = Color3.fromRGB(118, 118, 118)
+	GuiDesign.TextSize = 20.000
+	GuiDesign.TextWrapped = true
+
+	Inspiration.Name = "Inspiration"
+	Inspiration.Parent = CreditsFrame
+	Inspiration.BackgroundColor3 = Color3.fromRGB(118, 118, 118)
+	Inspiration.BackgroundTransparency = 1.000
+	Inspiration.BorderColor3 = Color3.fromRGB(118, 118, 118)
+	Inspiration.BorderSizePixel = 0
+	Inspiration.Position = UDim2.new(0, 0, 0.144927531, 0)
+	Inspiration.Size = UDim2.new(0, 239, 0, 52)
+	Inspiration.Font = Enum.Font.SourceSansItalic
+	Inspiration.Text = "Inspiration: Xerantheneum, Symphony, Biel"
+	Inspiration.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Inspiration.TextSize = 20.000
+	Inspiration.TextWrapped = true
+
+	UIListLayout.Parent = CreditsFrame
+	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+	Thanks.Name = "Thanks"
+	Thanks.Parent = Page10Frame
+	Thanks.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Thanks.BackgroundTransparency = 1.000
+	Thanks.Position = UDim2.new(0.164429531, 0, 0.356321841, 0)
+	Thanks.Size = UDim2.new(0, 200, 0, 50)
+	Thanks.Font = Enum.Font.SourceSansBold
+	Thanks.Text = "Thank You Everyone For The Support! <3"
+	Thanks.TextColor3 = Color3.fromRGB(52, 61, 88)
+	Thanks.TextScaled = true
+	Thanks.TextSize = 14.000
+	Thanks.TextTransparency = 1.000
+	Thanks.TextWrapped = true
+
+	Page9Frame.Name = "Page9Frame"
+	Page9Frame.Parent = OutlineFrame
+	Page9Frame.BackgroundColor3 = Color3.fromRGB(0, 8, 21)
+	Page9Frame.LayoutOrder = 400
+	Page9Frame.Position = UDim2.new(0.0223642178, 0, 0.042105265, 0)
+	Page9Frame.Size = UDim2.new(0, 298, 0, 174)
+	Page9Frame.Visible = false
+
+	UICorner_91.CornerRadius = UDim.new(0, 10)
+	UICorner_91.Parent = Page9Frame
+
+	_9.Name = "9"
+	_9.Parent = Page9Frame
+	_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	_9.BackgroundTransparency = 1.000
+	_9.Position = UDim2.new(0.832214773, 0, 0.890804589, 0)
+	_9.Size = UDim2.new(0, 67, 0, 13)
+	_9.Font = Enum.Font.SourceSans
+	_9.Text = "9"
+	_9.TextColor3 = Color3.fromRGB(42, 2, 74)
+	_9.TextScaled = true
+	_9.TextSize = 14.000
+	_9.TextWrapped = true
+
+	Prev8.Name = "Prev8"
+	Prev8.Parent = Page9Frame
+	Prev8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Prev8.BackgroundTransparency = 1.000
+	Prev8.Position = UDim2.new(0.022364201, 0, 0.415789634, 0)
+	Prev8.Size = UDim2.new(0, 23, 0, 30)
+	Prev8.Font = Enum.Font.RobotoCondensed
+	Prev8.Text = "<"
+	Prev8.TextColor3 = Color3.fromRGB(56, 2, 100)
+	Prev8.TextScaled = true
+	Prev8.TextSize = 14.000
+	Prev8.TextWrapped = true
+
+	UICorner_92.Parent = Prev8
+
+	Next9.Name = "Next9"
+	Next9.Parent = Page9Frame
+	Next9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Next9.BackgroundTransparency = 1.000
+	Next9.Position = UDim2.new(0.900958478, 0, 0.415789634, 0)
+	Next9.Size = UDim2.new(0, 23, 0, 30)
+	Next9.Font = Enum.Font.RobotoCondensed
+	Next9.Text = ">"
+	Next9.TextColor3 = Color3.fromRGB(56, 2, 100)
+	Next9.TextScaled = true
+	Next9.TextSize = 14.000
+	Next9.TextWrapped = true
+
+	UICorner_93.Parent = Next9
+
+	InsertScroll.Name = "InsertScroll"
+	InsertScroll.Parent = Page9Frame
+	InsertScroll.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	InsertScroll.Position = UDim2.new(0.204697981, 0, 0.821839094, 0)
+	InsertScroll.Size = UDim2.new(0, 50, 0, 25)
+	InsertScroll.Font = Enum.Font.SourceSans
+	InsertScroll.Text = "Scroll"
+	InsertScroll.TextColor3 = Color3.fromRGB(118, 118, 118)
+	InsertScroll.TextSize = 14.000
+
+	UICorner_94.Parent = InsertScroll
+
+	InsertAzure.Name = "InsertAzure"
+	InsertAzure.Parent = Page9Frame
+	InsertAzure.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	InsertAzure.Position = UDim2.new(0.630872488, 0, 0.821839094, 0)
+	InsertAzure.Size = UDim2.new(0, 50, 0, 25)
+	InsertAzure.Font = Enum.Font.SourceSans
+	InsertAzure.Text = "Azure"
+	InsertAzure.TextColor3 = Color3.fromRGB(118, 118, 118)
+	InsertAzure.TextSize = 14.000
+
+	UICorner_95.Parent = InsertAzure
+
+	InsertHorn.Name = "InsertHorn"
+	InsertHorn.Parent = Page9Frame
+	InsertHorn.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	InsertHorn.Position = UDim2.new(0.419463098, 0, 0.821839094, 0)
+	InsertHorn.Size = UDim2.new(0, 50, 0, 25)
+	InsertHorn.Font = Enum.Font.SourceSans
+	InsertHorn.Text = "Wind"
+	InsertHorn.TextColor3 = Color3.fromRGB(118, 118, 118)
+	InsertHorn.TextSize = 14.000
+
+	UICorner_96.Parent = InsertHorn
+
+	Banned.Name = "Banned"
+	Banned.Parent = Page9Frame
+	Banned.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Banned.BackgroundTransparency = 1.000
+	Banned.Position = UDim2.new(0.167785227, 0, 0.724137962, 0)
+	Banned.Size = UDim2.new(0, 200, 0, 10)
+	Banned.Font = Enum.Font.SourceSansBold
+	Banned.Text = "Banned"
+	Banned.TextColor3 = Color3.fromRGB(118, 118, 118)
+	Banned.TextSize = 14.000
+
+	InsertFrost.Name = "InsertFrost"
+	InsertFrost.Parent = Page9Frame
+	InsertFrost.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	InsertFrost.Position = UDim2.new(0.627516806, 0, 0.0977011919, 0)
+	InsertFrost.Size = UDim2.new(0, 50, 0, 25)
+	InsertFrost.Font = Enum.Font.SourceSans
+	InsertFrost.Text = "Frost"
+	InsertFrost.TextColor3 = Color3.fromRGB(118, 118, 118)
+	InsertFrost.TextSize = 14.000
+
+	UICorner_97.Parent = InsertFrost
+
+	InsertTela.Name = "InsertTela"
+	InsertTela.Parent = Page9Frame
+	InsertTela.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	InsertTela.Position = UDim2.new(0.416107386, 0, 0.0977011919, 0)
+	InsertTela.Size = UDim2.new(0, 50, 0, 25)
+	InsertTela.Font = Enum.Font.SourceSans
+	InsertTela.Text = "Tela"
+	InsertTela.TextColor3 = Color3.fromRGB(118, 118, 118)
+	InsertTela.TextSize = 14.000
+
+	UICorner_98.Parent = InsertTela
+
+	InsertWings.Name = "InsertWings"
+	InsertWings.Parent = Page9Frame
+	InsertWings.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	InsertWings.Position = UDim2.new(0.20134227, 0, 0.0977011919, 0)
+	InsertWings.Size = UDim2.new(0, 50, 0, 25)
+	InsertWings.Font = Enum.Font.SourceSans
+	InsertWings.Text = "Wings"
+	InsertWings.TextColor3 = Color3.fromRGB(118, 118, 118)
+	InsertWings.TextSize = 14.000
+
+	UICorner_99.Parent = InsertWings
+
+	InsertSOD.Name = "InsertSOD"
+	InsertSOD.Parent = Page9Frame
+	InsertSOD.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	InsertSOD.Position = UDim2.new(0.627516806, 0, 0.316092014, 0)
+	InsertSOD.Size = UDim2.new(0, 50, 0, 25)
+	InsertSOD.Font = Enum.Font.SourceSans
+	InsertSOD.Text = "Darkness"
+	InsertSOD.TextColor3 = Color3.fromRGB(118, 118, 118)
+	InsertSOD.TextSize = 14.000
+
+	UICorner_100.Parent = InsertSOD
+
+	InsertChart.Name = "InsertChart"
+	InsertChart.Parent = Page9Frame
+	InsertChart.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	InsertChart.Position = UDim2.new(0.416107386, 0, 0.316092014, 0)
+	InsertChart.Size = UDim2.new(0, 50, 0, 25)
+	InsertChart.Font = Enum.Font.SourceSans
+	InsertChart.Text = "Chart"
+	InsertChart.TextColor3 = Color3.fromRGB(118, 118, 118)
+	InsertChart.TextSize = 14.000
+
+	UICorner_101.Parent = InsertChart
+
+	InsertPol.Name = "InsertPol"
+	InsertPol.Parent = Page9Frame
+	InsertPol.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	InsertPol.Position = UDim2.new(0.20134227, 0, 0.316092014, 0)
+	InsertPol.Size = UDim2.new(0, 50, 0, 25)
+	InsertPol.Font = Enum.Font.SourceSans
+	InsertPol.Text = "Polarity"
+	InsertPol.TextColor3 = Color3.fromRGB(118, 118, 118)
+	InsertPol.TextSize = 14.000
+
+	UICorner_102.Parent = InsertPol
+
+	InsertFurno.Name = "InsertFurno"
+	InsertFurno.Parent = Page9Frame
+	InsertFurno.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	InsertFurno.Position = UDim2.new(0.627516806, 0, 0.540229917, 0)
+	InsertFurno.Size = UDim2.new(0, 50, 0, 25)
+	InsertFurno.Font = Enum.Font.SourceSans
+	InsertFurno.Text = "Furno"
+	InsertFurno.TextColor3 = Color3.fromRGB(118, 118, 118)
+	InsertFurno.TextSize = 14.000
+
+	UICorner_103.Parent = InsertFurno
+
+	InsertSorcus.Name = "InsertSorcus"
+	InsertSorcus.Parent = Page9Frame
+	InsertSorcus.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	InsertSorcus.Position = UDim2.new(0.416107386, 0, 0.540229917, 0)
+	InsertSorcus.Size = UDim2.new(0, 50, 0, 25)
+	InsertSorcus.Font = Enum.Font.SourceSans
+	InsertSorcus.Text = "Sorcus"
+	InsertSorcus.TextColor3 = Color3.fromRGB(118, 118, 118)
+	InsertSorcus.TextSize = 14.000
+
+	UICorner_104.Parent = InsertSorcus
+
+	InsertSOL.Name = "InsertSOL"
+	InsertSOL.Parent = Page9Frame
+	InsertSOL.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+	InsertSOL.Position = UDim2.new(0.20134227, 0, 0.540229917, 0)
+	InsertSOL.Size = UDim2.new(0, 50, 0, 25)
+	InsertSOL.Font = Enum.Font.SourceSans
+	InsertSOL.Text = "Light"
+	InsertSOL.TextColor3 = Color3.fromRGB(118, 118, 118)
+	InsertSOL.TextSize = 14.000
+
+	UICorner_105.Parent = InsertSOL
+
+	GearInserters.Name = "GearInserters"
+	GearInserters.Parent = Page9Frame
+	GearInserters.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	GearInserters.BackgroundTransparency = 1.000
+	GearInserters.Position = UDim2.new(0.164429516, 0, 0.00574713945, 0)
+	GearInserters.Size = UDim2.new(0, 200, 0, 10)
+	GearInserters.Font = Enum.Font.SourceSansBold
+	GearInserters.Text = "Gear Inserters"
+	GearInserters.TextColor3 = Color3.fromRGB(118, 118, 118)
+	GearInserters.TextSize = 14.000
+
+	-- Scripts:
+	local script = Instance.new('Script', CHGui)
+
+	--XButton
+	X.MouseButton1Down:connect(function()
+		CHGui:Remove()
+		GuiReset()
+	end)
+
+	--ChatMessages
+	function ChatMessage(v)
+		game.StarterGui:SetCore("ChatMakeSystemMessage", {
+			Text = game.Players:GetNameFromUserIdAsync(v);
+			Color = Color3.fromRGB(162, 173, 248);
+			Font = Enum.Font.SourceSansBold;
+			FontSize = Enum.FontSize.Size96;
+		})
+	end
+
+	function ChatMessage2(Message, r, g, b)
+		game.StarterGui:SetCore("ChatMakeSystemMessage", {
+			Text = Message;
+			Color = Color3.fromRGB(r, g, b);
+			Font = Enum.Font.SourceSansBold;
+			FontSize = Enum.FontSize.Size96;
+		})
+	end
+
+	--InsertGear
+	function InsertGear(Id, Name)
+		if not game.Players.LocalPlayer.Backpack:FindFirstChild(Name) and not game.Players.LocalPlayer.Character:FindFirstChild(Name) then
+			game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(Id)
+		end
+	end
+
+	--RemoveGear
+	function RemoveGear(Id, Name)
+		if game.Players.LocalPlayer.Backpack:FindFirstChild(Name) and not game.Players.LocalPlayer.Character:FindFirstChild(Name) then
+			game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(Id)
+		end
+	end
+
+	--Time 
+	Days = math.random(400,200000)
+	Minutes = math.random(0,59)
+	Seconds = math.random(0,59)
+
+	--PreviousTable
+	local Previous = {}
+
+	--TargetsTable
+	local Targets2 = {}
+
+	--InsertTargetName
+	TargetName:GetPropertyChangedSignal("Text"):Connect(function()
+		for i = 1, #game.Players:GetPlayers() do
+			if string.lower(string.sub(game.Players:GetPlayers()[i].Name, 1, string.len(TargetName.Text))) == string.lower(TargetName.Text) then
+				TargetID = game.Players:GetPlayers()[i].UserId
+				break
+			end
+		end
+	end)
+
+	--RemoveTargetName
+	TargetName:GetPropertyChangedSignal("Text"):Connect(function()
+		for i,v in pairs(_G.TargetsTable) do
+			c = game.Players:GetNameFromUserIdAsync(v)
+			if string.lower(string.sub(c, 1, string.len(TargetName.Text))) == string.lower(TargetName.Text) then
+				TargetID2 = v
+				break
+			end
+		end
+	end)
+
+	--SpectateName
+	SpectateName:GetPropertyChangedSignal("Text"):Connect(function()
+		for i = 1, #game.Players:GetPlayers() do
+			if string.lower(string.sub(game.Players:GetPlayers()[i].Name, 1, string.len(SpectateName.Text))) == string.lower(SpectateName.Text) then
+				Spectated = game.Players:GetPlayers()[i]
+				break
+			end
+		end
+	end)
+
+
+	--InsertWhitelistName
+	WhitelistUser:GetPropertyChangedSignal("Text"):Connect(function()
+		for i = 1, #game.Players:GetPlayers() do
+			if string.lower(string.sub(game.Players:GetPlayers()[i].Name, 1, string.len(WhitelistUser.Text))) == string.lower(WhitelistUser.Text) then
+				WhitelistID = game.Players:GetPlayers()[i].UserId
+				break
+			end
+		end
+	end)
+
+	--RemoveWhitelistName
+	WhitelistUser:GetPropertyChangedSignal("Text"):Connect(function()
+		for i,v in pairs(_G.WhitelistTable) do
+			c = game.Players:GetNameFromUserIdAsync(v)
+			if string.lower(string.sub(c, 1, string.len(WhitelistUser.Text))) == string.lower(WhitelistUser.Text) then
+				WhitelistID2 = v
+				break
+			end
+		end
+	end)
+
+	--DefineTargets
+	if not _G.WhitelistTable then
+		if not isfile('Whitelist.txt') then
+			_G.WhitelistTable = {}
+			writefile('Whitelist.txt', game.HttpService:JSONEncode(_G.WhitelistTable))
+		else
+			_G.WhitelistTable = game.HttpService:JSONDecode(readfile('Whitelist.txt'))
+		end
+	end
+
+	--RemoveWhitelist
+	RemoveWhitelist.MouseButton1Down:connect(function()
+		WhitelistRemove = table.find(_G.WhitelistTable, WhitelistID2)
+		table.remove(_G.WhitelistTable, WhitelistRemove)
+		writefile('Whitelist.txt',game.HttpService:JSONEncode(_G.WhitelistTable))
+		ChatMessage2('Whitelisted:', 162, 173, 248)
+		for i,v in pairs(_G.WhitelistTable) do
+			ChatMessage(v)
+			print(v .. " --" .. game.Players:GetNameFromUserIdAsync(v))
+		end
+		WhitelistUser.Text = ""
+	end)
+
+	--InsertWhitelist
+	InsertWhitelist.MouseButton1Down:connect(function()
+		if table.find(_G.WhitelistTable, WhitelistID) or WhitelistID == game.Players.LocalPlayer.UserId then
+			print "Already In Table"
+		else
+			table.insert(_G.WhitelistTable, WhitelistID)
+			writefile('Whitelist.txt',game.HttpService:JSONEncode(_G.WhitelistTable))
+		end
+		ChatMessage2('Whitelisted', 162, 173, 248)
+		for i,v in pairs(_G.WhitelistTable) do
+			ChatMessage(v)
+			print(v .. " --" .. game.Players:GetNameFromUserIdAsync(v))
+		end
+		WhitelistUser.Text = ""
+	end)
+
+	--ToPlrName
+	PlayerName:GetPropertyChangedSignal("Text"):Connect(function()
+		for i = 1, #game.Players:GetPlayers() do
+			if string.lower(string.sub(game.Players:GetPlayers()[i].Name, 1, string.len(PlayerName.Text))) == string.lower(PlayerName.Text) then
+				Player = game.Players:GetPlayers()[i].Name
+				break
+			end
+		end
+	end)
+
+	--ToPlr
+	ToPlayer.MouseButton1Down:connect(function()
+		plr = game.Workspace:FindFirstChild(Player)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = plr.HumanoidRootPart.CFrame * CFrame.new(-1,0,1)
+	end)
+
+	--speed
+	Speed.MouseButton1Down:connect(function()
+		_G.Speed = not _G.Speed
+		if _G.Speed == true then
+			Speed.Text = "UnSpeed"
+		else
+			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = '16'
+			Speed.Text = "Speed"
+		end
+		pcall(function()
+			while game.RunService.RenderStepped:wait() do
+				if _G.Speed then
+					for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+						if v.Name == "Humanoid" then
+							v.WalkSpeed = WalkSpeed.Text
+						end
+					end
+				else
+					break
+				end
+			end
+		end)
+	end)
+
+	--jump
+	Jump.MouseButton1Down:connect(function()
+		_G.Jump = not _G.Jump
+		if _G.Jump == true then
+			Jump.Text = "UnJump"
+		else
+			game.Players.LocalPlayer.Character.Humanoid.JumpPower = '50'
+			Jump.Text = "Jump"
+		end
+		pcall(function()
+			while game.RunService.RenderStepped:wait() do
+				if _G.Jump then
+					for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+						if v.Name == "Humanoid" then
+							v.JumpPower = JumpHeight.Text
+						end
+					end
+				else
+					break
+				end
+			end
+		end)
+	end)
+
+	--TimeChange
+	TimeChange.MouseButton1Down:connect(function()
+		Time = TimeSet.Text
+		game.Lighting.TimeOfDay = Time
+		game.Lighting.Changed:connect(function(v)
+			if v == 'TimeOfDay' then
+				game.Lighting.TimeOfDay = Time
+			end
+		end)
+	end)
+
+	--DefineTargets
+	if not _G.TargetsTable then
+		if not isfile('Targets.txt') then
+			_G.TargetsTable = {}
+			writefile('Targets.txt', game.HttpService:JSONEncode(_G.TargetsTable))
+		else
+			_G.TargetsTable = game.HttpService:JSONDecode(readfile('Targets.txt'))
+		end
+	end
+
+	--RemoveTarget
+	RemoveTarget.MouseButton1Down:connect(function()
+		TargetRemove = table.find(_G.TargetsTable, TargetID2)
+		table.remove(_G.TargetsTable, TargetRemove)
+		writefile('Targets.txt',game.HttpService:JSONEncode(_G.TargetsTable))
+		ChatMessage2('Targets:', 162, 173, 248)
+		for i,v in pairs(_G.TargetsTable) do
+			ChatMessage(v)
+			print(v .. " --" .. game.Players:GetNameFromUserIdAsync(v))
+		end
+		TargetName.Text = ""
+	end)
+
+	--InsertTarget
+	InsertTarget.MouseButton1Down:connect(function()
+		if table.find(_G.TargetsTable, TargetID) or TargetID == game.Players.LocalPlayer.UserId then
+			print "Already In Table"
+		else
+			table.insert(_G.TargetsTable, TargetID)
+			writefile('Targets.txt',game.HttpService:JSONEncode(_G.TargetsTable))
+		end
+		ChatMessage2('Targets:', 162, 173, 248)
+		for i,v in pairs(_G.TargetsTable) do
+			ChatMessage(v)
+			print(v .. " --" .. game.Players:GetNameFromUserIdAsync(v))
+		end
+		TargetName.Text = ""
+	end)
+
+	--airwalk
+	AirWalk.MouseButton1Down:connect(function()
+		_G.AirWalk = not _G.AirWalk
+		if _G.AirWalk == true then
+			AirWalk.Text = "UnAirWalk"
+		else
+			AirWalk.Text = "AirWalk"
+		end
+		UIS = game:GetService("UserInputService")
+
+		WalkPart = Instance.new("Part", workspace)
+		WalkPart.Size = Vector3.new(7, 2, 3)
+		WalkPart.CFrame = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -4, 0)
+		WalkPart.Transparency = 1
+		WalkPart.Anchored = true
+		WalkPart.Name = "Airwalk"
+
+		UIS.InputBegan:connect(function(key)
+			if key.KeyCode == Enum.KeyCode.LeftControl then
+				repeat
+					game.RunService.RenderStepped:wait()
+					WalkPart.Size = Vector3.new(4, -0.5, 3)
+				until not UIS.IsKeyDown(Enum.KeyCode.LeftControl)
+			end
+		end)
+
+		UIS.InputEnded:connect(function(key)
+			if key.KeyCode == Enum.KeyCode.LeftControl then
+				WalkPart.Size = Vector3.new(7, 2, 3)
+			end
+		end)
+
+		repeat
+			WalkPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -4, 0)
+			game.RunService.RenderStepped:wait()
+		until _G.AirWalk == false
+		game.Workspace.Airwalk:Destroy()
+	end)
+
+	--Clicktp
+	ClickTP.MouseButton1Down:connect(function()
+		_G.ClickTp = not _G.ClickTp
+		if _G.ClickTp == true then
+			ClickTP.Text = 'UnClickTP'
+		elseif _G.ClickTp == false then
+			ClickTP.Text = 'ClickTP'
+		end
+
+		game.Players.LocalPlayer:GetMouse().Button1Down:Connect(function()
+			if game.Players.LocalPlayer:GetMouse().Target and _G.ClickTp == true then 
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer:GetMouse().Hit.x, game.Players.LocalPlayer:GetMouse().Hit.y + 5, game.Players.LocalPlayer:GetMouse().Hit.z)
+			end
+		end)
+	end)
+
+	--Crash
+	Crash.MouseButton1Down:connect(function()
+		Sure()
+	end)
+
+	--frame
+	frame = script.Parent.DragFrame
+	frame.Draggable = true
+	frame.Active = true
+	frame.Selectable = true
+
+	--block
+	local Block = Instance.new("Part", workspace)
+	Block.Name = "PlatformBlock"
+	Block.Position = Vector3.new(300000, 300000, 300000)
+	Block.Size = Vector3.new(10000, 3, 10000)
+	Block.Color = BrickColor.new("Maroon").Color
+	Block.CanCollide = true
+	Block.Anchored = true
+
+	--startmessage
+	ChatMessage2("Thank you for using my Gui\n Press Ctrl + B to hide Gui :)", 255, 247, 0)
+	ChatMessage2("Ctrl + Z For ID Toggle", 255, 247, 0)
+	ChatMessage2("/e print (Targets, Whitelist, Hitlist) to Get Specified Players", 255, 247, 0)
+	ChatMessage2("/e Clear (Targets, Whitelist, Hitlist) to Clear a Specific Table", 255, 247, 0)
+	ChatMessage2("/e h (Name) To Get Profile of A Hitlisted Player", 255, 247, 0)
+	ChatMessage2("/e t (Name) To Get Profile of A Targetted Player", 255, 247, 0)
+	ChatMessage2("/e w (Name) To Get Profile of A Whitelisted Player", 255, 247, 0)
+	ChatMessage2("/e p (Name) To Get Profile of A Player", 255, 247, 0)
+
+	--Hide
+	game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
+		if (input.KeyCode == Enum.KeyCode.B and game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl)) or (input.KeyCode == Enum.KeyCode.LeftControl and game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.B)) then
+			DragFrame.Visible = not DragFrame.Visible
+		end
+	end)
+
+	--Unblind
+	spawn(function()
+		while true do
+			wait()
+			for i,v in pairs(game.Players.LocalPlayer.PlayerGui:GetChildren()) do
+				if v.Name == "DarknessGui" or v.Name == "GuiMain" then
+					v:Remove()
+				end
+			end
+		end
+	end)
+
+	--Next1
+	Next1.MouseButton1Down:connect(function()
+		Page1Frame.Visible = false
+		Page2Frame.Visible = true
+	end)
+
+	--Next2
+	Next2.MouseButton1Down:connect(function()
+		Page2Frame.Visible = false
+		Page3Frame.Visible = true
+	end)
+
+	--Next3
+	Next3.MouseButton1Down:connect(function()
+		Page3Frame.Visible = false
+		Page4Frame.Visible = true
+	end)
+
+	--Next4
+	Next4.MouseButton1Down:connect(function()
+		Page4Frame.Visible = false
+		Page5Frame.Visible = true
+	end)
+
+	--Next5
+	Next5.MouseButton1Down:connect(function()
+		Page5Frame.Visible = false
+		Page6Frame.Visible = true
+	end)
+
+	--Next6
+	Next6.MouseButton1Down:connect(function()
+		Page6Frame.Visible = false
+		Page7Frame.Visible = true
+	end)
+
+	--Next7
+	Next7.MouseButton1Down:connect(function()
+		Page7Frame.Visible = false
+		Page8Frame.Visible = true
+	end)
+
+	--Next8
+	Next8.MouseButton1Down:connect(function()
+		Page8Frame.Visible = false
+		Page9Frame.Visible = true
+	end)
+    
+    --Tweens
+    Tween1 = game.TweenService:Create(Scripting, TweenInfo.new(2), {TextTransparency = 1})
+    Tween2 = game.TweenService:Create(GuiDesign, TweenInfo.new(2), {TextTransparency = 1})
+    Tween3 = game.TweenService:Create(Inspiration, TweenInfo.new(2), {TextTransparency = 1})
+    Tween4 = game.TweenService:Create(Thanks, TweenInfo.new(1), {TextTransparency = 0})
+    
+	--Next9
+	Next9.MouseButton1Down:connect(function()
+		Page9Frame.Visible = false
+		Page10Frame.Visible = true
+		wait(5)
+        Tween1:Play()
+        Tween2:Play()
+        Tween3:Play()
+        wait(1.75)
+        Tween4:Play()
+	end)
+
+	--Prev1
+	Prev1.MouseButton1Down:connect(function()
+		Page2Frame.Visible = false
+		Page1Frame.Visible = true
+	end)
+
+	--Prev2
+	Prev2.MouseButton1Down:connect(function()
+		Page3Frame.Visible = false
+		Page2Frame.Visible = true
+	end)
+
+	--Prev3
+	Prev3.MouseButton1Down:connect(function()
+		Page4Frame.Visible = false
+		Page3Frame.Visible = true
+	end)
+
+	--Prev4
+	Prev4.MouseButton1Down:connect(function()
+		Page5Frame.Visible = false
+		Page4Frame.Visible = true
+	end)
+
+	--Prev5
+	Prev5.MouseButton1Down:connect(function()
+		Page6Frame.Visible = false
+		Page5Frame.Visible = true
+	end)
+
+	--Prev6
+	Prev6.MouseButton1Down:connect(function()
+		Page7Frame.Visible = false
+		Page6Frame.Visible = true
+	end)
+
+	--Prev7
+	Prev7.MouseButton1Down:connect(function()
+		Page8Frame.Visible = false
+		Page7Frame.Visible = true
+	end)
+
+	--Prev8
+	Prev8.MouseButton1Down:connect(function()
+		Page9Frame.Visible = false
+		Page8Frame.Visible = true
+	end)
+
+	--Prev9
+	Prev9.MouseButton1Down:connect(function()
+		Page10Frame.Visible = false
+		Page9Frame.Visible = true
+		Tween1:Pause()
+        Tween2:Pause()
+        Tween3:Pause()
+        Tween4:Pause()
+		Scripting.TextTransparency = 0 
+		GuiDesign.TextTransparency = 0 
+		Inspiration.TextTransparency = 0 
+		Thanks.TextTransparency = 1
+	end)
+
+	--Previous2Table
+	Previous2 = {}
+
+	--Load
+	Load.MouseButton1Down:connect(function()
+		local Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+		table.insert(Previous2, Position)
+		wait()
+		fireclickdetector(game.Workspace[game.Players.LocalPlayer.Name .. "'s Cloud"].OutfitGiver.Load.Head.ClickDetector)
+		wait(0.5)
+		game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(Previous2[1])
+		table.remove(Previous2, 1)
+	end)
+
+	--Save
+	Save.MouseButton1Down:connect(function()
+		fireclickdetector(game.Workspace[game.Players.LocalPlayer.Name .. "'s Cloud"].OutfitGiver.Save.Head.ClickDetector)
+	end)
+
+	--PrevLoad
+	PrevLoad.MouseButton1Down:connect(function()
+		fireclickdetector(game.Workspace[game.Players.LocalPlayer.Name .. "'s Cloud"].OutfitGiver.Previous.ClickDetector)
+	end)
+
+	--NextLoad
+	NextLoad.MouseButton1Down:connect(function()
+		fireclickdetector(game.Workspace[game.Players.LocalPlayer.Name .. "'s Cloud"].OutfitGiver.Next.ClickDetector)
+	end)
+
+	--ChangeLoadoutText
+	wait(1)
+	if not game.Workspace[game.Players.LocalPlayer.Name .. "'s Cloud"].OutfitGiver:FindFirstChild("Click here to unlock this feature") then
+		Loadout.Text = ("The Current Load Is: 1")
+		for i,v in pairs(game.Workspace[game.Players.LocalPlayer.Name .. "'s Cloud"].OutfitGiver:GetDescendants()) do
+			if v.Name == "Torso" then
+				v.Parent.Changed:connect(function()
+					LoadNumber = string.sub(v.Parent.Name,0,2)
+					Loadout.Text = ("The Current Load Is: " .. LoadNumber)
+				end)
+			end
+		end
+	end
+
+	--safespot
+	SafeSpot.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(300000, 300001, 300000)
+	end)
+
+	--Whitelist
+	Whitelist.MouseButton1Down:connect(function()
+		_G.AntiJoin = not _G.AntiJoin
+		if _G.AntiJoin == true then
+			Whitelist.Text = "Un Whitelist"
+			Whitelist.TextWrapped = true
+		else
+			Whitelist.Text = "Whitelist"
+		end
+		InsertGear(173755801, "Diamond Blade Sword")
+		while game:GetService("RunService").RenderStepped:wait() do
+			if _G.AntiJoin then
+				pcall(function()
+					for i,v in pairs(game.Players:GetChildren()) do
+						if not table.find(_G.WhitelistTable, v.UserId) then
+							if v.Character.Humanoid.Health >= 1 and v ~= game.Players.LocalPlayer then
+								game.Players.LocalPlayer.Backpack:WaitForChild("Diamond Blade Sword").GearScript.Controller:InvokeServer(7, v.Character.Humanoid, math.huge())
+							end
+						end
+					end
+				end)
+			else
+				break
+			end
+		end
+	end)
+
+	--AntiFF
+	AntiFF.MouseButton1Down:connect(function()
+		_G.AntiFF = not _G.AntiFF
+		if _G.AntiFF == true then
+			AntiFF.Text = "UnAnti-FF"
+			InsertGear(68539623, 'KorbloxSwordAndShield')
+		else
+			AntiFF.Text = "Anti-FF"
+			RemoveGear(68539623, 'KorbloxSwordAndShield')
+		end
+		while game.RunService.RenderStepped:wait() do
+			if _G.AntiFF then
+				pcall(function()
+					for i,v in pairs(game.Players:GetChildren()) do
+						if v.Character:FindFirstChild("ForceField") and not v.Character:FindFirstChild("ShieldSphere") and not v.Character:FindFirstChild("BatControls") and v ~= game.Players.LocalPlayer then
+							game.Players.LocalPlayer.Backpack.KorbloxSwordAndShield.Parent = game.Players.LocalPlayer.Character
+							local Handle = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Handle
+							if v.Character.Humanoid.Health > 0 then
+								for i=0,5 do
+									game.RunService.RenderStepped:wait()
+									for i,c in pairs(v.Character:GetChildren()) do
+										if c:IsA("BasePart") then
+											c = ((c.IsA(c, "BasePart") and firetouchinterest(Handle, c, 1,(game.RunService.RenderStepped.Wait(game.RunService.RenderStepped) and nil) or firetouchinterest(Handle, c, 0)) and nil) or c) or c
+										end
+									end
+								end
+							end
+							game.RunService.RenderStepped:wait()
+						end
+					end
+				end)
+			else 
+				break
+			end
+		end
+	end)
+
+	--Heal
+	Heal.MouseButton1Down:connect(function()
+		plr = game.Players.LocalPlayer
+		hum = plr.Character.Humanoid
+		InsertGear(173755801, "Diamond Blade Sword")
+		_G.Heal = not _G.Heal
+		if _G.Heal == true then
+			Heal.Text = "UnHeal"
+		else
+			Heal.Text = "Heal"
+		end
+		while game.RunService.RenderStepped:wait() do
+			if _G.Heal then
+					pcall(function()
+						plr.Backpack:FindFirstChild("Diamond Blade Sword").GearScript.Controller:InvokeServer(7,hum,-(hum.MaxHealth))
+					end)
+			else 
+				break
+			end
+		end
+	end)
+
+	--Martyrdom
+	Martyrdom.MouseButton1Down:connect(function()
+		_G.Martyrdom = not _G.Martyrdom
+		if _G.Martyrdom == true then
+			Martyrdom.Text = "UnMartyrdom"
+		else
+			Martyrdom.Text = "Martyrdom"
+		end
+		InsertGear(173755801, "Diamond Blade Sword")
+		while game.RunService.RenderStepped:wait() do
+			if _G.Martyrdom then
+				for i,v in pairs(game.Players:GetPlayers()) do
+					if v ~= game.Players.LocalPlayer then
+						pcall(function()
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).magnitude <= 40 then
+								print((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).magnitude)
+								if game.Players.LocalPlayer.Character.Humanoid.Health <= 0 then
+									if v.Character.Humanoid.Health > 0 then
+										game.Players.LocalPlayer.Backpack:WaitForChild("Diamond Blade Sword").GearScript.Controller:InvokeServer(7, v.Character.Humanoid, v.Character.Humanoid.MaxHealth)
+									end
+								end
+							end
+						end)
+					end
+				end
+			else
+				break
+			end
+		end
+	end)
+
+	--KrnlCbring
+	CBring.MouseButton1Down:connect(function()
+		_G.TorsoCbring = not _G.TorsoCbring
+		if _G.TorsoCbring == true then
+			CBring.Text = "UnCBring"
+		else
+			CBring.Text = "CBring"
+		end
+		while game.RunService.RenderStepped:wait() do
+			if _G.TorsoCbring then
+				for i,v in pairs(game.Players:GetChildren()) do
+					if table.find(_G.TargetsTable, v.UserId) or table.find(Targets2, v.Name) and v ~= game.Players.LocalPlayer then
+						for i,c in pairs(v.Character:GetChildren()) do
+							if c:IsA("BasePart") then
+								c.Anchored = true
+								c.CFrame = game.Players.LocalPlayer.Character.Torso.CFrame * CFrame.new(Vector3.new(1.5, 1, -1.8))
+							elseif c:IsA("Tool") then
+								c:Remove()
+							end
+						end
+					end
+				end
+			else
+				break
+			end
+		end
+	end)
+
+	--AntiVoid
+	AntiVoid.MouseButton1Down:connect(function()
+		for i,v in pairs(game.Workspace:GetDescendants()) do
+			pcall(function()
+				v.Velocity = Vector3.new(0,0,0)
+			end)
+		end
+	end)
+
+	--Hitlist
+	Hitlist.MouseButton1Down:connect(function()
+		_G.KillHits = not _G.KillHits
+		if _G.KillHits == true then
+			Hitlist.Text = "UnHitlist"
+		else
+			Hitlist.Text = "Hitlist"
+		end
+		InsertGear(173755801, "Diamond Blade Sword")
+		while game.RunService.RenderStepped:wait() do
+			if _G.KillHits then
+				pcall(function()
+					for i,v in pairs(game.Players:GetChildren()) do
+						if table.find(Hitlisted, v.UserId) or table.find(_G.HitlistTable, v.UserId) and v ~= game.Players.LocalPlayer then
+							if v.Character.Humanoid.Health > 0 then
+								game.Players.LocalPlayer.Backpack:FindFirstChild("Diamond Blade Sword").GearScript.Controller:InvokeServer(7, v.Character.Humanoid, v.Character.Humanoid.MaxHealth)
+							end
+						end
+					end
+				end)
+			else
+				break
+			end
+		end
+	end)
+
+	--AntiMap
+	AntiMap.MouseButton1Down:connect(function()
+		_G.AntiMap = not _G.AntiMap
+		if _G.AntiMap == true then
+			AntiMap.Text = "Un AntiMap"
+			AntiMap.TextWrapped = true
+		else
+			if MapClone then
+				MapClone.Parent = game.Workspace
+				MapClone.Name = 'ClonedMap'
+			end
+			AntiMap.Text = "AntiMap"
+		end
+		while game.RunService.RenderStepped:wait() do
+			if _G.AntiMap then
+				pcall(function()
+					if game.Workspace:FindFirstChild("MapModel") then
+						wait(0.5)
+						MapClone = game.Workspace.MapModel:Clone()
+						game.Workspace.MapModel:Remove()
+					elseif game.Workspace:FindFirstChild('ClonedMap') then
+						wait(0.5)
+						MapClone = game.Workspace.ClonedMap:Clone()
+						game.Workspace.ClonedMap:Remove()
+					end
+				end)
+			else
+				break
+			end
+		end
+	end)
+
+	--YayMap
+	game.Workspace.ChildAdded:connect(function(Child)
+		if _G.AntiMap == false then
+			if Child.Name == 'MapModel' then
+				if game.Workspace:FindFirstChild('ClonedMap') then
+					game.Workspace.ClonedMap:Remove()
+				end
+			end
+		end
+	end)
+
+	--RemoveWalls
+	RemoveWalls.MouseButton1Down:connect(function()
+		for i,v in pairs(game.Workspace:GetDescendants()) do
+			if v.Name == "FF" or v.Name == "Fence" then
+				v:Remove()
+			end
+		end
+		game.Workspace.DescendantAdded:connect(function(v)
+			game.RunService.RenderStepped:wait()
+			if v.Name == "FF" or v.Name == "Fence" then
+				v:Remove()
+			end
+		end)
+	end)
+	
+	--AnchorPos
+	AnchorPos = {}
+
+	--Anchor
+	Anchor.MouseButton1Down:connect(function()
+		_G.Anchor = not _G.Anchor
+		if _G.Anchor == true then
+			Anchor.Text = "Un Anchor"
+			Anchor.TextWrapped = true
+			table.insert(AnchorPos, game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+		else
+			game.Players.LocalPlayer.Character.Torso.Anchored = false
+			Anchor.Text = "Anchor"
+			table.clear(AnchorPos)
+		end
+		while game.RunService.RenderStepped:wait() do
+		    if _G.Anchor then
+		        pcall(function()
+		            for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+		                pcall(function()
+		                    v.Velocity = Vector3.new(0,0,0)
+		                end)
+		            end
+		            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = AnchorPos[1]
+		        end)
+		    else
+		        break
+		    end
+        end
+	end)
+
+	--GodMode
+	GodMode.MouseButton1Down:connect(function()
+		if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character.Humanoid then
+			game.Players.LocalPlayer.Character.Humanoid:Remove()
+			Instance.new('Humanoid', game.Players.LocalPlayer.Character)
+			wait(0.5)
+			speaker = game.Players.LocalPlayer
+			local Cam = workspace.CurrentCamera
+			local Pos, Char = Cam.CFrame, speaker.Character
+			local Human = Char and Char.FindFirstChildWhichIsA(Char, "Humanoid")
+			local nHuman = Human.Clone(Human)
+			nHuman.Parent, speaker.Character = Char, nil
+			nHuman.SetStateEnabled(nHuman, 15, false)
+			nHuman.SetStateEnabled(nHuman, 1, false)
+			nHuman.SetStateEnabled(nHuman, 0, false)
+			nHuman.BreakJointsOnDeath, Human = true, Human.Destroy(Human)
+			speaker.Character, Cam.CameraSubject, Cam.CFrame = Char, nHuman, wait() and Pos
+			nHuman.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+			local Script = Char.FindFirstChild(Char, "Animate")
+			if Script then
+				Script.Disabled = true
+				wait()
+				Script.Disabled = false
+			end
+			nHuman.Health = nHuman.MaxHealth
+		end
+	end)
+
+	--BaseProtect
+	BaseProtect.MouseButton1Down:connect(function()
+		_G.BaseProtect = not _G.BaseProtect
+		if _G.BaseProtect == true then
+			BaseProtect.Text = "UnBase Protect"
+		else
+			BaseProtect.Text = "Base Protect"
+		end
+		InsertGear(173755801, "Diamond Blade Sword")
+		while game.RunService.RenderStepped:wait() do
+			if _G.BaseProtect then
+				for i,v in pairs(game.Players:GetChildren()) do
+					pcall(function()
+						if v ~= game.Players.LocalPlayer and not table.find(_G.WhitelistTable, v.UserId) and v.Character.Humanoid.Health >= 1 and (v.Character.HumanoidRootPart.Position - game.Workspace[game.Players.LocalPlayer.Name .. "'s Cloud"].SpawnLocation.Position).magnitude <= 40 then
+							game.Players.LocalPlayer.Backpack:FindFirstChild("Diamond Blade Sword").GearScript.Controller:InvokeServer(7, v.Character.Humanoid, v.Character.Humanoid.MaxHealth)
+						end
+					end)
+				end
+			else
+				break
+			end
+		end
+	end)
+
+	--TargetOthers
+	Others.MouseButton1Down:connect(function()
+		_G.TargetOthers = not _G.TargetOthers
+		if _G.TargetOthers == true then
+			Others.Text = "UnTarget Others"
+		else
+			for i,v in pairs(Targets2) do
+				Targets2[i] = nil
+			end
+			Others.Text = "Target Others"
+		end
+		while wait() do
+			if _G.TargetOthers then
+				for i, v in pairs(game.Players:GetChildren()) do
+					if v ~= game.Players.LocalPlayer and not table.find(Targets2,v.Name) then
+						table.insert(Targets2, v.Name)
+					end
+				end
+			else
+				break
+			end
+		end
+	end)
+
+	--FTI
+	FTI.MouseButton1Down:connect(function()
+		_G.KillTarget = not _G.KillTarget
+		if _G.KillTarget == true then
+			FTI.Text = "UnFTI"
+		else
+			FTI.Text = "FTI"
+		end
+		while game:GetService("RunService").RenderStepped:wait() do
+			if _G.KillTarget then
+				for i,v in pairs(game.Players:GetChildren()) do
+					if table.find(_G.TargetsTable, v.UserId) or table.find(Targets2, v.Name) and v ~= game.Players.LocalPlayer then
+						spawn(function()
+							local Handle = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Handle
+							if Handle then
+								for i,c in pairs(v.Character:GetChildren()) do
+									if c:IsA("BasePart") then
+										c = ((c.IsA(c, "BasePart") and firetouchinterest(Handle, c, 1,(game:GetService("RunService").RenderStepped.Wait(game:GetService("RunService").RenderStepped) and nil) or firetouchinterest(Handle, c, 0)) and nil) or c) or c
+									end
+								end
+							end
+						end)
+					end
+				end
+			else
+				break
+			end
+		end
+	end)
+	
+	--AntiWaterKill
+	spawn(function()
+        while wait() do
+            pcall(function()
+                if game.Workspace.MapModel.WaterKill:FindFirstChild('TouchInterest') then
+                   game.Workspace.MapModel.WaterKill.TouchInterest:Remove() 
+                end
+            end)
+        end
+    end)
+
+	--Diamond
+	Diamond.MouseButton1Down:connect(function()
+		InsertGear(173755801, "Diamond Blade Sword")
+		_G.Diamond = not _G.Diamond
+		if _G.Diamond == true then
+			Diamond.Text = "Un Diamond"
+			Diamond.TextWrapped = true
+		else
+			Diamond.Text = "Diamond"
+		end
+		while game.RunService.RenderStepped:wait() do
+			if _G.Diamond then
+				pcall(function()
+					for i,v in pairs(game.Players:GetChildren()) do
+						if table.find(_G.TargetsTable, v.UserId) or table.find(Targets2, v.Name) and v ~= game.Players.LocalPlayer then
+							if v.Character.Humanoid.Health > 0 then
+								game.Players.LocalPlayer.Backpack:FindFirstChild("Diamond Blade Sword").GearScript.Controller:InvokeServer(7, v.Character.Humanoid, v.Character.Humanoid.MaxHealth)
+							end
+						end
+					end
+				end)
+			else
+				break
+			end
+		end
+	end)
+
+	--Characterremove
+	DeleteMe.MouseButton1Down:connect(function()
+		_G.RemoveMe = not _G.RemoveMe
+		if _G.RemoveMe == true then
+			local Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+			table.insert(Previous, Position)
+			DeleteMe.Text = "Un DeleteMe"
+			DeleteMe.TextWrapped = true
+		else
+			DeleteMe.Text = "DeleteMe"
+			game:GetService("ReplicatedStorage").Remotes.SetRigType:FireServer(Enum.HumanoidRigType.R6)
+			wait(0.5)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Previous[1])
+			table.remove(Previous, 1)
+		end
+		while game:GetService("RunService").RenderStepped:wait() do
+			if _G.RemoveMe then
+				game.Players.LocalPlayer.Character:Remove()
+			else
+				break
+			end
+		end
+	end)
+
+	--RocketRain
+	RocketRain.MouseButton1Down:connect(function()
+		_G.RocketRainOn = not _G.RocketRainOn
+		if _G.RocketRainOn == true then
+			RocketRain.Text = "Un RocketRain"
+			RocketRain.TextWrapped = true
+		else
+			RemoveGear(169602103, 'RocketJumper')
+			RocketRain.Text = "RocketRain"
+		end
+
+		InsertGear(169602103, "RocketJumper")
+		while game.RunService.RenderStepped:wait() do
+			if _G.RocketRainOn then
+				pcall(function()
+					game.Players.LocalPlayer.Backpack.RocketJumper.FireRocket:FireServer(Vector3.new(0,-9e9,0),Vector3.new(game.Players.LocalPlayer.Character.Head.Position.X + math.random(-400,400),game.Players.LocalPlayer.Character.Head.Position.Y + 250, game.Players.LocalPlayer.Character.Head.Position.Z + math.random(-400,400)))
+				end)
+			else
+				break
+			end
+		end
+	end)
+
+	--DeathSpotTable
+	DeathSpot = {}
+
+	--CheckDeathPosition
+	spawn(function()
+		while wait() do
+			pcall(function()
+				if game.Players.LocalPlayer.Character.Humanoid.Health <= 0 then
+					game.Players.LocalPlayer.Character.Head.Anchored = true
+					table.insert(DeathSpot,1,game.Players.LocalPlayer.Character.Head.CFrame)
+					wait()
+				end
+			end)
+		end
+	end)
+
+	--AntiInvis
+	spawn(function()
+		while wait() do
+			pcall(function()
+				for i,v in pairs(game.Players:GetPlayers()) do
+					if v ~= game.Players.LocalPlayer then
+						for i,c in pairs(v.Character:GetChildren()) do
+							pcall(function()
+								if c.Transparency ~= 0 and c.Name ~= 'HumanoidRootPart' then
+									c.Transparency = 0.75
+								end
+							end)
+						end
+					end
+				end
+			end)
+		end
+	end)
+
+	--DeathPoint
+	DeathPoint.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = (DeathSpot[1])
+	end)
+
+	--KillAura
+	KillAura.MouseButton1Down:connect(function()
+		_G.KillAura = not _G.KillAura
+		if _G.KillAura == true then
+			KillAura.Text = "UnKillAura"
+		else
+			KillAura.Text = "KillAura"
+		end
+		InsertGear(173755801, "Diamond Blade Sword")
+		while game.RunService.RenderStepped:wait() do
+			if _G.KillAura then
+				for i,v in pairs(game.Players:GetPlayers()) do
+					if v ~= game.Players.LocalPlayer then
+						pcall(function()
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).magnitude <= 40 then
+								if v.Character.Humanoid.Health > 0 then
+									game.Players.LocalPlayer.Backpack:WaitForChild("Diamond Blade Sword").GearScript.Controller:InvokeServer(7, v.Character.Humanoid, v.Character.Humanoid.MaxHealth)
+								end
+							end
+						end)
+					end
+				end
+			else
+				break
+			end
+		end
+	end)
+
+	--Grimgold
+	Grimgold.MouseButton1Down:connect(function()
+		_G.Grimgold = not _G.Grimgold
+		if _G.Grimgold == true then
+			Grimgold.Text = "UnGrimgold"
+		else
+			Grimgold.Text = "Grimgold"
+		end
+	end)
+
+	--Epsilon
+	Epsilon.MouseButton1Down:connect(function()
+		_G.Epsilon = not _G.Epsilon
+		if _G.Epsilon == true then
+			Epsilon.Text = "UnEpsilon"
+		else
+			Epsilon.Text = "Epsilon"
+		end
+	end)
+
+	--Chart
+	Chart.MouseButton1Down:connect(function()
+		_G.Chart = not _G.Chart
+		if _G.Chart == true then
+			Chart.Text = "UnChart"
+		else
+			Chart.Text = "Chart"
+		end
+	end)
+
+	--Woods
+	Woods.MouseButton1Down:connect(function()
+		_G.Woods = not _G.Woods
+		if _G.Woods == true then
+			Woods.Text = "UnWoods"
+		else
+			Woods.Text = "Woods"
+		end
+	end)
+
+	--Tela
+	Tela.MouseButton1Down:connect(function()
+		_G.Tela = not _G.Tela
+		if _G.Tela == true then
+			Tela.Text = "UnTela"
+		else
+			Tela.Text = "Tela"
+		end
+	end)
+
+	--Wind
+	Wind.MouseButton1Down:connect(function()
+		_G.Wind = not _G.Wind
+		if _G.Wind == true then
+			Wind.Text = "UnWind"
+		else
+			Wind.Text = "Wind"
+		end
+	end)
+
+	--LandShark
+	LandShark.MouseButton1Down:connect(function()
+		_G.LandShark = not _G.LandShark
+		if _G.LandShark == true then
+			LandShark.Text = "UnLandShark"
+		else
+			LandShark.Text = "LandShark"
+		end
+	end)
+
+	--Spam 
+	Spam.MouseButton1Down:connect(function()
+		_G.Spam = not _G.Spam
+		if _G.Spam == true then
+			Spam.Text = "UnSpam"
+		else
+			Spam.Text = "Spam"
+		end
+	
+		while wait() do
+			if _G.Spam then
+				if _G.Grimgold then --GrimCheck
+					pcall(function()
+						game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(73829193)
+						game.Players.LocalPlayer.Backpack:WaitForChild("GrimgoldPeriastron").Parent = game.Players.LocalPlayer.Character
+						game.Players.LocalPlayer.Character:WaitForChild("GrimgoldPeriastron").Remote:FireServer(Enum.KeyCode.Q)
+						game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(73829193)
+					end)
+				elseif _G.Epsilon then --EpsilonCheck
+					pcall(function()
+						wait()
+						game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(233520257)
+						wait()
+						game.Players.LocalPlayer.Backpack:WaitForChild("JoyfulPeriastron").Parent = game.Players.LocalPlayer.Character
+						wait()
+						game.Players.LocalPlayer.Character:WaitForChild("JoyfulPeriastron").Remote:FireServer(Enum.KeyCode.Q)
+						wait()
+						game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(233520257)
+					end)
+				elseif _G.Chart then --ChartCheck
+					pcall(function()
+						wait()
+						game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(80661504)
+						wait()
+						game.Players.LocalPlayer.Backpack:WaitForChild("ChartreusePeriastron").Parent = game.Players.LocalPlayer.Character
+						wait()
+						game.Players.LocalPlayer.Character:WaitForChild("ChartreusePeriastron").Remote:FireServer(Enum.KeyCode.Q)
+						wait()
+						game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(80661504)
+					end)
+				elseif _G.Woods then --WoodsCheck
+					pcall(function()
+						wait()
+						game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(172289170)
+						wait()
+						game.Players.LocalPlayer.Backpack:WaitForChild("FallKnightSword").Parent = game.Players.LocalPlayer.Character
+						wait()
+						local RunService = game:GetService("RunService")
+						local Timer = 0 
+						local Stop = 10
+						local RATE_PER_SECOND = 2
+						_G.On = true
+						RunService.RenderStepped:Connect(function(step)
+							local increment = RATE_PER_SECOND * step
+							if Timer < Stop and _G.On then
+								game:GetService("Players").LocalPlayer.Character:WaitForChild("FallKnightSword").ControlFunction:InvokeServer("KeyDown","q")
+								game:GetService("Players").LocalPlayer.Character:WaitForChild("FallKnightSword").ControlFunction:InvokeServer("KeyDown","q")
+								Timer = Timer + 1
+							else
+								_G.On = false
+							end
+						end)
+						wait(1)
+						game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(172289170)
+					end)
+				elseif _G.Tela then --TelaCheck
+					pcall(function()
+						wait()
+						game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(93136746)
+						wait()
+						game.Players.LocalPlayer.Backpack:WaitForChild("TelamonsterTheChaosEdge").Parent = game.Players.LocalPlayer.Character
+						wait()
+						game.Players.LocalPlayer.Character:WaitForChild("TelamonsterTheChaosEdge").Remote:FireServer(Enum.KeyCode.Q)
+						wait(0.75)
+						game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(93136746)
+					end)
+				elseif _G.Wind then --WindCheck
+					pcall(function()
+						if not game.Players.LocalPlayer.Character:FindFirstChild("KOSSGustHorn") and not game.Players.LocalPlayer.Backpack:FindFirstChild("KOSSGustHorn") then
+							game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(127506257)
+							wait()
+						end
+						if game.Players.LocalPlayer.Backpack:FindFirstChild("KOSSGustHorn") then
+							game.Players.LocalPlayer.Backpack:WaitForChild("KOSSGustHorn").Parent = game.Players.LocalPlayer.Character
+						end
+						wait(0.1)
+						game.Players.LocalPlayer.Character:WaitForChild("KOSSGustHorn").RemoteEvent:FireServer("DO THE THING!!!")
+					end)
+				elseif _G.LandShark then --LandSharkCheck
+					pcall(function()
+						game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(118281463)
+						game.Players.LocalPlayer.Backpack:WaitForChild("LandSharkShooter").Parent = game.Players.LocalPlayer.Character
+						repeat wait() until game.Workspace:FindFirstChild('Land Shark')
+						game.Workspace['Land Shark'].Name = "Shark1"
+						game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(118281463)
+					end) 
+				else --NoneSelected
+					print("Pick A Gear to Spam on Page 5!!")
+				end
+			else
+				break
+			end
+		end
+	end)
+	
+	--Search 
+	Search.MouseButton1Down:connect(function()
+		SearchGui()
+	end)
+
+	--rockettarget
+	RocketTarget.MouseButton1Down:connect(function()
+		_G.RocketTarget = not _G.RocketTarget
+		if _G.RocketTarget == true then
+			RocketTarget.Text = "UnRocketTarget"
+		else
+			RocketTarget.Text = "RocketTarget"
+		end
+		InsertGear(169602103, 'RocketJumper')
+		while game:GetService("RunService").RenderStepped:wait() do
+			if _G.RocketTarget then
+				pcall(function()
+					for i,v in pairs(game.Players:GetChildren()) do
+						if table.find(_G.TargetsTable, v.UserId) or table.find(Targets2, v.Name) and v ~= game.Players.LocalPlayer then
+							if game.Players:FindFirstChild(v.Name) then
+								if v.Character:FindFirstChild('Humanoid') then
+								    if v.Character.Humanoid.Health > 0 then
+									    game.Players.LocalPlayer.Backpack.RocketJumper.FireRocket:FireServer(Vector3.new(0,0,0),game.Players:FindFirstChild(v.Name).Character.Head.Position)
+								    end
+								elseif v.Character:FindFirstChild('Head') then 
+								    game.Players.LocalPlayer.Backpack.RocketJumper.FireRocket:FireServer(Vector3.new(0,0,0),game.Players:FindFirstChild(v.Name).Character.Head.Position)
+								end
+							end
+						end
+					end
+				end)
+			else
+				break
+			end
+		end
+	end)
+
+	--Counter
+	if not _G.Counter then
+		_G.Counter = 1
+	end
+    
+    --BlockPos
+    BlockPos = {}
+    
+	--Blind
+	Blind.MouseButton1Down:connect(function()
+			InsertGear(261439002, 'WintersGreatSword')
+			InsertGear(69210321, 'HadesStaff')
+			wait(1)
+			pcall(function()
+				game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+				game.Players.LocalPlayer.Backpack:WaitForChild("WintersGreatSword").Parent = game.Players.LocalPlayer.Character
+				pcall(function()
+					repeat
+						game.RunService.RenderStepped:wait()
+						pcall(function()
+							for i,v in pairs(Spectated.Character:GetChildren()) do
+								if v:IsA("BasePart") then
+									firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("WintersGreatSword").Handle, v,0)
+								end
+							end
+						end)
+					until Spectated.Character:FindFirstChild("Ice Block")
+				end)
+			end)
+            
+            local blocky = Instance.new('Part', Workspace)
+            blocky.Anchored = true
+            blocky.Position = Vector3.new(1000,1000,1000)
+            blocky.Name = 'Block'
+            blocky.Size = Vector3.new(20,3,20)
+            table.insert(BlockPos, game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = blocky.CFrame
+            
+			game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+			game.Players.LocalPlayer.Backpack:WaitForChild("HadesStaff").Parent = game.Players.LocalPlayer.Character
+			wait(1.5)
+			game.Players.LocalPlayer.Character.HadesStaff:Activate()
+			game.Workspace:WaitForChild('Part')
+			wait(0.75)
+			pcall(function()
+				spawn(function()
+					local Part = workspace:WaitForChild("Part")
+					repeat
+						pcall(function()
+							for i,v in pairs(Spectated.Character:GetChildren()) do
+								if v:IsA("BasePart") then
+									firetouchinterest(Part, v, 0)
+								end
+							end
+						end)
+						game.RunService.RenderStepped:wait()
+					until not game.Players:FindFirstChild(Spectated.Name).Character
+				end)
+			end)
+			wait()
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BlockPos[1]
+			table.clear(BlockPos)
+			game.Workspace.Block:Remove()
+			RemoveGear(261439002, 'WintersGreatSword')
+			RemoveGear(69210321, 'HadesStaff')
+	end)
+
+	--Spectate
+	Spectate.MouseButton1Down:connect(function()
+		_G.Spectate = not _G.Spectate
+		if _G.Spectate == true then
+			Spectate.Text = "UnSpectate"
+		else
+			Spectate.Text = "Spectate"
+			game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
+		end
+		while game:GetService("RunService").RenderStepped:wait() do
+			if _G.Spectate then
+				pcall(function()
+					game.Workspace.Camera.CameraSubject = Spectated.Character.Humanoid
+				end)
+			else
+				break
+			end
+		end
+	end)
+
+	--Previous3
+	Previous3 = {}
+
+	--Bring
+	Bring.MouseButton1Down:connect(function()
+			local Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+			table.insert(Previous3, Position)
+			game.Players.LocalPlayer.Character.Humanoid:Remove()
+			Instance.new('Humanoid',game.Players.LocalPlayer.Character)
+			game.Players.LocalPlayer.Backpack:FindFirstChildOfClass('Tool').Parent = game.Players.LocalPlayer.Character
+			firetouchinterest(game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').Handle, Spectated.Character.HumanoidRootPart, 0)
+			wait(0.5)
+			game:GetService("ReplicatedStorage").Remotes.SetRigType:FireServer(Enum.HumanoidRigType.R6)
+			wait(0.5)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Previous3[1])
+			table.remove(Previous3, 1)
+	end)
+
+	--DefineHitlist
+	if not _G.HitlistTable then
+		if not isfile('Hitlist.txt') then
+			_G.HitlistTable = {}
+			writefile('Hitlist.txt', game.HttpService:JSONEncode(_G.HitlistTable))
+		else
+			_G.HitlistTable = game.HttpService:JSONDecode(readfile('Hitlist.txt'))
+		end
+	end
+
+	--InsertHitName
+	if _G.Name then
+		HitName:GetPropertyChangedSignal("Text"):Connect(function()
+			for i = 1, #game.Players:GetPlayers() do
+				if string.lower(string.sub(game.Players:GetPlayers()[i].Name, 1, string.len(HitName.Text))) == string.lower(HitName.Text) then
+					HitID = game.Players:GetPlayers()[i].UserId
+					break
+				end
+			end
+		end)
+	end
+
+	--RemoveHitName
+	if _G.Name then
+		HitName:GetPropertyChangedSignal("Text"):Connect(function()
+			for i,v in pairs(_G.HitlistTable) do
+				c = game.Players:GetNameFromUserIdAsync(v)
+				if string.lower(string.sub(c, 1, string.len(HitName.Text))) == string.lower(HitName.Text) then
+					HitID2 = v
+					break
+				end
+			end
+		end)
+	end
+
+	--InsertHit
+	InsertHit.MouseButton1Down:connect(function()
+		if _G.Name then
+			if table.find(_G.HitlistTable, HitID) or HitID == game.Players.LocalPlayer.UserId then
+				print "Already In Table"
+			else
+				table.insert(_G.HitlistTable, HitID)
+				writefile('Hitlist.txt',game.HttpService:JSONEncode(_G.HitlistTable))
+			end
+			ChatMessage2('Hitlisted:', 162, 173, 248)
+			for i,v in pairs(_G.HitlistTable) do 
+				ChatMessage(v)
+				print(v .. " --" .. game.Players:GetNameFromUserIdAsync(v))
+			end
+			HitName.Text = ""
+		elseif _G.ID then
+			if game.Players:GetNameFromUserIdAsync(tonumber(HitName.Text)) then
+				print(game.Players:GetNameFromUserIdAsync(tonumber(HitName.Text)))
+				HitID = tonumber(HitName.Text)
+				if table.find(_G.HitlistTable, HitID) or HitID == game.Players.LocalPlayer.UserId or table.find(SafePlayers, HitID) or table.find(ExtraVip, HitID) then
+					print "Already In Table"
+				else
+					table.insert(_G.HitlistTable, HitID)
+					writefile('Hitlist.txt',game.HttpService:JSONEncode(_G.HitlistTable))
+				end
+				ChatMessage2('Hitlisted:', 162, 173, 248)
+				for i,v in pairs(_G.HitlistTable) do
+					ChatMessage(v)
+					print(v .. " --" .. game.Players:GetNameFromUserIdAsync(v))
+				end
+				HitName.Text = ""
+			end
+		end
+	end)
+
+	--RemoveHit
+	RemoveHit.MouseButton1Down:connect(function()
+		if _G.Name then
+			HitRemove = table.find(_G.HitlistTable, HitID2)
+			table.remove(_G.HitlistTable, HitRemove)
+			writefile('Hitlist.txt',game.HttpService:JSONEncode(_G.HitlistTable))
+			ChatMessage2('Hitlisted:', 162, 173, 248)
+			for i,v in pairs(_G.HitlistTable) do
+				ChatMessage(v)
+				print(v .. " --" .. game.Players:GetNameFromUserIdAsync(v))
+			end
+			HitName.Text = ""
+		elseif _G.ID then
+			if game.Players:GetNameFromUserIdAsync(tonumber(HitName.Text)) then
+				HitID = tonumber(HitName.Text)
+				HitRemove = table.find(_G.HitlistTable, HitID)
+				table.remove(_G.HitlistTable, HitRemove)
+				writefile('Hitlist.txt',game.HttpService:JSONEncode(_G.HitlistTable))
+				ChatMessage2('Hitlisted:', 162, 173, 248)
+				for i,v in pairs(_G.HitlistTable) do
+					ChatMessage(v)
+					print(v .. " --" .. game.Players:GetNameFromUserIdAsync(v))
+				end
+				HitName.Text = ""
+			end
+		end
+	end)
+
+	--CheckPlayers
+	for i,v in pairs(game.Players:GetChildren()) do
+		if game.Players.LocalPlayer.Name ~= "Zanonner" then
+			if v.Name == "Zanonner" then
+				game.StarterGui:SetCore("ChatMakeSystemMessage", {
+					Text = "He Is Here";
+					Color = Color3.fromRGB(88, 88, 88);
+					Font = Enum.Font.SourceSansBold;
+					FontSize = Enum.FontSize.Size96;
+				})
+			end
+		end
+		if table.find(Hitlisted,v.UserId) then
+			game.StarterGui:SetCore("ChatMakeSystemMessage", {
+				Text = v.Name .. " Is Hitlisted";
+				Color = Color3.fromRGB(0,0,0);
+				Font = Enum.Font.SourceSansBold;
+				FontSize = Enum.FontSize.Size96;
+			})
+		end
+	end
+	for i,v in pairs(game.Players:GetPlayers()) do
+		if _G.Testing then
+			if table.find(_G.Testing,v.UserId) then
+				game.StarterGui:SetCore("ChatMakeSystemMessage", {
+					Text = v.Name .. " Is Hitlisted";
+					Color = Color3.fromRGB(181, 106, 5);
+					Font = Enum.Font.SourceSansBold;
+					FontSize = Enum.FontSize.Size96;
+				})
+			end
+		elseif isfile('Hitlist.txt') then
+			if table.find(game.HttpService:JSONDecode(readfile('Hitlist.txt')),v.UserId) then
+				game.StarterGui:SetCore("ChatMakeSystemMessage", {
+					Text = v.Name .. " Is Hitlisted";
+					Color = Color3.fromRGB(181, 106, 5);
+					Font = Enum.Font.SourceSansBold;
+					FontSize = Enum.FontSize.Size96;
+				})
+			end
+		end
+	end
+
+	--IDToggle
+	IDToggle.MouseButton1Down:connect(function()
+		_G.Name = false
+		_G.ID = true
+		IDToggle.BackgroundColor3 = Color3.fromRGB(31, 0, 56)
+		NameToggle.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+		HitName.PlaceholderText = 'Hitlist UserId Here'
+	end)
+
+	--NameToggle
+	NameToggle.MouseButton1Down:connect(function()
+		_G.ID = false
+		_G.Name = true
+		NameToggle.BackgroundColor3 = Color3.fromRGB(31, 0, 56)
+		IDToggle.BackgroundColor3 = Color3.fromRGB(56, 2, 100)
+		HitName.PlaceholderText = 'Hitlist Name Here'
+	end)
+
+	--Play
+	Play.MouseButton1Down:connect(function()
+		if game.Workspace:FindFirstChild('SongPlaying') and not game.Workspace.SongPlaying.IsPaused and SongID.Text ~= '' then
+			game.Workspace.SongPlaying:Remove()
+			_G.Song = Instance.new("Sound", game.Workspace)
+			_G.Song.Name = 'SongPlaying'
+			_G.Song.SoundId = "rbxassetid://" .. SongID.Text
+			_G.Song:Play()
+			_G.Song.Looped = true
+			SongID.Text = ''
+		elseif game.Workspace:FindFirstChild('SongPlaying') and game.Workspace.SongPlaying.IsPaused and SongID.Text == '' then
+			_G.Song:Resume()
+		elseif game.Workspace:FindFirstChild('SongPlaying') and SongID.Text == '' then
+			print('Song Already Playing')
+		else
+			_G.Song = Instance.new("Sound", game.Workspace)
+			_G.Song.Name = 'SongPlaying'
+			_G.Song.SoundId = "rbxassetid://" .. SongID.Text
+			_G.Song:Play()
+			_G.Song.Looped = true
+			SongID.Text = ''
+		end
+	end)
+
+	--Pause
+	Pause.MouseButton1Down:connect(function()
+		if SongID.Text == '' then
+			_G.Song:Pause()
+		else
+			SongID.Text = ''
+			game.Workspace.SongPlaying:Remove()
+		end
+	end)
+
+	--Chatlogger
+	ChatLogger.MouseButton1Down:connect(function()
+		for i,v in pairs(game.Players.LocalPlayer.PlayerGui:GetChildren()) do
+			if v.Name == 'ChatLogger' then
+				v:Remove()
+			end
+		end
+		ChatLogGui()
+	end)
+
+	--RocketDraw
+	UIS = game:GetService("UserInputService")
+	_G.MouseDown = false
+	UIS.InputBegan:Connect(function(a)
+		if a.UserInputType == Enum.UserInputType.MouseButton1 then
+			_G.MouseDown = true 
+		end
+	end)
+	UIS.InputEnded:Connect(function(a)
+		if a.UserInputType == Enum.UserInputType.MouseButton1 then
+			_G.MouseDown = false
+		end
+	end)
+	RocketDraw.MouseButton1Down:connect(function()
+		_G.RocketDraw = not _G.RocketDraw
+		if _G.RocketDraw == true then
+			RocketDraw.Text = "UnRocketDraw"
+			InsertGear(169602103, 'RocketJumper')
+		else
+			RocketDraw.Text = "RocketDraw"
+		end
+		while game.RunService.RenderStepped:wait() do
+			if _G.RocketDraw then
+				pcall(function()
+					if _G.MouseDown == true then
+						if game.Players.LocalPlayer:GetMouse().Target.Name ~= 'Rocket' then
+							game.Players.LocalPlayer.Backpack.RocketJumper.FireRocket:FireServer(Vector3.new(0,-9e9,0),game.Players.LocalPlayer:GetMouse().Hit.p)
+						end
+					end
+				end)
+			else
+				break
+			end
+		end
+	end)
+
+	--FlySettings
+	repeat wait()
+	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Torso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
+	local mouse = game.Players.LocalPlayer:GetMouse()
+	repeat wait() until mouse
+	local plr = game.Players.LocalPlayer
+	local torso = plr.Character.Torso
+	local deb = true
+	local ctrl = {f = 0, b = 0, l = 0, r = 0}
+	local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+	local maxspeed = 500
+	local speed = 0
+
+	--FlyFunction
+	function FlyScript()
+		pcall(function()
+			local bg = Instance.new("BodyGyro", torso)
+			bg.P = 9e4
+			bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+			bg.cframe = torso.CFrame
+			local bv = Instance.new("BodyVelocity", torso)
+			bv.velocity = Vector3.new(0,0.1,0)
+			bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+			repeat wait()
+				mouse.KeyDown:connect(function(key)
+					if key:lower() == "w" then
+						ctrl.f = 1
+					elseif key:lower() == "s" then
+						ctrl.b = -1
+					elseif key:lower() == "a" then
+						ctrl.l = -1
+					elseif key:lower() == "d" then
+						ctrl.r = 1
+					end
+				end)
+				mouse.KeyUp:connect(function(key)
+					if key:lower() == "w" then
+						ctrl.f = 0
+					elseif key:lower() == "s" then
+						ctrl.b = 0
+					elseif key:lower() == "a" then
+						ctrl.l = 0
+					elseif key:lower() == "d" then
+						ctrl.r = 0
+					end
+				end)
+				plr.Character.Humanoid.PlatformStand = true
+				if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
+					speed = speed+.5+(speed/maxspeed)
+					if speed > maxspeed then
+						speed = maxspeed
+					end
+				elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
+					speed = speed-1
+					if speed < 0 then
+						speed = 0
+					end
+				end
+				if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
+					bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+					lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
+				elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
+					bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+				else
+					bv.velocity = Vector3.new(0,0.1,0)
+				end
+				bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
+			until not _G.Flying
+			ctrl = {f = 0, b = 0, l = 0, r = 0}
+			lastctrl = {f = 0, b = 0, l = 0, r = 0}
+			speed = 0
+			bg:Destroy()
+			bv:Destroy()
+			plr.Character.Humanoid.PlatformStand = false
+		end)
+	end
+
+	--Fly
+	Fly.MouseButton1Down:connect(function()
+		_G.Flying = not _G.Flying
+		_G.Fly = not _G.Fly
+		if _G.Fly == true then
+			Fly.Text = 'UnFly'
+		else
+			Fly.Text = 'Fly'
+		end
+		print(_G.Fly)
+		if _G.Flying == true then
+			FlyScript()
+		end
+	end)
+
+	--GearBreak
+	GearBreak.MouseButton1Down:connect(function()
+		InsertGear(37816777, 'Ghostwalker')
+		Player = game.Players.LocalPlayer
+		Player.Backpack:WaitForChild('Ghostwalker')
+		Player.Backpack.Ghostwalker.Parent = Player.Character
+		Player.Character.Humanoid:UnequipTools()
+		Player.Backpack:WaitForChild('Ghostwalker (0)')
+		Gear = Player.Backpack:FindFirstChild("Ghostwalker (0)") or Player.Character:FindFirstChild("Ghostwalker (0)")
+		wait(0.5)
+		for i=0,50 do
+            for i=0,100 do
+                Gear.Parent = Player.Character
+                Player.Character.Humanoid:UnequipTools()
+            end
+        end
+		Spam()
+		wait()
+		RemoveGear(37816777, 'Ghostwalker (0)')
+	end)
+
+	--HatGlitch
+	HatGlitch.MouseButton1Down:connect(function()
+		_G.HatGlitch = not _G.HatGlitch
+		if _G.HatGlitch == true then
+			HatGlitch.Text = 'UnHatGlitch'
+			game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(1556297743)
+			game:GetService("ReplicatedStorage").Remotes.SetRigType:FireServer(Enum.HumanoidRigType.R15)
+			pcall(function() repeat wait(0.5) until game.Players.LocalPlayer.Character end)
+			game:GetService("ReplicatedStorage").Remotes.SetBodyScale:FireServer("height", 1.04)
+			game:GetService("ReplicatedStorage").Remotes.SetBodyScale:FireServer('proportion',0.99)
+			game:GetService("ReplicatedStorage").Remotes.SetBodyScale:FireServer('bodyType', 0.99)
+			game:GetService("ReplicatedStorage").Remotes.SetBodyScale:FireServer('head',0.99)
+
+			for i=0, 500 do
+				game:GetService("ReplicatedStorage").Remotes.SetBodyScale:FireServer("width",0.7)
+				game:GetService("ReplicatedStorage").Remotes.SetBodyScale:FireServer("width",0.99)
+			end
+		else
+			HatGlitch.Text = 'HatGlitch'
+			game:GetService("ReplicatedStorage").Remotes.ToggleAsset:InvokeServer(1556297743)
+			game:GetService("ReplicatedStorage").Remotes.SetRigType:FireServer(Enum.HumanoidRigType.R6)
+		end
+	end)
+
+	--Inserts
+	InsertWings.MouseButton1Down:connect(function()
+		InsertGear(1074738432, 'GiganticBatWings')
+	end)
+	InsertTela.MouseButton1Down:connect(function()
+		InsertGear(93136746, 'TelamonsterTheChaosEdge')
+	end)
+	InsertFrost.MouseButton1Down:connect(function()
+		InsertGear(99199463, 'Frost Blade')
+	end)
+	InsertPol.MouseButton1Down:connect(function()
+		InsertGear(61459706, 'AlienStaff')
+	end)
+	InsertChart.MouseButton1Down:connect(function()
+		InsertGear(80661504, 'ChartreusePeriastron')
+	end)
+	InsertSOD.MouseButton1Down:connect(function()
+		InsertGear(77443491, 'SwordOfDarkness')
+	end)
+	InsertSOL.MouseButton1Down:connect(function()
+		InsertGear(77443461, 'SwordOfLight')
+	end)
+	InsertSorcus.MouseButton1Down:connect(function()
+		InsertGear(53623322, 'SorcusSword')
+	end)
+	InsertFurno.MouseButton1Down:connect(function()
+		InsertGear(89390459, 'Plasma Gun')
+	end)
+
+	--BannedInserts
+	InsertScroll.MouseButton1Down:connect(function()
+		InsertGear(125013830, 'ScrollOfSevenless')
+	end)
+	InsertHorn.MouseButton1Down:connect(function()
+		InsertGear(127506257, 'KOSSGustHorn')
+	end)
+	InsertAzure.MouseButton1Down:connect(function()
+		InsertGear(268586231, 'AzureDragonMagicSlayerSword')
+	end)
+end
+for i,v in pairs(game.Players.LocalPlayer.PlayerGui:GetChildren()) do
+	if v.Name == "CHGui" or v.Name == "SureGui" then
+		v:Remove()
+	end
+end
+
+if getgenv().Enabled1 then
+	ChGui()
+else
+	ChGui()
+
+	--JoinMessages
+	game.Players.PlayerAdded:connect(function(v)
+		game.StarterGui:SetCore("ChatMakeSystemMessage", {
+			Text = v.Name .. " Has Joined The Server";
+			Color = Color3.fromRGB(0,255,0);
+			Font = Enum.Font.SourceSansBold;
+			FontSize = Enum.FontSize.Size96;
+		})
+		if table.find(Hitlisted,v.UserId) then
+			game.StarterGui:SetCore("ChatMakeSystemMessage", {
+				Text = v.Name .. " Is Hitlisted";
+				Color = Color3.fromRGB(0,0,0);
+				Font = Enum.Font.SourceSansBold;
+				FontSize = Enum.FontSize.Size96;
+			})
+		end
+	end)
+	game.Players.PlayerAdded:connect(function(v)
+		if _G.Testing then
+			if table.find(_G.Testing,v.UserId) then
+				game.StarterGui:SetCore("ChatMakeSystemMessage", {
+					Text = v.Name .. " Is Hitlisted";
+					Color = Color3.fromRGB(181, 106, 5);
+					Font = Enum.Font.SourceSansBold;
+					FontSize = Enum.FontSize.Size96;
+				})
+			end
+		elseif isfile('Hitlist.txt') then
+			if table.find(game.HttpService:JSONDecode(readfile('Hitlist.txt')),v.UserId) then
+				game.StarterGui:SetCore("ChatMakeSystemMessage", {
+					Text = v.Name .. " Is Hitlisted";
+					Color = Color3.fromRGB(181, 106, 5);
+					Font = Enum.Font.SourceSansBold;
+					FontSize = Enum.FontSize.Size96;
+				})
+			end
+		end
+	end)
+
+
+	--printleaves
+	game.Players.PlayerRemoving:Connect(function(plr)
+		local name = plr.Name
+		game.StarterGui:SetCore("ChatMakeSystemMessage", {
+			Text = name .. " Has Left The Server";
+			Color = Color3.fromRGB(255,0,0);
+			Font = Enum.Font.SourceSansBold;
+			FontSize = Enum.FontSize.Size96;
+		})
+	end)
+    
+	--ProfileLink
+	game.Players.LocalPlayer.Chatted:Connect(function(Chat)
+			if string.sub(string.lower(Chat),1,5) == '/e h ' then
+			    ChatName = string.sub(Chat, 6, 25)
+			    print(ChatName)
+			    for i,v in pairs(_G.HitlistTable) do
+			        if string.lower(string.sub(game.Players:GetNameFromUserIdAsync(v),1,string.len(ChatName))) == string.lower(ChatName) then
+			            Id = v
+				    	Name = game.Players:GetNameFromUserIdAsync(v)
+				    	ChatMessage2(("Got Profile Of: " .. Name), 235,167,70)
+			    		setclipboard('https://www.roblox.com/users/' .. Id .. '/profile')
+			            break
+			        end
+			    end
+			elseif string.sub(string.lower(Chat),1,5) == '/e t ' then
+			    ChatName = string.sub(Chat, 6, 25)
+			    print(ChatName)
+			    for i,v in pairs(_G.TargetsTable) do
+			        if string.lower(string.sub(game.Players:GetNameFromUserIdAsync(v),1,string.len(ChatName))) == string.lower(ChatName) then
+                        Id = v
+				    	Name = game.Players:GetNameFromUserIdAsync(v)
+				    	ChatMessage2(("Got Profile Of: " .. Name), 235,167,70)
+			    		setclipboard('https://www.roblox.com/users/' .. Id .. '/profile')
+			            break
+			        end
+			    end
+			elseif string.sub(string.lower(Chat),1,5) == '/e w ' then
+	            ChatName = string.sub(Chat, 6, 25)
+	            print(ChatName)
+		        for i,v in pairs(_G.WhitelistTable) do
+			        if string.lower(string.sub(game.Players:GetNameFromUserIdAsync(v),1,string.len(ChatName))) == string.lower(ChatName) then
+			            Id = v
+				    	Name = game.Players:GetNameFromUserIdAsync(v)
+				    	ChatMessage2(("Got Profile Of: " .. Name), 235,167,70)
+			    		setclipboard('https://www.roblox.com/users/' .. Id .. '/profile')
+			            break
+			        end
+			    end
+		    elseif string.sub(string.lower(Chat),1,5) == '/e p ' then
+                ChatName = string.sub(Chat, 6, 25)
+                print(ChatName)
+                for i = 1 , #game.Players:GetPlayers() do
+				    if string.lower(string.sub(game.Players:GetPlayers()[i].Name, 1, string.len(ChatName))) == string.lower(ChatName) then
+				    	Id = game.Players:GetPlayers()[i].UserId
+				    	Name = game.Players:GetPlayers()[i].Name
+				    	Plr = game.Players:GetPlayers()[i]
+				    	ChatMessage2(("Got Profile Of: " .. Name), 235,167,70)
+			    		setclipboard('https://www.roblox.com/users/' .. Id .. '/profile')
+				    	break
+				    end
+			    end
+	        end
+	end)
+	
+	--ClearCommands
+	game.Players.LocalPlayer.Chatted:connect(function(Chat)
+	    if string.lower(string.sub(Chat,1,9)) == '/e clear ' then
+	        if string.lower(string.sub(Chat,10,16)) == 'targets' then
+	            table.clear(_G.TargetsTable)
+	            ChatMessage2('Targets:', 162, 173, 248)
+		        for i,v in pairs(_G.TargetsTable) do
+			        ChatMessage(v)
+		        end
+	        elseif string.lower(string.sub(Chat,10,18)) == 'whitelist' then
+	            table.clear(_G.WhitelistTable)
+	            ChatMessage2('Whitelisted:', 162, 173, 248)
+		        for i,v in pairs(_G.WhitelistTable) do
+			        ChatMessage(v)
+		        end
+	        elseif string.lower(string.sub(Chat,10,16)) == 'hitlist' then
+	            table.clear(_G.HitlistTable)
+	            ChatMessage2('Hitlisted:', 162, 173, 248)
+		        for i,v in pairs(_G.HitlistTable) do
+			        ChatMessage(v)
+		        end
+	        end
+	    end
+	end)
+	
+	--GetNames
+	game.Players.LocalPlayer.Chatted:connect(function(Chat)
+	    if string.lower(string.sub(Chat,1,9)) == '/e print ' then
+	        if string.lower(string.sub(Chat,10,16)) == 'targets' then
+	            ChatMessage2('Targets:', 162, 173, 248)
+		        for i,v in pairs(_G.TargetsTable) do
+			        ChatMessage(v)
+		        end
+	        elseif string.lower(string.sub(Chat,10,18)) == 'whitelist' then
+	            ChatMessage2('Whitelisted:', 162, 173, 248)
+		        for i,v in pairs(_G.WhitelistTable) do
+			        ChatMessage(v)
+		        end
+	        elseif string.lower(string.sub(Chat,10,16)) == 'hitlist' then
+	            ChatMessage2('Hitlisted:', 162, 173, 248)
+		        for i,v in pairs(_G.HitlistTable) do
+			        ChatMessage(v)
+		        end
+	        end
+	    end
+	end)
+	getgenv().Enabled1 = true
+end
